@@ -1,0 +1,12 @@
+/*
+<--!----------------------------------------------------------------!-->
+<--! Timeline SCSS !-->
+<--!----------------------------------------------------------------!-->
+*/
+.list-group-timeline {
+	.list-timeline-icon {
+		left: -1.25rem;
+		position: absolute;
+		background-color: var(--#{$prefix}tertiary-bg);
+	}
+}

@@ -1,0 +1,241 @@
+<div class="modal fade" id="cb-invite-people" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered modal-md" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div>
+                    <h4 class="fs-20 fw-bold modal-title">Send Invitation</h4>
+                    <small class="fs-12 fw-normal text-muted">Sent invitation to your friends</small>
+                </div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="input-group">
+                    <label class="form-label">Type name to invite</label>
+                    <select class="form-select" data-select-select2="user" multiple="multiple" data-placeholder="Choose to invite users....">
+                        <option value="test@gmail.com" data-user="1">test@gmail.com</option>
+                        <option value="bryan@gmail.com" data-user="2" selected>bryan@gmail.com</option>
+                    </select>
+                </div>
+                <hr class="my-6 border-top-dashed">
+                <div class="d-md-flex align-items-center gap-4 mb-4">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="invite-member-radio" id="radioCheckTeam" checked>
+                        <label class="form-check-label ms-3" for="radioCheckTeam">
+                            <span class="h6 d-block">Team Member</span>
+                            <span class="fs-12 text-muted text-truncate-2">Can view, comment on, create and edit all of the projects within the wordspace.</span>
+                        </label>
+                    </div>
+                    <div class="min-wd-150 ms-8 ms-md-0 mt-2 mt-md-0">
+                        <select class="form-select" data-select-select2="tag" data-placeholder="Choose role....">
+                            <option data-bg="bg-info">Guest</option>
+                            <option data-bg="bg-success">Owner</option>
+                            <option data-bg="bg-warning">Admin</option>
+                            <option data-bg="bg-primary" selected>Editor</option>
+                            <option data-bg="bg-danger">Viewer</option>
+                            <option data-bg="bg-dark">Member</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="d-md-flex align-items-center gap-4">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="invite-member-radio" id="radioCheckContributor">
+                        <label class="form-check-label ms-3" for="radioCheckContributor">
+                            <span class="h6 d-block">Contributor</span>
+                            <span class="fs-12 text-muted text-truncate-2">Can view, comment on, create and edit projects within a wordspace that you have specifically slected.</span>
+                        </label>
+                    </div>
+                    <div class="min-wd-150 ms-8 ms-md-0 mt-2 mt-md-0">
+                        <select class="form-select" data-select-select2="tag" data-placeholder="Choose role....">
+                            <option data-bg="bg-info" selected>Guest</option>
+                            <option data-bg="bg-success">Owner</option>
+                            <option data-bg="bg-warning">Admin</option>
+                            <option data-bg="bg-primary">Editor</option>
+                            <option data-bg="bg-danger">Viewer</option>
+                            <option data-bg="bg-dark">Member</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion accordion-flush border-top" id="accordionInvited">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingInvited">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInvited" aria-expanded="true" aria-controls="collapseInvited">
+                            <span>
+                                <span class="fw-bold text-dark d-block mb-1">Invited Friends</span>
+                                <span class="fs-12 text-muted d-block">Available friends for chatting.</span>
+                            </span>
+                        </button>
+                    </h2>
+                    <div id="collapseInvited" class="accordion-collapse collapse" aria-labelledby="headingInvited" data-bs-parent="#accordionInvited">
+                        <div class="accordion-body px-0">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item border-bottom-0 d-flex justify-content-between">
+                                    <div class="hstack gap-3">
+                                        <div class="avatar avatar-lg flex-shrink-0">
+                                            <img src="./../assets/images/avatar/1.png" class="img-fluid" alt="image">
+                                        </div>
+                                        <div>
+                                            <a href="javascript:void(0);" class="d-block mb-1">Alexandra Della</a>
+                                            <span class="fs-12 text-muted d-block">96 Mutual Friends</span>
+                                        </div>
+                                    </div>
+                                    <div class="hstack gap-2">
+                                        <a href="./call-voice.html" class="btn btn-light btn-icon">
+                                            <i class="fi fi-rr-phone-call"></i>
+                                        </a>
+                                        <a href="./call-video.html" class="btn btn-light btn-icon">
+                                            <i class="fi fi-rr-video-plus"></i>
+                                        </a>
+                                        <a href="./index.html" class="btn btn-light btn-icon">
+                                            <i class="fi fi-rr-comment-alt"></i>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="list-group-item border-bottom-0 d-flex justify-content-between">
+                                    <div class="hstack gap-3">
+                                        <div class="avatar avatar-lg flex-shrink-0">
+                                            <img src="./../assets/images/avatar/2.png" class="img-fluid" alt="image">
+                                        </div>
+                                        <div>
+                                            <a href="javascript:void(0);" class="d-block mb-1">Green Cute</a>
+                                            <span class="fs-12 text-muted d-block">84 Mutual Friends</span>
+                                        </div>
+                                    </div>
+                                    <div class="hstack gap-2">
+                                        <a href="./call-voice.html" class="btn btn-light btn-icon">
+                                            <i class="fi fi-rr-phone-call"></i>
+                                        </a>
+                                        <a href="./call-video.html" class="btn btn-light btn-icon">
+                                            <i class="fi fi-rr-video-plus"></i>
+                                        </a>
+                                        <a href="./index.html" class="btn btn-light btn-icon">
+                                            <i class="fi fi-rr-comment-alt"></i>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="list-group-item border-bottom-0 d-flex justify-content-between">
+                                    <div class="hstack gap-3">
+                                        <div class="avatar avatar-lg flex-shrink-0">
+                                            <img src="./../assets/images/avatar/3.png" class="img-fluid" alt="image">
+                                        </div>
+                                        <div>
+                                            <a href="javascript:void(0);" class="d-block mb-1">Marianne Audrey</a>
+                                            <span class="fs-12 text-muted d-block">78 Mutual Friends</span>
+                                        </div>
+                                    </div>
+                                    <div class="hstack gap-2">
+                                        <a href="./call-voice.html" class="btn btn-light btn-icon">
+                                            <i class="fi fi-rr-phone-call"></i>
+                                        </a>
+                                        <a href="./call-video.html" class="btn btn-light btn-icon">
+                                            <i class="fi fi-rr-video-plus"></i>
+                                        </a>
+                                        <a href="./index.html" class="btn btn-light btn-icon">
+                                            <i class="fi fi-rr-comment-alt"></i>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="list-group-item border-bottom-0 d-flex justify-content-between">
+                                    <div class="hstack gap-3">
+                                        <div class="avatar avatar-lg flex-shrink-0">
+                                            <img src="./../assets/images/avatar/4.png" class="img-fluid" alt="image">
+                                        </div>
+                                        <div>
+                                            <a href="javascript:void(0);" class="d-block mb-1">Sherie Hardy</a>
+                                            <span class="fs-12 text-muted d-block">67 Mutual Friends</span>
+                                        </div>
+                                    </div>
+                                    <div class="hstack gap-2">
+                                        <a href="./call-voice.html" class="btn btn-light btn-icon">
+                                            <i class="fi fi-rr-phone-call"></i>
+                                        </a>
+                                        <a href="./call-video.html" class="btn btn-light btn-icon">
+                                            <i class="fi fi-rr-video-plus"></i>
+                                        </a>
+                                        <a href="./index.html" class="btn btn-light btn-icon">
+                                            <i class="fi fi-rr-comment-alt"></i>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="list-group-item border-bottom-0 d-flex justify-content-between">
+                                    <div class="hstack gap-3">
+                                        <div class="avatar avatar-lg flex-shrink-0">
+                                            <img src="./../assets/images/avatar/5.png" class="img-fluid" alt="image">
+                                        </div>
+                                        <div>
+                                            <a href="javascript:void(0);" class="d-block mb-1"> Timothy Boyd</a>
+                                            <span class="fs-12 text-muted d-block">62 Mutual Friends</span>
+                                        </div>
+                                    </div>
+                                    <div class="hstack gap-2">
+                                        <a href="./call-voice.html" class="btn btn-light btn-icon">
+                                            <i class="fi fi-rr-phone-call"></i>
+                                        </a>
+                                        <a href="./call-video.html" class="btn btn-light btn-icon">
+                                            <i class="fi fi-rr-video-plus"></i>
+                                        <a href="./index.html" class="btn btn-light btn-icon">
+                                            <i class="fi fi-rr-comment-alt"></i>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer justify-content-between">
+                <a href="javascript:void(0);" class="btn btn-outline-light" data-toast-trigger="toast-copy">
+                    <span class="d-none d-lg-inline-block">
+                        <span class="text-truncate-1">https://cb.com/id?=axdefa</span>
+                    </span>
+                    <span class="vr mx-2 bg-body-secondary d-none d-sm-inline-block"></span>
+                    <i class="fi fi-rr-copy"></i>
+                </a>
+                <div class="hstack gap-3">
+                    <a href="javascript:void(0);" class="text-danger" data-bs-dismiss="modal">Cancel</a>
+                    <a href="javascript:void(0);" class="btn btn-primary" id="sendInvitationButton" data-bs-dismiss="modal" data-toast-trigger="toast-success">Send Invitation</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('Invite modal loaded');
+    document.getElementById('sendInvitationButton').addEventListener('click', () => {
+        const selectedUser = document.querySelector('select[data-select-select2="user"]').value;
+        console.log('Selected user for invitation:', selectedUser);
+        
+        const currentUserEmail = sessionStorage.getItem('currentUserEmail');
+        console.log('Current user email:', currentUserEmail);
+
+        if (selectedUser && currentUserEmail) {
+            console.log('Sending invitation to:', selectedUser);
+            fetch('http://localhost:5000/api/conversations/invite', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    userEmail: currentUserEmail,
+                    invitedEmail: selectedUser
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.message) {
+                    console.log('Server response:', data.message);
+                } else {
+                    console.error('Failed to send invitation.');
+                }
+            })
+            .catch(error => {
+                console.error('Error sending invitation:', error);
+            });
+        } else {
+            console.error('No user selected or current user email not available.');
+        }
+    });
+});
+</script>

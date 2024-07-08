@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zxx">
+	<head>
+		@@include('./partials/meta.html', {"title": "Maintenance"} )
+		<!--! Start:: Page Vendors -!-->
+		<!--! End:: Page Vendors -!-->
+
+		@@include('./partials/styling.html')
+	</head>
+
+	<body>
+		<!--! ================================================================ !-->
+		<!--! Start:: Main !-->
+		<!--! ================================================================ !-->
+		<main class="min-vh-100 overflow-y-auto d-flex flex-column justify-content-center bg-body-tertiary px-4">
+			<div class="card wd-sm-450 mx-auto my-5 bg-body">
+				<div class="card-body text-center p-sm-5 p-4">
+					<h4 class="mb-3">Maintenance</h4>
+					<h6 class="mb-3">Now we are under maintenance</h6>
+					<p class="fs-12 fw-medium text-muted mb-0 mb-5">Sorry for the inconvenience but we're performing some maintenance at the moment.</p>
+					<form action="#">
+						<div class="mb-4">
+							<input type="email" class="form-control" placeholder="Enter Your Email" required="">
+						</div>
+						<div class="mt-5">
+							<button type="submit" class="btn btn-lg btn-primary w-100">Notify Me</button>
+						</div>
+					</form>
+					<div class="mt-5 d-flex justify-content-center gap-2">
+						<a href="javascript:void(0);" class="btn btn-icon btn-light border" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Follow on Facebook">
+							<i class="fi fi-brands-facebook"></i>
+						</a>
+						<a href="javascript:void(0);" class="btn btn-icon btn-light border" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Follow on Twitter">
+							<i class="fi fi-brands-twitter"></i>
+						</a>
+						<a href="javascript:void(0);" class="btn btn-icon btn-light border" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Follow on Instagram">
+							<i class="fi fi-brands-instagram"></i>
+						</a>
+						<a href="javascript:void(0);" class="btn btn-icon btn-light border" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Follow on Github">
+							<i class="fi fi-brands-github"></i>
+						</a>
+						<a href="javascript:void(0);" class="btn btn-icon btn-light border" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Follow on Linkedin">
+							<i class="fi fi-brands-linkedin"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</main>
+		<!--! ================================================================ !-->
+		<!--! End:: Main !-->
+		<!--! ================================================================ !-->
+		<!--! ================================================================ !-->
+		<!--! Footer Script !-->
+		<!--! ================================================================ !-->
+		@@include('./partials/script.html')
+	</body>
+</html>

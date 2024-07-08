@@ -1,0 +1,62 @@
+/*
+<--!----------------------------------------------------------------!-->
+<--! OWL CAROUSEL CUSTOM SCSS !-->
+<--!----------------------------------------------------------------!-->
+*/
+.owl-carousel {
+	&:hover {
+		.owl-nav {
+
+			button.owl-prev,
+			button.owl-next {
+				opacity: 1;
+				visibility: visible;
+				transition: $transition-base;
+			}
+
+			button.owl-prev {
+				left: -1rem;
+			}
+
+			button.owl-next {
+				right: -1rem;
+			}
+		}
+	}
+
+	.owl-item {
+		overflow: hidden;
+		border-radius: $border-radius-lg;
+	}
+
+	.owl-nav button.owl-prev,
+	.owl-nav button.owl-next,
+	button.owl-dot {
+		width: 2.25rem;
+		height: 2.25rem;
+		border: 1px solid var(--#{$prefix}border-color);
+		border-radius: $border-radius-pill;
+	}
+
+	.owl-nav {
+
+		button.owl-prev,
+		button.owl-next {
+			top: 40%;
+			opacity: 0;
+			visibility: hidden;
+			position: absolute;
+			background-color: var(--#{$prefix}tertiary-bg);
+		}
+
+		button.owl-prev {
+			left: -2.25rem;
+			transition: all 0.3s ease;
+		}
+
+		button.owl-next {
+			right: -2.25rem;
+			transition: all 0.3s ease;
+		}
+	}
+}

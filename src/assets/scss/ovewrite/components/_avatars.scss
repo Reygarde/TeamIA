@@ -1,0 +1,212 @@
+/*
+<--!----------------------------------------------------------------!-->
+<--! AVATARS SCSS !-->
+<--!----------------------------------------------------------------!-->
+*/
+// Sass Mixin
+@mixin avatar($size) {
+	width: map-get($avatar-sizes, $size);
+	height: map-get($avatar-sizes, $size);
+	font-size: map-get($avatar-font-sizes, $size);
+	font-weight: $font-weight-semibold;
+	border-radius: $border-radius-pill;
+
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		border-radius: $border-radius-pill;
+	}
+
+	.fi {
+		font-size: map-get($avatar-font-sizes, $size);
+	}
+}
+
+// Avatar Sizes
+$avatar-sizes: (
+	"xs": 1.25rem,
+	"sm": 1.5rem,
+	"md": 2.5rem,
+	"lg": 3rem,
+	"xl": 4rem,
+	"xxl": 4.5rem,
+);
+
+// Avatar Font Sizes
+$avatar-font-sizes: (
+	"xs": 0.65rem,
+	"sm": 0.75rem,
+	"md": 0.875rem,
+	"lg": 0.9375rem,
+	"xl": 1rem,
+	"xxl":1.5rem,
+);
+
+// Avatar Styles
+.avatar {
+
+	@each $size,
+	$value in $avatar-sizes {
+		&.avatar-#{$size} {
+			@include avatar($size);
+		}
+	}
+
+	cursor: pointer;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	border-radius: $border-radius-pill;
+	transition: $transition-base;
+	color: var(--#{$prefix}dark);
+
+	span.avatar-text {
+		padding: 0.4em;
+		display: inline-block;
+		font-weight: $font-weight-bold;
+		border-radius: $border-radius-pill;
+	}
+
+	.avatar-indicator {
+		position: absolute;
+		bottom: 0;
+		width: 0.65em;
+		height: 0.65em;
+		border-radius: $border-radius-pill ;
+		border: 2px solid var(--#{$prefix}border-color-white);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transform: translateX(175%);
+
+		&.active {
+			background-color: $success;
+		}
+
+		&.busy {
+			background-color: $warning;
+		}
+
+		&.inactive {
+			background-color: $danger;
+		}
+
+		&.offline {
+			background-color: $gray-500;
+		}
+	}
+}
+
+// Avatar Group
+.avatar-group {
+	display: flex;
+	justify-content: flex-start;
+
+	.avatar {
+		background-color: var(--#{$prefix}light);
+
+		&:hover {
+			z-index: 1;
+			transform: scale(1.1);
+			transition: transform 0.2s ease-in-out;
+		}
+	}
+
+	&.avatar-group-xs {
+		.avatar {
+			margin-right: -0.5rem;
+			border: 0.125rem solid var(--#{$prefix}border-color-white);
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+			svg.feather {
+				width: 0.5rem;
+				height: 0.5rem;
+			}
+		}
+	}
+
+	&.avatar-group-sm {
+		.avatar {
+			margin-right: -0.625rem;
+			border: 0.125rem solid var(--#{$prefix}border-color-white);
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+			svg.feather {
+				width: 0.75rem;
+				height: 0.75rem;
+			}
+		}
+	}
+
+	&.avatar-group-md {
+		.avatar {
+			margin-right: -0.75rem;
+			border: 0.2rem solid var(--#{$prefix}border-color-white);
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+			svg.feather {
+				width: 0.9375rem;
+				height: 0.9375rem;
+			}
+		}
+	}
+
+	&.avatar-group-lg {
+		.avatar {
+			margin-right: -1rem;
+			border: 0.2rem solid var(--#{$prefix}border-color-white);
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+			svg.feather {
+				width: 1rem;
+				height: 1rem;
+			}
+		}
+	}
+
+	&.avatar-group-xl {
+		.avatar {
+			margin-right: -1.5rem;
+			border: 0.2rem solid var(--#{$prefix}border-color-white);
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+			svg.feather {
+				width: 1.25rem;
+				height: 1.25rem;
+			}
+		}
+	}
+
+	&.avatar-group-xxl {
+		.avatar {
+			margin-right: -2rem;
+			border: 0.2rem solid var(--#{$prefix}border-color-white);
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+			svg.feather {
+				width: 1.5rem;
+				height: 1.5rem;
+			}
+		}
+	}
+}

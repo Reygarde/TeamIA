@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="zxx">
+	<head>
+		@@include('./partials/meta.html', {"title": "Notifications"} )
+		<!--! Start:: Page Vendors -!-->
+		<link rel="stylesheet" href="./../assets/vendors/select2/css/select2.min.css">
+		<!--! End:: Page Vendors -!-->
+
+		@@include('./partials/styling.html')
+	</head>
+
+	<body>
+		<!--! ================================================================ !-->
+		<!--! Start:: Main Wrapper !-->
+		<!--! ================================================================ !-->
+		<div class="main-wrapper">
+			<!--! ================================================================ !-->
+			<!--! Start:: Navigation !-->
+			<!--! ================================================================ !-->
+			<nav class="cb-navigation d-flex flex-column flex-shrink-0 bg-body-tertiary position-fixed start-0 top-0 bottom-0 border-end z-1045">
+				<!-- Start:: Navigation Logo -->
+				<a href="./index.html" class="cb-navigation-brand d-flex align-items-center justify-content-center border-bottom" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Chatboot">
+					<img src="./../assets/images/logo.png" alt="Chatboot" class="img-fluid mx-auto wd-40">
+				</a>
+				<!-- End:: Navigation Logo -->
+				<!-- Start:: Navigation Body -->
+				<div class="cb-navigation-body position-relative" style="height: calc(100vh - 10rem)" data-scroll-target="cb-scrollable">
+					<ul class="nav nav-pills nav-flush flex-column mb-auto text-center py-4">
+						<li class="nav-item">
+							<a href="./index.html" class="nav-link" aria-current="page" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Chats" data-bs-offset="0,25">
+								<i class="fi fi-rr-comment-alt"></i>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="./call.html" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Calls" data-bs-offset="0,25">
+								<i class="fi fi-rr-phone-call"></i>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="./meeting.html" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Meetings" data-bs-offset="0,25">
+								<i class="fi fi-rr-camera-viewfinder"></i>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="./email.html" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Emails" data-bs-offset="0,25">
+								<i class="fi fi-rr-envelope-dot"></i>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="./contact.html" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Contacts" data-bs-offset="0,25">
+								<i class="fi fi-rr-address-book"></i>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="./pages.html" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Pages" data-bs-offset="0,25">
+								<i class="fi fi-rr-layers"></i>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="./../../docs/docs.html" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Documentations" data-bs-offset="0,25">
+								<i class="fi fi-rr-book-open-cover"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<!-- End:: Navigation Body  -->
+				<!-- Start:: Navigation Footer -->
+				<div class="cb-navigation-footer dropdown border-top d-flex align-items-center justify-content-center">
+					<a href="javascript:void(0);" data-bs-toggle="dropdown" data-bs-offset="-24, 16">
+						<div class="nav-link d-flex align-items-center justify-content-center rounded-pill" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Settings" data-bs-offset="0,25">
+							<i class="fi fi-rr-settings"></i>
+						</div>
+					</a>
+					<div class="dropdown-menu wd-350 py-3">
+						<!-- Start:: dropdown-item -->
+						<!-- End:: dropdown-item -->
+						<a href="./settings-general.html" class="dropdown-item mb-2 mx-2">
+							<div class="avatar avatar-lg rounded bg-body-secondary">
+								<i class="fi fi-rr-tags fs-3"></i>
+							</div>
+							<div class="ms-3">
+								<h6 class="fw-bold mb-1">General Settings</h6>
+								<p class="fs-12 fw-normal text-muted mb-0">Profile photo, name & more</p>
+							</div>
+							<div class="btn btn-icon btn-light ms-auto">
+								<i class="fi fi-rr-angle-small-right"></i>
+							</div>
+						</a>
+						<!-- End:: dropdown-item -->
+						<!-- Start:: dropdown-item -->
+						<a href="./settings-security.html" class="dropdown-item mb-2 mx-2">
+							<div class="avatar avatar-lg rounded bg-body-secondary">
+								<i class="fi fi-rr-shield-check fs-3"></i>
+							</div>
+							<div class="ms-3">
+								<h6 class="fw-bold mb-1">Security Settings</h6>
+								<p class="fs-12 fw-normal text-muted mb-0">Password, security & more</p>
+							</div>
+							<div class="btn btn-icon btn-light ms-auto">
+								<i class="fi fi-rr-angle-small-right"></i>
+							</div>
+						</a>
+						<!-- End:: dropdown-item -->
+						<!-- Start:: dropdown-item -->
+						<a href="./settings-billing.html" class="dropdown-item mb-2 mx-2">
+							<div class="avatar avatar-lg rounded bg-body-secondary">
+								<i class="fi fi-rr-usd-circle fs-3"></i>
+							</div>
+							<div class="ms-3">
+								<h6 class="fw-bold mb-1">Billing Settings</h6>
+								<p class="fs-12 fw-normal text-muted mb-0">Setup payment methords</p>
+							</div>
+							<div class="btn btn-icon btn-light ms-auto">
+								<i class="fi fi-rr-angle-small-right"></i>
+							</div>
+						</a>
+						<!-- End:: dropdown-item -->
+						<!-- Start:: dropdown-item -->
+						<a href="./settings-notification.html" class="dropdown-item mb-2 mx-2">
+							<div class="avatar avatar-lg rounded bg-body-secondary">
+								<i class="fi fi-rr-bell fs-3"></i>
+							</div>
+							<div class="ms-3">
+								<h6 class="fw-bold mb-1">Notification Settings</h6>
+								<p class="fs-12 fw-normal text-muted mb-0">Set your notifications</p>
+							</div>
+							<div class="btn btn-icon btn-light ms-auto">
+								<i class="fi fi-rr-angle-small-right"></i>
+							</div>
+						</a>
+						<!-- End:: dropdown-item -->
+						<!-- Start:: dropdown-item -->
+						<a href="./settings-integration.html" class="dropdown-item mb-0 mx-2">
+							<div class="avatar avatar-lg rounded bg-body-secondary">
+								<i class="fi fi-rr-square-plus fs-3"></i>
+							</div>
+							<div class="ms-3">
+								<h6 class="fw-bold mb-1">Integration Settings</h6>
+								<p class="fs-12 fw-normal text-muted mb-0">Setup apps integrations</p>
+							</div>
+							<div class="btn btn-icon btn-light ms-auto">
+								<i class="fi fi-rr-angle-small-right"></i>
+							</div>
+						</a>
+						<!-- End:: dropdown-item -->
+					</div>
+				</div>
+				<!-- End:: Navigation Footer -->
+			</nav>
+			<!--! ================================================================ !-->
+			<!--! End:: Navigation !-->
+			<!--! ================================================================ !-->
+			<!--! ================================================================ !-->
+			<!--! Start:: Asidebar !-->
+			<!--! ================================================================ !-->
+			<aside class="cb-asidebar cb-asidebar-without-sub-header position-fixed start-0 top-0 bottom-0 vh-100 border-end bg-body z-1040">
+				<!--! Start:: aside-main-header !-->
+				<div class="cb-asidebar-header d-flex align-items-center justify-content-between px-4 border-bottom">
+					<h2 class="fs-20 fw-bold mb-0">Settings</h2>
+					<!--! Start:: asidebar-toggler !-->
+					<button type="button" class="btn btn-icon btn-light d-xl-none" data-toggle-target="cb-asidebar-toggler">
+						<i class="fi fi-rr-cross"></i>
+					</button>
+					<!--! End:: asidebar-toggler !-->
+				</div>
+				<!--! End:: aside-main-header !-->
+				<!--! Start:: aside-main-body !-->
+				<div class="cb-asidebar-body position-relative" data-scroll-target="cb-scrollable">
+					<nav class="nav px-2 py-4">
+						<!--! Start:: setting-general  !-->
+						<a href="./settings-general.html" class="nav-link w-100 mb-2 d-flex align-items-center">
+							<div class="avatar avatar-lg rounded bg-body-secondary">
+								<i class="fi fi-rr-tags fs-3"></i>
+							</div>
+							<div class="ms-3">
+								<h6 class="fw-bold mb-1">General</h6>
+								<p class="fs-12 fw-normal text-muted mb-0">Profile photo, name & languages</p>
+							</div>
+							<div class="btn btn-icon btn-light ms-auto">
+								<i class="fi fi-rr-angle-small-right"></i>
+							</div>
+						</a>
+						<!--! End:: setting-general !-->
+						<!--! Start:: setting-security  !-->
+						<a href="./settings-security.html" class="nav-link w-100 mb-2 d-flex align-items-center">
+							<div class="avatar avatar-lg rounded bg-body-secondary">
+								<i class="fi fi-rr-shield-check fs-3"></i>
+							</div>
+							<div class="ms-3">
+								<h6 class="fw-bold mb-1">Security</h6>
+								<p class="fs-12 fw-normal text-muted mb-0">Password, security & more</p>
+							</div>
+							<div class="btn btn-icon btn-light ms-auto">
+								<i class="fi fi-rr-angle-small-right"></i>
+							</div>
+						</a>
+						<!--! End:: setting-security !-->
+						<!--! Start:: setting-billing  !-->
+						<a href="./settings-billing.html" class="nav-link w-100 mb-2 d-flex align-items-center">
+							<div class="avatar avatar-lg rounded bg-body-secondary">
+								<i class="fi fi-rr-usd-circle fs-3"></i>
+							</div>
+							<div class="ms-3">
+								<h6 class="fw-bold mb-1">Billing</h6>
+								<p class="fs-12 fw-normal text-muted mb-0">Setup payment info</p>
+							</div>
+							<div class="btn btn-icon btn-light ms-auto">
+								<i class="fi fi-rr-angle-small-right"></i>
+							</div>
+						</a>
+						<!--! End:: setting-billing !-->
+						<!--! Start:: setting-notification  !-->
+						<a href="./settings-notification.html" class="nav-link w-100 mb-2 d-flex align-items-center active" aria-current="page">
+							<div class="avatar avatar-lg rounded bg-body-secondary">
+								<i class="fi fi-rr-bell fs-3"></i>
+							</div>
+							<div class="ms-3">
+								<h6 class="fw-bold mb-1">Notification</h6>
+								<p class="fs-12 fw-normal text-muted mb-0">Set notifications preference</p>
+							</div>
+							<div class="btn btn-icon btn-light ms-auto">
+								<i class="fi fi-rr-angle-small-right"></i>
+							</div>
+						</a>
+						<!--! End:: setting-notification !-->
+						<!--! Start:: setting-integration  !-->
+						<a href="./settings-integration.html" class="nav-link w-100 mb-2 d-flex align-items-center">
+							<div class="avatar avatar-lg rounded bg-body-secondary">
+								<i class="fi fi-rr-square-plus fs-3"></i>
+							</div>
+							<div class="ms-3">
+								<h6 class="fw-bold mb-1">Integration</h6>
+								<p class="fs-12 fw-normal text-muted mb-0">Setup apps integrations</p>
+							</div>
+							<div class="btn btn-icon btn-light ms-auto">
+								<i class="fi fi-rr-angle-small-right"></i>
+							</div>
+						</a>
+						<!--! End:: setting-integration !-->
+					</nav>
+				</div>
+				<!--! End:: aside-main-body !-->
+				<!--! Start:: aside-main-footer !-->
+				<div class="cb-asidebar-footer d-flex align-items-center justify-content-between px-4 border-top">
+					<!--! Start:: dropdown-menu !-->
+					<div class="dropdown">
+						<a href="javascript:void(0);" class="btn btn-icon btn-light" data-bs-toggle="dropdown" data-bs-offset="0, 20" aria-expanded="false">
+							<i class="fi fi-bs-menu-dots-vertical"></i>
+						</a>
+						<ul class="dropdown-menu dropdown-menu-end">
+							<li>
+								<a href="javascript:void(0);" class="dropdown-item">
+									<i class="fi fi-rs-user-add"></i>
+									<span class="ms-3">Invite People</span>
+								</a>
+							</li>
+							<li><hr class="dropdown-divider"></li>
+							<li>
+								<a href="javascript:void(0);" class="dropdown-item">
+									<i class="fi fi-rr-edit"></i>
+									<span class="ms-3">Edit Group</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" class="dropdown-item">
+									<i class="fi fi-rs-users-alt"></i>
+									<span class="ms-3">Create Group</span>
+								</a>
+							</li>
+							<li><hr class="dropdown-divider"></li>
+							<li>
+								<a href="javascript:void(0);" class="dropdown-item">
+									<i class="fi fi-rr-edit"></i>
+									<span class="ms-3">Edit Event</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" class="dropdown-item">
+									<i class="fi fi-rr-plus"></i>
+									<span class="ms-3">Create Event</span>
+								</a>
+							</li>
+							<li><hr class="dropdown-divider"></li>
+							<li>
+								<a href="javascript:void(0);" class="dropdown-item">
+									<i class="fi fi-rr-settings"></i>
+									<span class="ms-3">Group Settings</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" class="dropdown-item">
+									<i class="fi fi-rr-settings"></i>
+									<span class="ms-3">Event Settings</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" class="dropdown-item">
+									<i class="fi fi-rr-settings"></i>
+									<span class="ms-3">Notification Settings</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<!--! End:: dropdown-menu !-->
+					<!--! Start:: pagination !-->
+					<div class="hstack gap-2">
+						<a href="./settings-billing.html" class="btn btn-icon btn-light" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Billing Settings">
+							<i class="fi fi-br-angle-left"></i>
+						</a>
+						<a href="./settings-integration.html" class="btn btn-icon btn-light" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Integration Settings">
+							<i class="fi fi-br-angle-right"></i>
+						</a>
+					</div>
+					<!--! End:: pagination !-->
+				</div>
+				<!--! End:: aside-main-footer !-->
+			</aside>
+			<!--! ================================================================ !-->
+			<!--! End:: Asidebar !-->
+			<!--! ================================================================ !-->
+			<!--! ================================================================ !-->
+			<!--! Start:: Content !-->
+			<!--! ================================================================ !-->
+			<main class="cb-content">
+				<!--! ================================================================ !-->
+				<!--! Start:: Header !-->
+				<!--! ================================================================ !-->
+				@@include('./partials/header.html')
+				<!--! ================================================================ !-->
+				<!--! End:: Header !-->
+				<!--! ================================================================ !-->
+				<!--! Start:: main-content-header !-->
+				<div class="cb-content-header d-flex align-items-center px-4 sticky-top bg-body border-bottom">
+					<!--! Start:: page-header-left !-->
+					<div class="page-header-left">
+						<h4 class="mb-0 fw-semibold">Notifications</h4>
+					</div>
+					<!--! End:: page-header-left !-->
+					<!--! Start:: page-header-right !-->
+					<div class="page-header-right ms-auto">
+						<a href="javascript:void(0);" class="btn btn-outline-light text-danger" data-toast-trigger="toast-cancel">Discard</a>
+						<a href="javascript:void(0);" class="btn btn-primary" data-toast-trigger="toast-success">Save Changes</a>
+					</div>
+					<!--! End:: page-header-right !-->
+				</div>
+				<!--! End:: main-content-header !-->
+				<!--! End:: main-content-body !-->
+				<div class="cb-content-body overflow-hidden my-5">
+					<!--! Start:: email-nofify !-->
+					<div class="row g-4 g-md-8 g-lg-16">
+						<div class="col-md-3 col-xl-4 col-xxl-3 text-md-end">
+							<h5 class="fw-bold">Email Nofify</h5>
+							<span class="text-muted">Receive important notificatons.</span>
+						</div>
+						<div class="col-md-8 col-xl-7 col-xxl-6">
+							<div class="form-check mb-4">
+								<input class="form-check-input cursor-pointer" type="checkbox" id="comformCheckConversations">
+								<label class="form-check-label cursor-pointer ms-2" for="comformCheckConversations">
+									<span class="h6 fw-semibold text-dark mb-1 d-block">Conversations tones</span>
+									<small class="fs-12 fw-normal text-muted d-block">Play sound for incoming and out going message.</small>
+								</label>
+							</div>
+							<div class="form-check mb-4">
+								<input class="form-check-input cursor-pointer" type="checkbox" id="comformCheckActivity">
+								<label class="form-check-label cursor-pointer ms-2" for="comformCheckActivity">
+									<span class="h6 fw-semibold text-dark mb-1 d-block">Account activity</span>
+									<small class="fs-12 fw-normal text-muted d-block">Get important notifications about you or activity you've missed.</small>
+								</label>
+							</div>
+							<div class="form-check mb-4">
+								<input class="form-check-input cursor-pointer" type="checkbox" id="comformCheckPayments">
+								<label class="form-check-label cursor-pointer ms-2" for="comformCheckPayments">
+									<span class="h6 fw-semibold text-dark mb-1 d-block">Successful payments</span>
+									<small class="fs-12 fw-normal text-muted d-block">Receive a notification for every successful payment.</small>
+								</label>
+							</div>
+							<div class="form-check mb-4">
+								<input class="form-check-input cursor-pointer" type="checkbox" id="comformCheckStory">
+								<label class="form-check-label cursor-pointer ms-2" for="comformCheckStory">
+									<span class="h6 fw-semibold text-dark mb-1 d-block">New post or story</span>
+									<small class="fs-12 fw-normal text-muted d-block">Notify or receiving post or story.</small>
+								</label>
+							</div>
+							<div class="form-check mb-4">
+								<input class="form-check-input cursor-pointer" type="checkbox" id="comformCheckComment">
+								<label class="form-check-label cursor-pointer ms-2" for="comformCheckComment">
+									<span class="h6 fw-semibold text-dark mb-1 d-block">Comment notifications</span>
+									<small class="fs-12 fw-normal text-muted d-block">Send me an email when someone comments on.</small>
+								</label>
+							</div>
+							<div class="form-check mb-4">
+								<input class="form-check-input cursor-pointer" type="checkbox" id="comformCheckRemainders">
+								<label class="form-check-label cursor-pointer ms-2" for="comformCheckRemainders">
+									<span class="h6 fw-semibold text-dark mb-1 d-block">Notify Remainders</span>
+									<small class="fs-12 fw-normal text-muted d-block">These are notification to remaind you.</small>
+								</label>
+							</div>
+							<div class="form-check mb-4">
+								<input class="form-check-input cursor-pointer" type="checkbox" id="comformCheckReview">
+								<label class="form-check-label cursor-pointer ms-2" for="comformCheckReview">
+									<span class="h6 fw-semibold text-dark mb-1 d-block">Review notificationsrs</span>
+									<small class="fs-12 fw-normal text-muted d-block">Send me an email when my items are approved or rejected.</small>
+								</label>
+							</div>
+							<div class="form-check mb-4">
+								<input class="form-check-input cursor-pointer" type="checkbox" id="comformCheckSummary">
+								<label class="form-check-label cursor-pointer ms-2" for="comformCheckSummary">
+									<span class="h6 fw-semibold text-dark mb-1 d-block">Daily summary emails</span>
+									<small class="fs-12 fw-normal text-muted d-block">Send me a daily summary of all items approved or rejected.</small>
+								</label>
+							</div>
+							<div class="form-check mb-0">
+								<input class="form-check-input cursor-pointer" type="checkbox" id="comformCheckUpdates">
+								<label class="form-check-label cursor-pointer ms-2" for="comformCheckUpdates">
+									<span class="h6 fw-semibold text-dark mb-1 d-block">News and updates</span>
+									<small class="fs-12 fw-normal text-muted d-block">News about product and features updates.</small>
+								</label>
+							</div>
+						</div>
+					</div>
+					<!--! End:: email-nofify !-->
+					<hr class="my-12 border-top-dashed">
+					<!--! Start:: sms-nofify !-->
+					<div class="row g-4 g-md-8 g-lg-16">
+						<div class="col-md-3 col-xl-4 col-xxl-3 text-md-end">
+							<h5 class="fw-bold">SMS Notify</h5>
+							<span class="text-muted">Receive important notificatons.</span>
+						</div>
+						<div class="col-md-8 col-xl-7 col-xxl-6">
+							<div class="form-check mb-4">
+								<input class="form-check-input cursor-pointer" type="checkbox" id="comformCheckComment_sms">
+								<label class="form-check-label cursor-pointer ms-2" for="comformCheckComment_sms">
+									<span class="h6 fw-semibold text-dark mb-1 d-block">Comment notifications</span>
+									<small class="fs-12 fw-normal text-muted d-block">Send me an email when someone comments on.</small>
+								</label>
+							</div>
+							<div class="form-check mb-4">
+								<input class="form-check-input cursor-pointer" type="checkbox" id="comformCheckMention_sms">
+								<label class="form-check-label cursor-pointer ms-2" for="comformCheckMention_sms">
+									<span class="h6 fw-semibold text-dark mb-1 d-block">Mention notifications</span>
+									<small class="fs-12 fw-normal text-muted d-block">Notify when someone mentioned me.</small>
+								</label>
+							</div>
+							<div class="form-check mb-4">
+								<input class="form-check-input cursor-pointer" type="checkbox" id="comformCheckStory_sms">
+								<label class="form-check-label cursor-pointer ms-2" for="comformCheckStory_sms">
+									<span class="h6 fw-semibold text-dark mb-1 d-block">New post or story</span>
+									<small class="fs-12 fw-normal text-muted d-block">Notify or receiving post or story.</small>
+								</label>
+							</div>
+							<div class="form-check mb-4">
+								<input class="form-check-input cursor-pointer" type="checkbox" id="comformCheckRemainders_sms">
+								<label class="form-check-label cursor-pointer ms-2" for="comformCheckRemainders_sms">
+									<span class="h6 fw-semibold text-dark mb-1 d-block">Notify Remainders</span>
+									<small class="fs-12 fw-normal text-muted d-block">These are notification to remaind you.</small>
+								</label>
+							</div>
+							<div class="form-check mb-0">
+								<input class="form-check-input cursor-pointer" type="checkbox" id="comformCheckReview_sms">
+								<label class="form-check-label cursor-pointer ms-2" for="comformCheckReview_sms">
+									<span class="h6 fw-semibold text-dark mb-1 d-block">Review notificationsrs</span>
+									<small class="fs-12 fw-normal text-muted d-block">Send me an email when my items are approved or rejected.</small>
+								</label>
+							</div>
+						</div>
+					</div>
+					<!--! End:: sms-nofify !-->
+					<hr class="my-12 border-top-dashed">
+					<!--! Start:: push-nofify !-->
+					<div class="row g-4 g-md-8 g-lg-16">
+						<div class="col-md-3 col-xl-4 col-xxl-3 text-md-end">
+							<h5 class="fw-bold">Push Notify</h5>
+							<span class="text-muted">Receive important notificatons.</span>
+						</div>
+						<div class="col-md-8 col-xl-7 col-xxl-6">
+							<div class="form-check mb-4">
+								<input class="form-check-input cursor-pointer" type="radio" name="push_radio" id="comformCheckEverything_push" checked>
+								<label class="form-check-label cursor-pointer ms-2" for="comformCheckEverything_push">
+									<span class="h6 fw-semibold text-dark mb-1 d-block">Everything</span>
+									<small class="fs-12 fw-normal text-muted d-block">Notify or receiving post or story.</small>
+								</label>
+							</div>
+							<div class="form-check mb-4">
+								<input class="form-check-input cursor-pointer" type="radio" name="push_radio" id="comformCheckImportant_push">
+								<label class="form-check-label cursor-pointer ms-2" for="comformCheckImportant_push">
+									<span class="h6 fw-semibold text-dark mb-1 d-block">Only what's important</span>
+									<small class="fs-12 fw-normal text-muted d-block">These are notification to remaind you.</small>
+								</label>
+							</div>
+							<div class="form-check mb-0">
+								<input class="form-check-input cursor-pointer" type="radio" name="push_radio" id="comformCheckNopush_push">
+								<label class="form-check-label cursor-pointer ms-2" for="comformCheckNopush_push">
+									<span class="h6 fw-semibold text-dark mb-1 d-block">No push notifications</span>
+									<small class="fs-12 fw-normal text-muted d-block">Send me an email when my items are approved or rejected.</small>
+								</label>
+							</div>
+						</div>
+					</div>
+					<!--! End:: push-nofify !-->
+					<hr class="my-12 border-top-dashed">
+					<!--! Start:: misce-nofify !-->
+					<div class="row g-4 g-md-8 g-lg-16">
+						<div class="col-md-3 col-xl-4 col-xxl-3 text-md-end">
+							<h5 class="fw-bold">Miscellaneous</h5>
+							<span class="text-muted">Receive important notificatons.</span>
+						</div>
+						<div class="col-md-8 col-xl-7 col-xxl-6">
+							<div class="form-check form-switch mb-4">
+								<input class="form-check-input cursor-pointer" type="checkbox" role="switch" id="comformCheckEverything_switch">
+								<label class="form-check-label cursor-pointer ms-2" for="comformCheckEverything_switch">
+									<span class="h6 fw-semibold text-dark mb-1 d-block">Disable notify</span>
+									<small class="fs-12 fw-normal text-muted d-block">Disabled notifications for all users.</small>
+								</label>
+							</div>
+							<div class="form-check form-switch mb-4">
+								<input class="form-check-input cursor-pointer" type="checkbox" role="switch" id="comformCheckImportant_switch">
+								<label class="form-check-label cursor-pointer ms-2" for="comformCheckImportant_switch">
+									<span class="h6 fw-semibold text-dark mb-1 d-block">Enable Sound</span>
+									<small class="fs-12 fw-normal text-muted d-block">Turn on sound for notifications.</small>
+								</label>
+							</div>
+							<div class="form-check form-switch mb-4">
+								<input class="form-check-input cursor-pointer" type="checkbox" role="switch" id="comformCheckNopush_switch">
+								<label class="form-check-label cursor-pointer ms-2" for="comformCheckNopush_switch">
+									<span class="h6 fw-semibold text-dark mb-1 d-block">LED notify</span>
+									<small class="fs-12 fw-normal text-muted d-block">Turn on LED notificatons light.</small>
+								</label>
+							</div>
+							<div class="form-check form-switch mb-0">
+								<input class="form-check-input cursor-pointer" type="checkbox" role="switch" id="comformCheckContact_switch">
+								<label class="form-check-label cursor-pointer ms-2" for="comformCheckContact_switch">
+									<span class="h6 fw-semibold text-dark mb-1 d-block">Contact joining</span>
+									<small class="fs-12 fw-normal text-muted d-block">Notify when a contact joins.</small>
+								</label>
+							</div>
+						</div>
+					</div>
+					<!--! End:: misce-nofify !-->
+					<hr class="my-12 border-top-dashed">
+					<!--! Start:: action-button !-->
+					<div class="row g-4 g-md-8 g-lg-16">
+						<div class="offset-md-3 offset-xl-4 offset-xxl-3">
+							<a href="javascript:void(0);" class="btn btn-outline-light text-danger" data-toast-trigger="toast-cancel">Discard</a>
+							<a href="javascript:void(0);" class="btn btn-primary" data-toast-trigger="toast-success">Save Changes</a>
+						</div>
+					</div>
+					<!--! End:: action-button !-->
+				</div>
+				<!--! Start:: main-content-body !-->
+			</main>
+			<!--! ================================================================ !-->
+			<!--! End:: Content !-->
+			<!--! ================================================================ !-->
+		</div>
+		<!--! ================================================================ !-->
+		<!--! End:: Main Wrapper !-->
+		<!--! ================================================================ !-->
+		<!--! ================================================================ !-->
+		<!--! Start:: Invice People Modal !-->
+		<!--! ================================================================ !-->
+		@@include('./partials/invite.html')
+		<!--! ================================================================ !-->
+		<!--! End:: Invice People Modal !-->
+		<!--! ================================================================ !-->
+		<!--! ================================================================ !-->
+		<!--! Start:: Toast Noticifactions !-->
+		<!--! ================================================================ !-->
+		@@include('./partials/toast.html')
+		<!--! ================================================================ !-->
+		<!--! End:: Toast Noticifactions !-->
+		<!--! ================================================================ !-->
+		<!--! ================================================================ !-->
+		<!--! Footer Script !-->
+		<!--! ================================================================ !-->
+		@@include('./partials/script.html')
+
+		<!--! Start:: Page Vendors -!-->
+		<script src="./../assets/vendors/select2/js/select2.full.min.js"></script>
+		<script src="./../assets/js/plugins/select2-active.min.js"></script>
+		<!--! End:: Page Vendors -!-->
+	</body>
+</html>

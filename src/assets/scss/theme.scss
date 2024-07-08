@@ -1,0 +1,66 @@
+/*!
+<--!----------------------------------------------------------------!-->
+<--!----------------------------------------------------------------!-->
+ * Template Name: Chatboot - Ultimate Chat & Discussion Platform
+ * Description: Fully Responsive Bootstrap Ultimate Chat & Discussion Platform Application.
+ * Copyright: WRAPCODERS
+ * Author: WRAPCODERS
+ * Version: 1.0.0
+ * File: theme.min.css
+<--!----------------------------------------------------------------!-->
+<--!----------------------------------------------------------------!-->
+*/
+
+// BOOTSTRAP-FUNCTIONS
+@import "./../../../node_modules/bootstrap/scss/functions";
+
+// OVERWRITE-VARIABLES
+@import "./ovewrite/theme/theme-variables";
+@import "./ovewrite/theme/theme-variables-dark";
+
+// USER-VARIABLES
+@import "./ovewrite/theme/user-variables";
+@import "./ovewrite/theme/user-variables-dark";
+
+
+// OVERWRITE-UTILITIES-&-ROOT
+@import "./ovewrite/theme/theme-utilities";
+@import "./ovewrite/theme/theme-root";
+
+// BOOTSTRAP-CORE
+@import "./../../../node_modules/bootstrap/scss/bootstrap";
+
+// THEME STRUCTURE
+@import "./ovewrite/structure/common";
+@import "./ovewrite/structure/navigation";
+@import "./ovewrite/structure/header";
+@import "./ovewrite/structure/asidebar";
+@import "./ovewrite/structure/content";
+@import "./ovewrite/structure/offcanvas";
+
+// THEME  APPS
+@import "./ovewrite/apps/chat";
+@import "./ovewrite/apps/call";
+@import "./ovewrite/apps/meeting";
+@import "./ovewrite/apps/email";
+@import "./ovewrite/apps/contact";
+
+// THEME COMPONENTS
+@import "./ovewrite/components/reboot";
+@import "./ovewrite/components/utilities";
+@import "./ovewrite/components/avatars";
+@import "./ovewrite/components/buttons";
+@import "./ovewrite/components/dropdown";
+@import "./ovewrite/components/nav-tabs";
+@import "./ovewrite/components/toast";
+@import "./ovewrite/components/misc";
+@import "./ovewrite/components/timeline";
+
+// THEME PLUGINS
+@import "./ovewrite/plugins/perfect-scrollbar";
+@import "./ovewrite/plugins/emoji-picker";
+@import "./ovewrite/plugins/glightbox";
+@import "./ovewrite/plugins/quill";
+@import "./ovewrite/plugins/select2";
+@import "./ovewrite/plugins/flatpickr";
+@import "./ovewrite/plugins/owl-carousel";

@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="zxx">
+	<head>
+		@@include('./partials/meta.html', {"title": "Email"} )
+		<!--! Start:: Page Vendors -!-->
+		<!--! End:: Page Vendors -!-->
+
+		@@include('./partials/styling.html')
+	</head>
+
+	<body>
+		<!--! ================================================================ !-->
+		<!--! Start:: Main Wrapper !-->
+		<!--! ================================================================ !-->
+		<div class="main-wrapper">
+			<!--! ================================================================ !-->
+			<!--! Start:: Navigation !-->
+			<!--! ================================================================ !-->
+			<nav class="cb-navigation d-flex flex-column flex-shrink-0 bg-body-tertiary position-fixed start-0 top-0 bottom-0 border-end z-1045">
+				<!-- Start:: Navigation Logo -->
+				<a href="./index.html" class="cb-navigation-brand d-flex align-items-center justify-content-center border-bottom" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Chatboot">
+					<img src="./../assets/images/logo.png" alt="Chatboot" class="img-fluid mx-auto wd-40">
+				</a>
+				<!-- End:: Navigation Logo -->
+				<!-- Start:: Navigation Body -->
+				<div class="cb-navigation-body position-relative" style="height: calc(100vh - 10rem)" data-scroll-target="cb-scrollable">
+					<ul class="nav nav-pills nav-flush flex-column mb-auto text-center py-4">
+						<li class="nav-item">
+							<a href="./index.html" class="nav-link" aria-current="page" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Chats" data-bs-offset="0,25">
+								<i class="fi fi-rr-comment-alt"></i>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="./call.html" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Calls" data-bs-offset="0,25">
+								<i class="fi fi-rr-phone-call"></i>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="./meeting.html" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Meetings" data-bs-offset="0,25">
+								<i class="fi fi-rr-camera-viewfinder"></i>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="./email.html" class="nav-link active" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Emails" data-bs-offset="0,25">
+								<i class="fi fi-rr-envelope-dot"></i>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="./contact.html" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Contacts" data-bs-offset="0,25">
+								<i class="fi fi-rr-address-book"></i>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="./pages.html" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Pages" data-bs-offset="0,25">
+								<i class="fi fi-rr-layers"></i>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="./../../docs/docs.html" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Documentations" data-bs-offset="0,25">
+								<i class="fi fi-rr-book-open-cover"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<!-- End:: Navigation Body  -->
+				<!-- Start:: Navigation Footer -->
+				<div class="cb-navigation-footer dropdown border-top d-flex align-items-center justify-content-center">
+					<a href="javascript:void(0);" data-bs-toggle="dropdown" data-bs-offset="-24, 16">
+						<div class="nav-link d-flex align-items-center justify-content-center rounded-pill" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Settings" data-bs-offset="0,25">
+							<i class="fi fi-rr-settings"></i>
+						</div>
+					</a>
+					<div class="dropdown-menu wd-350 py-3">
+						<!-- Start:: dropdown-item -->
+						<!-- End:: dropdown-item -->
+						<a href="./settings-general.html" class="dropdown-item mb-2 mx-2">
+							<div class="avatar avatar-lg rounded bg-body-secondary">
+								<i class="fi fi-rr-tags fs-3"></i>
+							</div>
+							<div class="ms-3">
+								<h6 class="fw-bold mb-1">General Settings</h6>
+								<p class="fs-12 fw-normal text-muted mb-0">Profile photo, name & more</p>
+							</div>
+							<div class="btn btn-icon btn-light ms-auto">
+								<i class="fi fi-rr-angle-small-right"></i>
+							</div>
+						</a>
+						<!-- End:: dropdown-item -->
+						<!-- Start:: dropdown-item -->
+						<a href="./settings-security.html" class="dropdown-item mb-2 mx-2">
+							<div class="avatar avatar-lg rounded bg-body-secondary">
+								<i class="fi fi-rr-shield-check fs-3"></i>
+							</div>
+							<div class="ms-3">
+								<h6 class="fw-bold mb-1">Security Settings</h6>
+								<p class="fs-12 fw-normal text-muted mb-0">Password, security & more</p>
+							</div>
+							<div class="btn btn-icon btn-light ms-auto">
+								<i class="fi fi-rr-angle-small-right"></i>
+							</div>
+						</a>
+						<!-- End:: dropdown-item -->
+						<!-- Start:: dropdown-item -->
+						<a href="./settings-billing.html" class="dropdown-item mb-2 mx-2">
+							<div class="avatar avatar-lg rounded bg-body-secondary">
+								<i class="fi fi-rr-usd-circle fs-3"></i>
+							</div>
+							<div class="ms-3">
+								<h6 class="fw-bold mb-1">Billing Settings</h6>
+								<p class="fs-12 fw-normal text-muted mb-0">Setup payment methords</p>
+							</div>
+							<div class="btn btn-icon btn-light ms-auto">
+								<i class="fi fi-rr-angle-small-right"></i>
+							</div>
+						</a>
+						<!-- End:: dropdown-item -->
+						<!-- Start:: dropdown-item -->
+						<a href="./settings-notification.html" class="dropdown-item mb-2 mx-2">
+							<div class="avatar avatar-lg rounded bg-body-secondary">
+								<i class="fi fi-rr-bell fs-3"></i>
+							</div>
+							<div class="ms-3">
+								<h6 class="fw-bold mb-1">Notification Settings</h6>
+								<p class="fs-12 fw-normal text-muted mb-0">Set your notifications</p>
+							</div>
+							<div class="btn btn-icon btn-light ms-auto">
+								<i class="fi fi-rr-angle-small-right"></i>
+							</div>
+						</a>
+						<!-- End:: dropdown-item -->
+						<!-- Start:: dropdown-item -->
+						<a href="./settings-integration.html" class="dropdown-item mb-0 mx-2">
+							<div class="avatar avatar-lg rounded bg-body-secondary">
+								<i class="fi fi-rr-square-plus fs-3"></i>
+							</div>
+							<div class="ms-3">
+								<h6 class="fw-bold mb-1">Integration Settings</h6>
+								<p class="fs-12 fw-normal text-muted mb-0">Setup apps integrations</p>
+							</div>
+							<div class="btn btn-icon btn-light ms-auto">
+								<i class="fi fi-rr-angle-small-right"></i>
+							</div>
+						</a>
+						<!-- End:: dropdown-item -->
+					</div>
+				</div>
+				<!-- End:: Navigation Footer -->
+			</nav>
+			<!--! ================================================================ !-->
+			<!--! End:: Navigation !-->
+			<!--! ================================================================ !-->
+			<!--! ================================================================ !-->
+			<!--! Start:: Asidebar !-->
+			<!--! ================================================================ !-->
+			<aside class="cb-asidebar cb-asidebar-md position-fixed start-0 top-0 bottom-0 vh-100 border-end bg-body z-1040">
+				<!--! Start:: aside-main-header !-->
+				<div class="cb-asidebar-header d-flex align-items-center justify-content-between px-4 border-bottom">
+					<h2 class="fs-20 fw-bold mb-0">Email</h2>
+					<!--! Start:: asidebar-toggler !-->
+					<button type="button" class="btn btn-icon btn-light d-xl-none" data-toggle-target="cb-asidebar-toggler">
+						<i class="fi fi-rr-cross"></i>
+					</button>
+					<!--! End:: asidebar-toggler !-->
+				</div>
+				<!--! End:: aside-main-header !-->
+				<!--! Start:: asidebar-sub-header !-->
+				<div class="cb-asidebar-sub-header d-flex align-items-center px-4 border-bottom">
+					<div class="d-grid w-100">
+						<a href="./email-compose.html" class="btn btn-primary">
+							<i class="fi fi-rr-plus"></i>
+							<span class="ms-2">Compose</span>
+						</a>
+					</div>
+				</div>
+				<!--! End:: asidebar-sub-header !-->
+				<!--! Start:: aside-main-body !-->
+				<div class="cb-asidebar-body position-relative" data-scroll-target="cb-scrollable">
+					<!--! Start:: email-nav !-->
+					<ul class="nav flex-column px-2 py-3">
+						<li class="nav-item mb-2 active">
+							<a href="javascript:void(0);" class="nav-link d-flex align-items-center justify-content-between rounded">
+								<span class="hstack gap-3">
+									<i class="fi fi-rr-envelope-plus"></i>
+									<span class="d-block">Inbox</span>
+								</span>
+								<span class="badge badge-soft-primary">53</span>
+							</a>
+						</li>
+						<li class="nav-item mb-2">
+							<a href="javascript:void(0);" class="nav-link rounded">
+								<span class="hstack gap-3">
+									<i class="fi fi-rr-paper-plane"></i>
+									<span class="d-block">Sent</span>
+								</span>
+							</a>
+						</li>
+						<li class="nav-item mb-2">
+							<a href="javascript:void(0);" class="nav-link rounded">
+								<span class="hstack gap-3">
+									<i class="fi fi-rr-star"></i>
+									<span class="d-block">Starred</span>
+								</span>
+							</a>
+						</li>
+						<li class="nav-item mb-2">
+							<a href="javascript:void(0);" class="nav-link d-flex align-items-center justify-content-between rounded">
+								<span class="hstack gap-3">
+									<i class="fi fi-rr-edit"></i>
+									<span class="d-block">Draft</span>
+								</span>
+								<span class="badge badge-soft-warning">12</span>
+							</a>
+						</li>
+						<li class="nav-item mb-2">
+							<a href="javascript:void(0);" class="nav-link rounded">
+								<span class="hstack gap-3">
+									<i class="fi fi-rr-check-circle"></i>
+									<span class="d-block">Important</span>
+								</span>
+							</a>
+						</li>
+						<li class="nav-item mb-2">
+							<a href="javascript:void(0);" class="nav-link rounded">
+								<span class="hstack gap-3">
+									<i class="fi fi-rr-time-half-past"></i>
+									<span class="d-block">Snoozed</span>
+								</span>
+							</a>
+						</li>
+						<li class="nav-item mb-2">
+							<a href="javascript:void(0);" class="nav-link d-flex align-items-center justify-content-between rounded">
+								<span class="hstack gap-3">
+									<i class="fi fi-rr-triangle-warning"></i>
+									<span class="d-block">Spam</span>
+								</span>
+								<span class="badge badge-soft-danger">23</span>
+							</a>
+						</li>
+						<li class="nav-item mb-0">
+							<a href="javascript:void(0);" class="nav-link rounded">
+								<span class="hstack gap-3">
+									<i class="fi fi-rr-trash"></i>
+									<span class="d-block">Trash</span>
+								</span>
+							</a>
+						</li>
+					</ul>
+					<!--! End:: email-nav !-->
+					<hr class="my-0">
+					<!--! Start:: lavel-heading !-->
+					<div class="px-4 pt-3 d-flex align-items-center justify-content-between">
+						<label class="fs-11 fw-semibold text-uppercase text-muted">Labels</label>
+						<a href="javascript:void(0);" class="btn btn-icon btn-icon-md btn-light" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Add Labels">
+							<i class="fi fi-rr-plus fs-12"></i>
+						</a>
+					</div>
+					<!--! End:: lavel-heading !-->
+					<!--! Start:: lavel-list !-->
+					<ul class="nav flex-column px-2 pb-3">
+						<li class="nav-item mb-2">
+							<a href="javascript:void(0);" class="nav-link d-flex align-items-center rounded gap-3">
+								<div class="wd-7 ht-7 rounded-circle bg-gradient bg-primary"></div>
+								<span>Updates</span>
+							</a>
+						</li>
+						<li class="nav-item mb-2">
+							<a href="javascript:void(0);" class="nav-link d-flex align-items-center rounded gap-3">
+								<div class="wd-7 ht-7 rounded-circle bg-gradient bg-success"></div>
+								<span>Promotions</span>
+							</a>
+						</li>
+						<li class="nav-item mb-2">
+							<a href="javascript:void(0);" class="nav-link d-flex align-items-center rounded gap-3">
+								<div class="wd-7 ht-7 rounded-circle bg-gradient bg-info"></div>
+								<span>Payments</span>
+							</a>
+						</li>
+						<li class="nav-item mb-2">
+							<a href="javascript:void(0);" class="nav-link d-flex align-items-center rounded gap-3">
+								<div class="wd-7 ht-7 rounded-circle bg-gradient bg-teal"></div>
+								<span>Friends</span>
+							</a>
+						</li>
+						<li class="nav-item mb-2">
+							<a href="javascript:void(0);" class="nav-link d-flex align-items-center rounded gap-3">
+								<div class="wd-7 ht-7 rounded-circle bg-gradient bg-danger"></div>
+								<span>Important</span>
+							</a>
+						</li>
+						<li class="nav-item mb-2">
+							<a href="javascript:void(0);" class="nav-link d-flex align-items-center rounded gap-3">
+								<div class="wd-7 ht-7 rounded-circle bg-gradient bg-warning"></div>
+								<span>Personal</span>
+							</a>
+						</li>
+						<li class="nav-item mb-0">
+							<a href="javascript:void(0);" class="nav-link d-flex align-items-center rounded gap-3">
+								<div class="wd-7 ht-7 rounded-circle bg-gradient bg-pink"></div>
+								<span>Social</span>
+							</a>
+						</li>
+					</ul>
+					<!--! End:: lavel-list !-->
+				</div>
+				<!--! End:: aside-main-body !-->
+				<!--! Start:: aside-main-footer !-->
+				<div class="cb-asidebar-footer d-flex flex-column justify-content-center px-4 border-top">
+					<div class="hstack justify-content-between mb-2">
+						<div class="fw-semibold text-dark">Storage</div>
+						<div class="fs-11 fw-normal text-muted text-uppercase">8.24 GB (55%) of 15 GB</div>
+					</div>
+					<div class="progress ht-5">
+						<div class="progress-bar bg-success" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+					</div>
+				</div>
+				<!--! End:: aside-main-footer !-->
+			</aside>
+			<!--! ================================================================ !-->
+			<!--! End:: Asidebar  !-->
+			<!--! ================================================================ !-->
+			<!--! ================================================================ !-->
+			<!--! Start:: Content !-->
+			<!--! ================================================================ !-->
+			<main class="cb-content">
+				<!--! ================================================================ !-->
+				<!--! Start:: Header !-->
+				<!--! ================================================================ !-->
+				@@include('./partials/header.html')
+				<!--! ================================================================ !-->
+				<!--! End:: Header !-->
+				<!--! ================================================================ !-->
+				<!--! Start:: main-content-header !-->
+				<div class="cb-content-header d-flex align-items-center px-4 sticky-top bg-body border-bottom">
+					<!--! Start:: page-header-left !-->
+					<div class="page-header-left hstack gap-4">
+						<!--! Start:: asidebar-toggler !-->
+						<a href="javascript:void(0);" class="app-sidebar-open-trigger d-none">
+							<i data-feather="align-right"></i>
+						</a>
+						<!--! End:: asidebar-toggler !-->
+						<!--! Start:: email-action !-->
+						<div class="cb-email-action hstack gap-1">
+							<!--! Start:: checkAll !-->
+							<div class="form-check me-2">
+								<input class="form-check-input cursor-pointer" type="checkbox" id="checkAll" data-checked-action="show-options">
+								<label class="form-check-label" for="checkAll"></label>
+							</div>
+							<!--! Start:: checkAll !-->
+							<!--! Start:: Refresh !-->
+							<a href="javascript:void(0)" class="d-none d-sm-flex">
+								<div class="btn btn-icon btn-icon-md btn-light" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Refresh" data-toast-trigger="toast-success">
+									<i class="fi fi-rr-refresh"></i>
+								</div>
+							</a>
+							<!--! End:: Refresh !-->
+							<!--! Start:: Nofify !-->
+							<a href="javascript:void(0)" class="d-none d-sm-flex">
+								<div class="btn btn-icon btn-icon-md btn-light" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Nofify" data-toast-trigger="toast-success">
+									<i class="fi fi-rr-bell"></i>
+								</div>
+							</a>
+							<!--! End:: Nofify !-->
+							<!--! Start:: Snooze !-->
+							<a href="javascript:void(0)" class="d-none d-sm-flex">
+								<div class="btn btn-icon btn-icon-md btn-light" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Snooze" data-toast-trigger="toast-success">
+									<i class="fi fi-rr-time-half-past"></i>
+								</div>
+							</a>
+							<!--! End:: Snooze !-->
+							<!--! Start:: email-action-list !-->
+							<div class="cb-email-action-list hstack gap-1">
+								<!--! Start:: dropdown-menu !-->
+								<div class="dropdown">
+									<a href="javascript:void(0)" class="btn btn-icon btn-icon-md btn-light" data-bs-toggle="dropdown" data-bs-offset="0,24" data-bs-auto-close="outside">
+										<i class="fi fi-rr-bookmark"></i>
+									</a>
+									<ul class="dropdown-menu">
+										<li class="dropdown-item">
+											<div class="form-check">
+												<input class="form-check-input cursor-pointer" type="checkbox" id="checkUpdates" checked>
+												<label class="form-check-label ms-2" for="checkUpdates">Updates</label>
+											</div>
+										</li>
+										<li class="dropdown-item">
+											<div class="form-check">
+												<input class="form-check-input cursor-pointer" type="checkbox" id="checkSocials">
+												<label class="form-check-label ms-2" for="checkSocials">Socials</label>
+											</div>
+										</li>
+										<li class="dropdown-item">
+											<div class="form-check">
+												<input class="form-check-input cursor-pointer" type="checkbox" id="checkPrimary" checked>
+												<label class="form-check-label ms-2" for="checkPrimary">Primary</label>
+											</div>
+										</li>
+										<li class="dropdown-item">
+											<div class="form-check">
+												<input class="form-check-input cursor-pointer" type="checkbox" id="checkForums">
+												<label class="form-check-label ms-2" for="checkForums">Forums</label>
+											</div>
+										</li>
+										<li class="dropdown-item">
+											<div class="form-check">
+												<input class="form-check-input cursor-pointer" type="checkbox" id="checkPromotions">
+												<label class="form-check-label ms-2" for="checkPromotions">Promotions</label>
+											</div>
+										</li>
+										<li><hr class="dropdown-divider"></li>
+										<li>
+											<a href="javascript:void(0);" class="dropdown-item">
+												<i class="fi fi-rr-plus"></i>
+												<span class="ms-3">Create labels</span>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);" class="dropdown-item">
+												<i class="fi fi-rr-settings"></i>
+												<span class="ms-3">Manages labels</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<!--! End:: dropdown-menu !-->
+								<!--! Start:: dropdown-menu !-->
+								<div class="dropdown">
+									<a href="javascript:void(0)" class="btn btn-icon btn-icon-md btn-light" data-bs-toggle="dropdown" data-bs-offset="0,24" data-bs-auto-close="outside">
+										<i class="fi fi-rr-tags"></i>
+									</a>
+									<ul class="dropdown-menu">
+										<li class="dropdown-item">
+											<div class="form-check">
+												<input class="form-check-input cursor-pointer" type="checkbox" id="checkOffice" checked>
+												<label class="form-check-label ms-2" for="checkOffice">Office</label>
+											</div>
+										</li>
+										<li class="dropdown-item">
+											<div class="form-check">
+												<input class="form-check-input cursor-pointer" type="checkbox" id="checkFamily">
+												<label class="form-check-label ms-2" for="checkFamily">Family</label>
+											</div>
+										</li>
+										<li class="dropdown-item">
+											<div class="form-check">
+												<input class="form-check-input cursor-pointer" type="checkbox" id="checkFriend">
+												<label class="form-check-label ms-2" for="checkFriend">Friend</label>
+											</div>
+										</li>
+										<li class="dropdown-item">
+											<div class="form-check">
+												<input class="form-check-input cursor-pointer" type="checkbox" id="checkMarketplace" checked>
+												<label class="form-check-label ms-2" for="checkMarketplace">Marketplace</label>
+											</div>
+										</li>
+										<li class="dropdown-item">
+											<div class="form-check">
+												<input class="form-check-input cursor-pointer" type="checkbox" id="checkDevelopment">
+												<label class="form-check-label ms-2" for="checkDevelopment">Development</label>
+											</div>
+										</li>
+										<li><hr class="dropdown-divider"></li>
+										<li>
+											<a href="javascript:void(0);" class="dropdown-item">
+												<i class="fi fi-rr-plus"></i>
+												<span class="ms-3">Create tags</span>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);" class="dropdown-item">
+												<i class="fi fi-rr-settings"></i>
+												<span class="ms-3">Manages tags</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<!--! End:: dropdown-menu !-->
+								<!--! Start:: dropdown-menu !-->
+								<div class="dropdown">
+									<a href="javascript:void(0)" class="btn btn-icon btn-icon-md btn-light" data-bs-toggle="dropdown" data-bs-offset="0,24">
+										<i class="fi fi-br-menu-dots-vertical"></i>
+									</a>
+									<ul class="dropdown-menu">
+										<li>
+											<a class="dropdown-item" href="javascript:void(0)">
+												<i class="fi fi-rr-eye"></i>
+												<span class="ms-3">Read</span>
+											</a>
+										</li>
+										<li>
+											<a class="dropdown-item" href="javascript:void(0)">
+												<i class="fi fi-rr-ban"></i>
+												<span class="ms-3">Unread</span>
+											</a>
+										</li>
+										<li>
+											<a class="dropdown-item" href="javascript:void(0)">
+												<i class="fi fi-rr-star"></i>
+												<span class="ms-3">Starred</span>
+											</a>
+										</li>
+										<li>
+											<a class="dropdown-item" href="javascript:void(0)">
+												<i class="fi fi-rr-shield-plus"></i>
+												<span class="ms-3">Unstarred</span>
+											</a>
+										</li>
+										<li class="dropdown-divider"></li>
+										<li>
+											<a class="dropdown-item" href="javascript:void(0)">
+												<i class="fi fi-rr-time-half-past"></i>
+												<span class="ms-3">Snooze</span>
+											</a>
+										</li>
+										<li>
+											<a class="dropdown-item" href="javascript:void(0)">
+												<i class="fi fi-rr-check-circle"></i>
+												<span class="ms-3">Add Tasks</span>
+											</a>
+										</li>
+										<li class="dropdown-divider"></li>
+										<li>
+											<a class="dropdown-item" href="javascript:void(0)">
+												<i class="fi fi-rr-box"></i>
+												<span class="ms-3">Archive</span>
+											</a>
+										</li>
+										<li>
+											<a class="dropdown-item" href="javascript:void(0)">
+												<i class="fi fi-rr-triangle-warning"></i>
+												<span class="ms-3">Report Spam</span>
+											</a>
+										</li>
+										<li class="dropdown-divider"></li>
+										<li>
+											<a class="dropdown-item text-danger" href="javascript:void(0)" data-toast-trigger="toast-delete">
+												<i class="fi fi-rr-trash"></i>
+												<span class="ms-3">Delete</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<!--! End:: dropdown-menu !-->
+							</div>
+							<!--! End:: email-action-list !-->
+						</div>
+						<!--! End:: email-action !-->
+					</div>
+					<!--! End:: page-header-left !-->
+					<!--! Start:: page-header-right !-->
+					<div class="page-header-right hstack gap-2 ms-auto">
+						<!--! Start:: email-sarch !-->
+						<a href="javascript:void(0);" class="btn btn-sm btn-icon btn-light">
+							<i class="fi fi-rr-search"></i>
+						</a>
+						<!--! Start:: email-sarch !-->
+						<!--! Start:: dropdown-menu !-->
+						<div class="dropdown">
+							<a href="javascript:void(0);" class="btn btn-icon btn-light" data-bs-toggle="dropdown" data-bs-auto-close="outside" data-bs-offset="25,19">
+								<i class="fi fi-rr-sliders-v"></i>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-end wd-300">
+								<li>
+									<a href="javascript:void(0);" class="dropdown-item gap-4">
+										<i class="fi fi-sr-sort-amount-up-alt"></i>
+										<span>
+											<span class="d-block">Ascending</span>
+											<span class="fs-12 fw-normal text-muted d-block">Emails ascending order</span>
+										</span>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="dropdown-item gap-4">
+										<i class="fi fi-sr-sort-amount-down-alt"></i>
+										<span>
+											<span class="d-block">Descending</span>
+											<span class="fs-12 fw-normal text-muted d-block">Emails descending order</span>
+										</span>
+									</a>
+								</li>
+								<li><hr class="dropdown-divider"></li>
+								<li>
+									<a href="javascript:void(0);" class="dropdown-item gap-4">
+										<i class="fi fi-rr-comment-alt"></i>
+										<span>
+											<span class="d-block">All Emails</span>
+											<span class="fs-12 fw-normal text-muted d-block">All emails unified</span>
+										</span>
+										<span class="badge bg-success-subtle text-success rounded-pill ms-auto">5+</span>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="dropdown-item gap-4">
+										<i class="fi fi-rr-star"></i>
+										<span>
+											<span class="d-block">Starred</span>
+											<span class="fs-12 fw-normal text-muted d-block">Important emails</span>
+										</span>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="dropdown-item gap-4">
+										<i class="fi fi-rr-time-half-past"></i>
+										<span>
+											<span class="d-block">Snoozed</span>
+											<span class="fs-12 fw-normal text-muted d-block">Will appear later</span>
+										</span>
+										<span class="badge bg-warning-subtle text-warning rounded-pill ms-auto">4+</span>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="dropdown-item gap-4">
+										<i class="fi fi-rr-edit"></i>
+										<span>
+											<span class="d-block">Drafts</span>
+											<span class="fs-12 fw-normal text-muted d-block">Re-edite your messages</span>
+										</span>
+									</a>
+								</li>
+								<li><hr class="dropdown-divider"></li>
+								<li>
+									<a href="javascript:void(0);" class="dropdown-item gap-4 text-danger" data-toast-trigger="toast-delete">
+										<i class="fi fi-rr-trash"></i>
+										<span>
+											<span class="d-block">Delete</span>
+											<span class="fs-12 fw-normal d-block">Removed messages</span>
+										</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<!--! End:: dropdown-menu !-->
+						<!--! Start:: dropdown-menu !-->
+						<div class="dropdown">
+							<a href="javascript:void(0);" class="btn btn-icon btn-light" data-bs-toggle="dropdown" data-bs-offset="0,19" aria-expanded="false">
+								<i class="fi fi-br-menu-dots-vertical"></i>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-end">
+								<li>
+									<a href="javascript:void(0);" class="dropdown-item">
+										<i class="fi fi-rr-plus"></i>
+										<span class="ms-3">Add to Group</span>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="dropdown-item">
+										<i class="fi fi-rs-user-add"></i>
+										<span class="ms-3">Add to Contact</span>
+									</a>
+								</li>
+								<li><hr class="dropdown-divider"></li>
+								<li>
+									<a href="javascript:void(0);" class="dropdown-item">
+										<i class="fi fi-rr-eye"></i>
+										<span class="ms-3">Make as Unread</span>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="dropdown-item">
+										<i class="fi fi-rr-sliders-v"></i>
+										<span class="ms-3">Filter Messages</span>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="dropdown-item">
+										<i class="fi fi-rr-box"></i>
+										<span class="ms-3">Make as Archive</span>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="dropdown-item">
+										<i class="fi fi-rr-download"></i>
+										<span class="ms-3">Download Messages</span>
+									</a>
+								</li>
+								<li><hr class="dropdown-divider"></li>
+								<li>
+									<a href="javascript:void(0);" class="dropdown-item">
+										<i class="fi fi-rr-triangle-warning"></i>
+										<span class="ms-3">Report Spam</span>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="dropdown-item">
+										<i class="fi fi-rr-hexagon-exclamation"></i>
+										<span class="ms-3">Report phishing</span>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="dropdown-item">
+										<i class="fi fi-rr-bell-slash"></i>
+										<span class="ms-3">Mute Conversion</span>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="dropdown-item">
+										<i class="fi fi-rr-ban"></i>
+										<span class="ms-3">Block Conversion</span>
+									</a>
+								</li>
+								<li><hr class="dropdown-divider"></li>
+								<li>
+									<a href="javascript:void(0);" class="dropdown-item text-danger" data-toast-trigger="toast-delete">
+										<i class="fi fi-rr-trash"></i>
+										<span class="ms-3">Delete Conversion</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<!--! End:: dropdown-menu !-->
+					</div>
+					<!--! End:: page-header-right !-->
+				</div>
+				<!--! End:: main-content-header !-->
+				<!--! End:: main-content-body !-->
+				<div class="cb-content-body p-0">
+					<!--! Start:: list-group !-->
+					<ul class="list-group list-group-flush">
+						<!--! Start:: email-item !-->
+						<li class="cb-email-item list-group-item border-bottom-dashed hstack gap-4">
+							<div class="cb-email-action flex-shrink-0">
+								<input class="form-check-input me-3" type="checkbox" data-checked-action="show-options">
+								<a href="javascript:void(0);" data-toast-trigger="toast-success"><i data-feather="star" class="text-muted"></i></a>
+							</div>
+							<div class="cb-email-sender d-none d-md-flex align-items-center gap-3 flex-shrink-0">
+								<div class="avatar avatar-lg">
+									<img src="./../assets/images/avatar/1.png" alt="" class="img-fluid">
+								</div>
+								<div class="cb-email-sender-meta lh-1">
+									<h6 class="fw-bold mb-1">Alexandra Della</h6>
+									<p class="fs-12 text-muted mb-0">alex@email.com</p>
+								</div>
+							</div>
+							<div class="cb-email-content">
+								<a href="./email-details.html" class="text-truncate-1 unread">Ruhul Hasan, log into Facebook with one click</a>
+							</div>
+							<div class="cb-email-info position-relative ms-auto wd-150 text-end">
+								<p class="cb-email-date fs-11 fw-medium text-muted text-uppercase text-nowrap mb-0">26 Mar 2023<span class="d-none d-md-inline-block">, 12:26 PM</span></p>
+								<div class="cb-email-info-action hstack gap-1 position-absolute top-0 end-0 bottom-0">
+									<a href="./email-details.html" class="btn btn-icon btn-icon-md btn-light">
+										<i class="fi fi-rr-eye"></i>
+									</a>
+									<a href="javascript:void(0);" class="btn btn-icon btn-icon-md btn-light" data-toast-trigger="toast-success">
+										<i class="fi fi-rr-box"></i>
+									</a>
+									<a href="javascript:void(0);" class="btn btn-icon btn-icon-md btn-light" data-toast-trigger="toast-success">
+										<i class="fi fi-rr-time-half-past"></i>
+									</a>
+									<a href="javascript:void(0);" class="btn btn-icon btn-icon-md btn-light" data-toast-trigger="toast-delete">
+										<i class="fi fi-rr-trash"></i>
+									</a>
+									<a href="javascript:void(0);" class="btn btn-icon btn-icon-md btn-light">
+										<i class="fi fi-br-menu-dots-vertical"></i>
+									</a>
+								</div>
+							</div>
+						</li>
+						<!--! End:: email-item !-->
+					</ul>
+					<!--! End:: list-group !-->
+				</div>
+				<!--! Start:: main-content-body !-->
+				<!--! End:: main-content-footer !-->
+				<div class="cb-content-footer px-4 d-flex align-items-center justify-content-between border-top sticky-bottom bg-body">
+					<!--! Start:: dropdown-menu !-->
+					<div class="dropdown">
+						<a href="javascript:void(0);" class="btn btn-outline-light dropdown-toggle" data-bs-toggle="dropdown">Showing 1 - 15 of 536 </a>
+						<ul class="dropdown-menu">
+							<li>
+								<a href="javascript:void(0);" class="dropdown-item">
+									<i class="fi fi-rr-list"></i>
+									<span class="ms-3">5 Items</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" class="dropdown-item">
+									<i class="fi fi-rr-list"></i>
+									<span class="ms-3">10 Items</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" class="dropdown-item active">
+									<i class="fi fi-rr-list"></i>
+									<span class="ms-3">15 Items</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" class="dropdown-item">
+									<i class="fi fi-rr-list"></i>
+									<span class="ms-3">20 Items</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" class="dropdown-item">
+									<i class="fi fi-rr-list"></i>
+									<span class="ms-3">50 Items</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" class="dropdown-item">
+									<i class="fi fi-rr-list"></i>
+									<span class="ms-3">100 Items</span>
+								</a>
+							</li>
+							<li><hr class="dropdown-divider"></li>
+							<li>
+								<a href="javascript:void(0);" class="dropdown-item">
+									<i class="fi fi-rr-sliders-v"></i>
+									<span class="ms-3">Maximum Items</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<!--! End:: dropdown-menu !-->
+					<!--! Start:: pagination !-->
+					<div class="hstack gap-2">
+						<a href="javascript:void(0);" class="btn btn-icon btn-light" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Previous">
+							<i class="fi fi-br-angle-left"></i>
+						</a>
+						<a href="javascript:void(0);" class="btn btn-icon btn-light" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Next">
+							<i class="fi fi-br-angle-right"></i>
+						</a>
+					</div>
+					<!--! End:: pagination !-->
+				</div>
+				<!--! Start:: main-content-footer !-->
+			</main>
+			<!--! ================================================================ !-->
+			<!--! End:: Content !-->
+			<!--! ================================================================ !-->
+		</div>
+		<!--! ================================================================ !-->
+		<!--! End:: Main Wrapper !-->
+		<!--! ================================================================ !-->
+		<!--! ================================================================ !-->
+		<!--! Start:: Invice People Modal !-->
+		<!--! ================================================================ !-->
+		@@include('./partials/invite.html')
+		<!--! ================================================================ !-->
+		<!--! End:: Invice People Modal !-->
+		<!--! ================================================================ !-->
+		<!--! ================================================================ !-->
+		<!--! Start:: Toast Noticifactions !-->
+		<!--! ================================================================ !-->
+		@@include('./partials/toast.html')
+		<!--! ================================================================ !-->
+		<!--! End:: Toast Noticifactions !-->
+		<!--! ================================================================ !-->
+		<!--! ================================================================ !-->
+		<!--! Footer Script !-->
+		<!--! ================================================================ !-->
+		@@include('./partials/script.html')
+
+		<!--! Start:: Email Init -!-->
+		<script src="./../assets/js/apps/email/email-list.min.js"></script>
+		<!--! End:: Email Init -!-->
+	</body>
+</html>

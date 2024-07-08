@@ -1,0 +1,38 @@
+/*
+<--!----------------------------------------------------------------!-->
+<--! EMOJI-PICKER SCSS !-->
+<--!----------------------------------------------------------------!-->
+*/
+.picker {
+	border-top-left-radius: $border-radius-xl;
+	border-top-right-radius: $border-radius-xl;
+}
+
+.emoji-picker {
+	&.shown {
+		right: 0;
+		bottom: 3.75rem;
+		position: absolute;
+	}
+
+	&:not(.shown) {
+		display: none;
+	}
+
+	emoji-picker {
+		overflow: hidden;
+		box-shadow: var(--#{$prefix}box-shadow);
+		border-top-left-radius: $border-radius-xl;
+		border-top-right-radius: $border-radius-xl;
+		--emoji-size: 1rem;
+		--outline-size: 0.0625rem;
+		--outline-color: #{$primary};
+		--input-font-size: #{$font-size-base};
+		--input-padding: #{$input-padding-y} #{$input-padding-x};
+		--background: var(--#{$prefix}tertiary-bg);
+		--border-color: var(--#{$prefix}border-color);
+		--input-border-color: var(--#{$prefix}border-color);
+		--button-active-background: var(--#{$prefix}gray-200);
+		--button-hover-background: var(--#{$prefix}gray-200);
+	}
+}

@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="zxx">
+	<head>
+		@@include('./partials/meta.html', {"title": "Email Compose"} )
+		<!--! Start:: Page Vendors -!-->
+		<link rel="stylesheet" href="./../assets/vendors/quill/quill.snow.css">
+		<!--! End:: Page Vendors -!-->
+
+		@@include('./partials/styling.html')
+	</head>
+
+	<body>
+		<!--! ================================================================ !-->
+		<!--! Start:: Main Wrapper !-->
+		<!--! ================================================================ !-->
+		<div class="main-wrapper">
+			<!--! ================================================================ !-->
+			<!--! Start:: Navigation !-->
+			<!--! ================================================================ !-->
+			<nav class="cb-navigation d-flex flex-column flex-shrink-0 bg-body-tertiary position-fixed start-0 top-0 bottom-0 border-end z-1045">
+				<!-- Start:: Navigation Logo -->
+				<a href="./index.html" class="cb-navigation-brand d-flex align-items-center justify-content-center border-bottom" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Chatboot">
+					<img src="./../assets/images/logo.png" alt="Chatboot" class="img-fluid mx-auto wd-40">
+				</a>
+				<!-- End:: Navigation Logo -->
+				<!-- Start:: Navigation Body -->
+				<div class="cb-navigation-body position-relative" style="height: calc(100vh - 10rem)" data-scroll-target="cb-scrollable">
+					<ul class="nav nav-pills nav-flush flex-column mb-auto text-center py-4">
+						<li class="nav-item">
+							<a href="./index.html" class="nav-link" aria-current="page" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Chats" data-bs-offset="0,25">
+								<i class="fi fi-rr-comment-alt"></i>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="./call.html" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Calls" data-bs-offset="0,25">
+								<i class="fi fi-rr-phone-call"></i>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="./meeting.html" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Meetings" data-bs-offset="0,25">
+								<i class="fi fi-rr-camera-viewfinder"></i>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="./email.html" class="nav-link active" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Emails" data-bs-offset="0,25">
+								<i class="fi fi-rr-envelope-dot"></i>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="./contact.html" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Contacts" data-bs-offset="0,25">
+								<i class="fi fi-rr-address-book"></i>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="./pages.html" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Pages" data-bs-offset="0,25">
+								<i class="fi fi-rr-layers"></i>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="./../../docs/docs.html" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Documentations" data-bs-offset="0,25">
+								<i class="fi fi-rr-book-open-cover"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<!-- End:: Navigation Body  -->
+				<!-- Start:: Navigation Footer -->
+				<div class="cb-navigation-footer dropdown border-top d-flex align-items-center justify-content-center">
+					<a href="javascript:void(0);" data-bs-toggle="dropdown" data-bs-offset="-24, 16">
+						<div class="nav-link d-flex align-items-center justify-content-center rounded-pill" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Settings" data-bs-offset="0,25">
+							<i class="fi fi-rr-settings"></i>
+						</div>
+					</a>
+					<div class="dropdown-menu wd-350 py-3">
+						<!-- Start:: dropdown-item -->
+						<!-- End:: dropdown-item -->
+						<a href="./settings-general.html" class="dropdown-item mb-2 mx-2">
+							<div class="avatar avatar-lg rounded bg-body-secondary">
+								<i class="fi fi-rr-tags fs-3"></i>
+							</div>
+							<div class="ms-3">
+								<h6 class="fw-bold mb-1">General Settings</h6>
+								<p class="fs-12 fw-normal text-muted mb-0">Profile photo, name & more</p>
+							</div>
+							<div class="btn btn-icon btn-light ms-auto">
+								<i class="fi fi-rr-angle-small-right"></i>
+							</div>
+						</a>
+						<!-- End:: dropdown-item -->
+						<!-- Start:: dropdown-item -->
+						<a href="./settings-security.html" class="dropdown-item mb-2 mx-2">
+							<div class="avatar avatar-lg rounded bg-body-secondary">
+								<i class="fi fi-rr-shield-check fs-3"></i>
+							</div>
+							<div class="ms-3">
+								<h6 class="fw-bold mb-1">Security Settings</h6>
+								<p class="fs-12 fw-normal text-muted mb-0">Password, security & more</p>
+							</div>
+							<div class="btn btn-icon btn-light ms-auto">
+								<i class="fi fi-rr-angle-small-right"></i>
+							</div>
+						</a>
+						<!-- End:: dropdown-item -->
+						<!-- Start:: dropdown-item -->
+						<a href="./settings-billing.html" class="dropdown-item mb-2 mx-2">
+							<div class="avatar avatar-lg rounded bg-body-secondary">
+								<i class="fi fi-rr-usd-circle fs-3"></i>
+							</div>
+							<div class="ms-3">
+								<h6 class="fw-bold mb-1">Billing Settings</h6>
+								<p class="fs-12 fw-normal text-muted mb-0">Setup payment methords</p>
+							</div>
+							<div class="btn btn-icon btn-light ms-auto">
+								<i class="fi fi-rr-angle-small-right"></i>
+							</div>
+						</a>
+						<!-- End:: dropdown-item -->
+						<!-- Start:: dropdown-item -->
+						<a href="./settings-notification.html" class="dropdown-item mb-2 mx-2">
+							<div class="avatar avatar-lg rounded bg-body-secondary">
+								<i class="fi fi-rr-bell fs-3"></i>
+							</div>
+							<div class="ms-3">
+								<h6 class="fw-bold mb-1">Notification Settings</h6>
+								<p class="fs-12 fw-normal text-muted mb-0">Set your notifications</p>
+							</div>
+							<div class="btn btn-icon btn-light ms-auto">
+								<i class="fi fi-rr-angle-small-right"></i>
+							</div>
+						</a>
+						<!-- End:: dropdown-item -->
+						<!-- Start:: dropdown-item -->
+						<a href="./settings-integration.html" class="dropdown-item mb-0 mx-2">
+							<div class="avatar avatar-lg rounded bg-body-secondary">
+								<i class="fi fi-rr-square-plus fs-3"></i>
+							</div>
+							<div class="ms-3">
+								<h6 class="fw-bold mb-1">Integration Settings</h6>
+								<p class="fs-12 fw-normal text-muted mb-0">Setup apps integrations</p>
+							</div>
+							<div class="btn btn-icon btn-light ms-auto">
+								<i class="fi fi-rr-angle-small-right"></i>
+							</div>
+						</a>
+						<!-- End:: dropdown-item -->
+					</div>
+				</div>
+				<!-- End:: Navigation Footer -->
+			</nav>
+			<!--! ================================================================ !-->
+			<!--! End:: Navigation !-->
+			<!--! ================================================================ !-->
+			<!--! ================================================================ !-->
+			<!--! Start:: Asidebar !-->
+			<!--! ================================================================ !-->
+			<aside class="cb-asidebar cb-asidebar-without-sub-header position-fixed start-0 top-0 bottom-0 vh-100 border-end bg-body z-1040">
+				<!--! Start:: aside-main-header !-->
+				<div class="cb-asidebar-header d-flex align-items-center justify-content-between px-4 border-bottom">
+					<h2 class="fs-20 fw-bold mb-0">Inbox <span class="badge bg-danger-subtle text-danger ms-2">5+</span></h2>
+					<div class="hstack gap-2">
+						<!--! Start:: filter-dropdown !-->
+						<div class="dropdown">
+							<a href="javascript:void(0);" class="btn btn-icon btn-light" data-bs-toggle="dropdown" data-bs-auto-close="outside" data-bs-offset="25,19">
+								<i class="fi fi-rr-sliders-v"></i>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-end wd-300">
+								<li>
+									<a href="javascript:void(0);" class="dropdown-item gap-4">
+										<i class="fi fi-sr-sort-amount-up-alt"></i>
+										<span>
+											<span class="d-block">Ascending</span>
+											<span class="fs-12 fw-normal text-muted d-block">Emails ascending order</span>
+										</span>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="dropdown-item gap-4">
+										<i class="fi fi-sr-sort-amount-down-alt"></i>
+										<span>
+											<span class="d-block">Descending</span>
+											<span class="fs-12 fw-normal text-muted d-block">Emails descending order</span>
+										</span>
+									</a>
+								</li>
+								<li><hr class="dropdown-divider"></li>
+								<li>
+									<a href="javascript:void(0);" class="dropdown-item gap-4">
+										<i class="fi fi-rr-comment-alt"></i>
+										<span>
+											<span class="d-block">All Emails</span>
+											<span class="fs-12 fw-normal text-muted d-block">All emails unified</span>
+										</span>
+										<span class="badge bg-success-subtle text-success rounded-pill ms-auto">5+</span>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="dropdown-item gap-4">
+										<i class="fi fi-rr-star"></i>
+										<span>
+											<span class="d-block">Starred</span>
+											<span class="fs-12 fw-normal text-muted d-block">Important emails</span>
+										</span>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="dropdown-item gap-4">
+										<i class="fi fi-rr-time-half-past"></i>
+										<span>
+											<span class="d-block">Snoozed</span>
+											<span class="fs-12 fw-normal text-muted d-block">Will appear later</span>
+										</span>
+										<span class="badge bg-warning-subtle text-warning rounded-pill ms-auto">4+</span>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="dropdown-item gap-4">
+										<i class="fi fi-rr-edit"></i>
+										<span>
+											<span class="d-block">Drafts</span>
+											<span class="fs-12 fw-normal text-muted d-block">Re-edite your messages</span>
+										</span>
+									</a>
+								</li>
+								<li><hr class="dropdown-divider"></li>
+								<li>
+									<a href="javascript:void(0);" class="dropdown-item gap-4 text-danger" data-toast-trigger="toast-delete">
+										<i class="fi fi-rr-trash"></i>
+										<span>
+											<span class="d-block">Delete</span>
+											<span class="fs-12 fw-normal d-block">Removed messages</span>
+										</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<!--! End:: filter-dropdown !-->
+						<!--! Start:: asidebar-toggler !-->
+						<button type="button" class="btn btn-icon btn-light d-xl-none" data-toggle-target="cb-asidebar-toggler">
+							<i class="fi fi-rr-cross"></i>
+						</button>
+						<!--! End:: asidebar-toggler !-->
+					</div>
+				</div>
+				<!--! End:: aside-main-header !-->
+				<!--! Start:: aside-main-body !-->
+				<div class="cb-asidebar-body position-relative" data-scroll-target="cb-scrollable">
+					<ul class="cb-email-inbox-list list-group list-group-flush p-2">
+						<!--! Start:: asidebar-item !-->
+						<li class="list-group-item list-group-item-action border-bottom-0 d-flex align-items-start gap-4 px-3 rounded-2">
+							<div class="avatar avatar-lg flex-shrink-0">
+								<img src="./../assets/images/avatar/1.png" alt="" class="img-fluid">
+								<div class="avatar-indicator inactive"></div>
+							</div>
+							<div class="w-100 ms-auto">
+								<div class="d-flex align-items-start justify-content-between mb-2">
+									<div class="hstack gap-2 text-muted">
+										<span class="fs-11 fw-medium">Alexandra Della</span>
+										<span class="wd-4 ht-4 rounded-circle bg-dark bg-opacity-20"></span>
+										<span class="fs-10 fw-medium">02:20 PM</span>
+									</div>
+									<div class="cb-asidebar-email-action hstack gap-1">
+										<a href="javascript:void(0);" class="btn btn-icon btn-icon-sm btn-light" data-toast-trigger="toast-download">
+											<i class="fi fi-rr-clip"></i>
+										</a>
+										<a href="javascript:void(0);" class="btn btn-icon btn-icon-sm btn-light" data-toast-trigger="toast-success">
+											<i class="fi fi-rr-star"></i>
+										</a>
+										<a href="javascript:void(0);" class="btn btn-icon btn-icon-sm btn-light">
+											<i class="fi fi-bs-menu-dots"></i>
+										</a>
+									</div>
+								</div>
+								<a href="./email-details.html">
+									<h6 class="fw-semibold text-truncate wd-250">Hyper - Admin & Dashboard Template (Dark/Light)</h6>
+									<p class="small fw-normal text-muted text-truncate-2 mb-0 w-100">Hyper is a feature-rich dashboard and admin template that offers a vast collection of UI elements, components, widgets, and pages to help you build web applications quickly and efficiently.</p>
+								</a>
+							</div>
+						</li>
+						<!--! End:: asidebar-item !-->
+					</ul>
+				</div>
+				<!--! End:: aside-main-body !-->
+				<!--! Start:: aside-main-footer !-->
+				<div class="cb-asidebar-footer d-flex align-items-center justify-content-between px-4 border-top">
+					<!--! Start:: dropdown-menu !-->
+					<div class="dropdown">
+						<a href="javascript:void(0);" class="btn btn-icon btn-light" data-bs-toggle="dropdown" data-bs-offset="0,19" aria-expanded="false">
+							<i class="fi fi-br-menu-dots-vertical"></i>
+						</a>
+						<ul class="dropdown-menu dropdown-menu-end">
+							<li>
+								<a href="javascript:void(0);" class="dropdown-item">
+									<i class="fi fi-rr-plus"></i>
+									<span class="ms-3">Add to Group</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" class="dropdown-item">
+									<i class="fi fi-rs-user-add"></i>
+									<span class="ms-3">Add to Contact</span>
+								</a>
+							</li>
+							<li><hr class="dropdown-divider"></li>
+							<li>
+								<a href="javascript:void(0);" class="dropdown-item">
+									<i class="fi fi-rr-eye"></i>
+									<span class="ms-3">Make as Unread</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" class="dropdown-item">
+									<i class="fi fi-rr-sliders-v"></i>
+									<span class="ms-3">Filter Messages</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" class="dropdown-item">
+									<i class="fi fi-rr-box"></i>
+									<span class="ms-3">Make as Archive</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" class="dropdown-item">
+									<i class="fi fi-rr-download"></i>
+									<span class="ms-3">Download Messages</span>
+								</a>
+							</li>
+							<li><hr class="dropdown-divider"></li>
+							<li>
+								<a href="javascript:void(0);" class="dropdown-item">
+									<i class="fi fi-rr-triangle-warning"></i>
+									<span class="ms-3">Report Spam</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" class="dropdown-item">
+									<i class="fi fi-rr-hexagon-exclamation"></i>
+									<span class="ms-3">Report phishing</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" class="dropdown-item">
+									<i class="fi fi-rr-bell-slash"></i>
+									<span class="ms-3">Mute Conversion</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" class="dropdown-item">
+									<i class="fi fi-rr-ban"></i>
+									<span class="ms-3">Block Conversion</span>
+								</a>
+							</li>
+							<li><hr class="dropdown-divider"></li>
+							<li>
+								<a href="javascript:void(0);" class="dropdown-item text-danger" data-toast-trigger="toast-delete">
+									<i class="fi fi-rr-trash"></i>
+									<span class="ms-3">Delete Conversion</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<!--! End:: dropdown-menu !-->
+					<!--! Start:: pagination !-->
+					<div class="hstack gap-2">
+						<a href="javascript:void(0);" class="btn btn-icon btn-light" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Previous">
+							<i class="fi fi-br-angle-left"></i>
+						</a>
+						<a href="javascript:void(0);" class="btn btn-icon btn-light" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Next">
+							<i class="fi fi-br-angle-right"></i>
+						</a>
+					</div>
+					<!--! End:: pagination !-->
+				</div>
+				<!--! End:: aside-main-footer !-->
+			</aside>
+			<!--! ================================================================ !-->
+			<!--! End:: Asidebar  !-->
+			<!--! ================================================================ !-->
+			<!--! ================================================================ !-->
+			<!--! Start:: Content !-->
+			<!--! ================================================================ !-->
+			<main class="cb-content">
+				<!--! ================================================================ !-->
+				<!--! Start:: Header !-->
+				<!--! ================================================================ !-->
+				@@include('./partials/header.html')
+				<!--! ================================================================ !-->
+				<!--! End:: Header !-->
+				<!--! ================================================================ !-->
+				<!--! Start:: main-content-header !-->
+				<div class="cb-content-header d-flex align-items-center px-4 sticky-top bg-body border-bottom">
+					<!--! Start:: page-header-left !-->
+					<div class="page-header-left hstack gap-4">
+						<a href="javascript:void(0);" class="app-sidebar-open-trigger d-none">
+							<i data-feather="align-right"></i>
+						</a>
+						<div class="hstack gap-4">
+							<a href="./email.html" class="btn btn-icon btn-light flex-shrink-0">
+								<i class="fi fi-rr-arrow-left"></i>
+							</a>
+							<div class="d-none d-sm-block">
+								<h5 class="mb-1">New Message</h5>
+								<small class="text-muted">Compose new message</small>
+							</div>
+						</div>
+					</div>
+					<!--! End:: page-header-left !-->
+					<!--! Start:: page-header-right !-->
+					<div class="page-header-right hstack gap-2 ms-auto">
+						<!--! Start:: email-cc !-->
+						<a href="javascript:void(0);" class="px-3 py-1 fs-12 fw-semibold rounded-pill border border-dashed bg-body-secondary" id="cb-cc-toggle">CC</a>
+						<!--! End:: email-cc !-->
+						<!--! Start:: email-bcc !-->
+						<a href="javascript:void(0);" class="px-3 py-1 fs-12 fw-semibold rounded-pill border border-dashed bg-body-secondary" id="cb-bcc-toggle">BCC</a>
+						<!--! End:: email-bcc  !-->
+						<!--! Start:: dropdown-menu !-->
+						<div class="dropdown">
+							<a href="javascript:void(0);" class="btn btn-sm btn-icon btn-light" data-bs-toggle="dropdown" data-bs-offset="0,19">
+								<i class="fi fi-br-menu-dots-vertical"></i>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-end">
+								<li>
+									<a href="javascript:void(0);" class="dropdown-item">
+										<i class="fi fi-rr-thumbtack"></i>
+										<span class="ms-3">Pin</span>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="dropdown-item">
+										<i class="fi fi-rr-bell-slash"></i>
+										<span class="ms-3">Mute</span>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="dropdown-item">
+										<i class="fi fi-rs-user-pen"></i>
+										<span class="ms-3">Edit</span>
+									</a>
+								</li>
+								<li><hr class="dropdown-divider"></li>
+								<li>
+									<a href="javascript:void(0);" class="dropdown-item">
+										<i class="fi fi-rr-print"></i>
+										<span class="ms-3">Print</span>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="dropdown-item">
+										<i class="fi fi-rr-box"></i>
+										<span class="ms-3">Archive</span>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="dropdown-item">
+										<i class="fi fi-rr-star"></i>
+										<span class="ms-3">Favorite</span>
+									</a>
+								</li>
+								<li><hr class="dropdown-divider"></li>
+								<li>
+									<a href="javascript:void(0);" class="dropdown-item text-danger" data-toast-trigger="toast-delete">
+										<i class="fi fi-rr-trash"></i>
+										<span class="ms-3">Delete</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<!--! End:: dropdown-menu !-->
+					</div>
+					<!--! End:: page-header-right !-->
+				</div>
+				<!--! End:: main-content-header !-->
+				<!--! End:: main-content-body !-->
+				<div class="cb-content-body">
+					<!--! Start:: email-editor !-->
+					<div class="cb-email-editor" id="cb-email-editor">
+						<form action="#">
+							<div class="mb-4">
+								<input type="email" class="form-control" placeholder="TO">
+							</div>
+							<div class="mb-4">
+								<input type="email" class="form-control" placeholder="CC" data-cb-target="cb-email-cc" style="display: none">
+							</div>
+							<div class="mb-4">
+								<input type="email" class="form-control" placeholder="BCC" data-cb-target="cb-email-bcc" style="display: none">
+							</div>
+							<div class="mb-4">
+								<input type="email" class="form-control" placeholder="Subject">
+							</div>
+						</form>
+						<!--! Start:: email-editor !-->
+						<div id="mailEditor" class="ht-500"></div>
+						<!--! End:: email-editor !-->
+					</div>
+					<!--! End:: email-editor !-->
+				</div>
+				<!--! Start:: main-content-body !-->
+				<!--! End:: main-content-footer !-->
+				<div class="cb-content-footer px-4 d-flex align-items-center justify-content-between border-top sticky-bottom bg-body">
+					<!--! Start:: email-action-btn !-->
+					<div class="w-100 d-flex align-items-center justify-content-between">
+						<div class="btn-group dropdown">
+							<button type="button" class="btn btn-outline-light" data-toast-trigger="toast-success">
+								<i class="fi fi-rr-paper-plane"></i>
+								<span class="ms-2">Send</span>
+							</button>
+							<button type="button" class="btn btn-outline-light dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+								<span class="visually-hidden">Toggle Dropdown</span>
+							</button>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="javascript:void(0);" class="dropdown-item" data-toast-trigger="toast-success">
+										<i class="fi fi-rr-paper-plane"></i>
+										<span class="ms-3">Instan Send</span>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="dropdown-item" data-toast-trigger="toast-success">
+										<i class="fi fi-rr-time-half-past"></i>
+										<span class="ms-3">Schedule Send</span>
+									</a>
+								</li>
+								<li><hr class="dropdown-divider"></li>
+								<li>
+									<a href="javascript:void(0);" class="dropdown-item" data-toast-trigger="toast-success">
+										<i class="fi fi-rs-user-pen"></i>
+										<span class="ms-3">Save Draft</span>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="dropdown-item" data-toast-trigger="toast-delete">
+										<i class="fi fi-rr-trash-xmark"></i>
+										<span class="ms-3">Discard Now</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<a href="./email.html" class="btn btn-soft-danger">
+							<i class="fi fi-rr-trash-xmark"></i>
+							<span class="ms-2">Discard</span>
+						</a>
+					</div>
+					<!--! End:: email-action-btn !-->
+				</div>
+				<!--! Start:: main-content-footer !-->
+			</main>
+			<!--! ================================================================ !-->
+			<!--! End:: Content !-->
+			<!--! ================================================================ !-->
+		</div>
+		<!--! ================================================================ !-->
+		<!--! End:: Main Wrapper !-->
+		<!--! ================================================================ !-->
+		<!--! ================================================================ !-->
+		<!--! Start:: Invice People Modal !-->
+		<!--! ================================================================ !-->
+		@@include('./partials/invite.html')
+		<!--! ================================================================ !-->
+		<!--! End:: Invice People Modal !-->
+		<!--! ================================================================ !-->
+		<!--! ================================================================ !-->
+		<!--! Start:: Toast Noticifactions !-->
+		<!--! ================================================================ !-->
+		@@include('./partials/toast.html')
+		<!--! ================================================================ !-->
+		<!--! End:: Toast Noticifactions !-->
+		<!--! ================================================================ !-->
+		<!--! ================================================================ !-->
+		<!--! Footer Script !-->
+		<!--! ================================================================ !-->
+		@@include('./partials/script.html')
+
+		<!--! Start:: Page Vendors -!-->
+		<script src="./../assets/vendors/quill/quill.min.js"></script>
+		<!--! End:: Page Vendors -!-->
+
+		<!--! Start:: Email Init -!-->
+		<script src="./../assets/js/apps/email/email-compose.min.js"></script>
+		<!--! End:: Email Init -!-->
+	</body>
+</html>

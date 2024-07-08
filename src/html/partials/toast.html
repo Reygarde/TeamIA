@@ -1,0 +1,85 @@
+<div class="toast-container position-fixed top-0 start-50 p-3 translate-middle-x">
+	<!--! Start:: Toast Success !-->
+	<div class="toast align-items-center bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="2000" data-toast-instance="toast-success">
+		<div class="hstack" data-bs-theme="dark">
+			<div class="toast-body w-100 hstack gap-3 text-white">
+				<i class="fi fi-rr-check-circle"></i>
+				<span>Successful</span>
+			</div>
+			<button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+		</div>
+	</div>
+	<!--! End:: Toast Success !-->
+	<!--! Start:: Toast Delete !-->
+	<div class="toast align-items-center bg-danger border-0" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="2000" data-toast-instance="toast-delete">
+		<div class="hstack" data-bs-theme="dark">
+			<div class="toast-body w-100 hstack gap-3 text-white">
+				<i class="fi fi-rr-trash"></i>
+				<span>Deleted</span>
+			</div>
+			<button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+		</div>
+	</div>
+	<!--! End:: Toast Delete !-->
+	<!--! Start:: Toast Cancel !-->
+	<div class="toast align-items-center bg-warning border-0" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="2000" data-toast-instance="toast-cancel">
+		<div class="hstack" data-bs-theme="dark">
+			<div class="toast-body w-100 hstack gap-3 text-white">
+				<i class="fi fi-rr-cross-circle"></i>
+				<span>Cancelled!</span>
+			</div>
+			<button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+		</div>
+	</div>
+	<!--! End:: Toast Cancel !-->
+	<!--! Start:: Toast Copy !-->
+	<div class="toast align-items-center bg-info border-0" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="2000" data-toast-instance="toast-copy">
+		<div class="hstack" data-bs-theme="dark">
+			<div class="toast-body w-100 hstack gap-3 text-white">
+				<i class="fi fi-rr-copy"></i>
+				<span>Copied!</span>
+			</div>
+			<button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+		</div>
+	</div>
+	<!--! End:: Toast Copy !-->
+	<!--! Start:: Toast Conform !-->
+	<div class="toast align-items-center bg-danger border-0" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="false" data-toast-instance="toast-conform">
+		<div class="toast-body w-100 text-white">
+			<h5 class="mb-1 text-white">Are you sure?</h5>
+			<p class="fs-12">Want to execute this operation!</p>
+			<a href="javascript:void(0);" class="btn btn-sm wd-50 btn-warning" data-bs-dismiss="toast">No</a>
+			<a href="javascript:void(0);" class="btn btn-sm wd-50 btn-success" data-bs-dismiss="toast" data-toast-trigger="toast-success">Yes</a>
+		</div>
+	</div>
+	<!--! End:: Toast Conform !-->
+	<!--! Start:: Toast Leave !-->
+	<div class="toast align-items-center bg-warning border-0" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="false" data-toast-instance="toast-leave">
+		<div class="toast-body w-100 text-white">
+			<h5 class="mb-1 text-white">Want to Leave?</h5>
+			<p class="fs-12">Want to execute this operation!</p>
+			<a href="javascript:void(0);" class="btn btn-sm wd-50 btn-danger" data-bs-dismiss="toast">No</a>
+			<a href="javascript:void(0);" class="btn btn-sm wd-50 btn-success" data-bs-dismiss="toast" data-toast-trigger="toast-success">Yes</a>
+		</div>
+	</div>
+	<!--! End:: Toast Leave !-->
+</div>
+<!--! Start:: Toast Downloading !-->
+<div class="toast-container position-fixed end-0 bottom-0 p-3">
+	<div class="toast align-items-center bg-black border-0" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="3000" data-bs-animation="false" data-toast-instance="toast-download">
+		<div class="toast-header px-3 bg-transparent d-flex align-items-center justify-content-between border-bottom border-light border-opacity-10">
+			<div class="text-white mb-0 mr-auto">Downloading...</div>
+			<button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+		</div>
+		<div class="toast-body p-3 text-white">
+			<h6 class="fs-13 text-white">Project.zip</h6>
+			<span class="text-muted fs-12">4.2mb of 5.5mb</span>
+		</div>
+		<div class="toast-footer p-3 pt-0 border-top border-light border-opacity-10">
+			<div class="progress mt-3" style="height: 5px">
+				<div class="progress-bar progress-bar-striped progress-bar-animated w-75 bg-black" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--! End:: Toast Downloading !-->

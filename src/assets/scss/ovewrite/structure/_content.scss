@@ -1,0 +1,66 @@
+/*
+<--!----------------------------------------------------------------!-->
+<--! Content SCSS !-->
+<--!----------------------------------------------------------------!-->
+*/
+body {
+	.cb-asidebar {
+		&.cb-asidebar-md~.cb-content {
+			@include media-breakpoint-down(lg) {
+				margin-left: 0 !important;
+			}
+
+			@include media-breakpoint-down(xl) {
+				margin-left: var(--#{$prefix}navigation-width);
+			}
+		}
+	}
+
+	.cb-content {
+		min-height: calc(100vh - var(--#{$prefix}header-height));
+		margin-left: calc(var(--#{$prefix}navigation-width) + var(--#{$prefix}asidebar-width));
+		transition: $transition-base;
+
+		.cb-content-header {
+			height: var(--#{$prefix}header-height);
+		}
+
+		.cb-content-body {
+			padding: 1.5rem 1.5rem;
+			transition: $transition-base;
+		}
+
+		.cb-content-footer {
+			height: var(--#{$prefix}header-height);
+		}
+
+		@include media-breakpoint-down(lg) {
+			margin-left: 0 !important;
+		}
+
+		@include media-breakpoint-down(xl) {
+			margin-left: var(--#{$prefix}navigation-width);
+		}
+
+	}
+
+	&.header-search-open {
+		.cb-content {
+			.cb-content-header {
+				.cb-content-header-search-wrapper {
+					.cb-header-search {
+						opacity: 1;
+						visibility: visible;
+						transition: $transition-base;
+					}
+				}
+			}
+		}
+	}
+
+	&.cb-without-asidebar {
+		.cb-content {
+			margin-left: var(--#{$prefix}navigation-width);
+		}
+	}
+}

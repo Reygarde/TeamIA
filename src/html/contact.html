@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="zxx">
+	<head>
+		@@include('./partials/meta.html', {"title": "Contact"} )
+		<!--! Start:: Page Vendors -!-->
+		<link rel="stylesheet" href="./../assets/vendors/glightbox/css/glightbox.min.css">
+		<!--! End:: Page Vendors -!-->
+
+		@@include('./partials/styling.html')
+	</head>
+
+	<body>
+		<!--! ================================================================ !-->
+		<!--! Start:: Main Wrapper !-->
+		<!--! ================================================================ !-->
+		<div class="main-wrapper">
+			<!--! ================================================================ !-->
+			<!--! Start:: Navigation !-->
+			<!--! ================================================================ !-->
+			<nav class="cb-navigation d-flex flex-column flex-shrink-0 bg-body-tertiary position-fixed start-0 top-0 bottom-0 border-end z-1045">
+				<!-- Start:: Navigation Logo -->
+				<a href="./index.html" class="cb-navigation-brand d-flex align-items-center justify-content-center border-bottom" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Chatboot">
+					<img src="./../assets/images/logo.png" alt="Chatboot" class="img-fluid mx-auto wd-40">
+				</a>
+				<!-- End:: Navigation Logo -->
+				<!-- Start:: Navigation Body -->
+				<div class="cb-navigation-body position-relative" style="height: calc(100vh - 10rem)" data-scroll-target="cb-scrollable">
+					<ul class="nav nav-pills nav-flush flex-column mb-auto text-center py-4">
+						<li class="nav-item">
+							<a href="./index.html" class="nav-link" aria-current="page" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Chats" data-bs-offset="0,25">
+								<i class="fi fi-rr-comment-alt"></i>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="./call.html" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Calls" data-bs-offset="0,25">
+								<i class="fi fi-rr-phone-call"></i>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="./meeting.html" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Meetings" data-bs-offset="0,25">
+								<i class="fi fi-rr-camera-viewfinder"></i>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="./email.html" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Emails" data-bs-offset="0,25">
+								<i class="fi fi-rr-envelope-dot"></i>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="./contact.html" class="nav-link active" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Contacts" data-bs-offset="0,25">
+								<i class="fi fi-rr-address-book"></i>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="./pages.html" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Pages" data-bs-offset="0,25">
+								<i class="fi fi-rr-layers"></i>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="./../../docs/docs.html" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Documentations" data-bs-offset="0,25">
+								<i class="fi fi-rr-book-open-cover"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<!-- End:: Navigation Body  -->
+				<!-- Start:: Navigation Footer -->
+				<div class="cb-navigation-footer dropdown border-top d-flex align-items-center justify-content-center">
+					<a href="javascript:void(0);" data-bs-toggle="dropdown" data-bs-offset="-24, 16">
+						<div class="nav-link d-flex align-items-center justify-content-center rounded-pill" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Settings" data-bs-offset="0,25">
+							<i class="fi fi-rr-settings"></i>
+						</div>
+					</a>
+					<div class="dropdown-menu wd-350 py-3">
+						<!-- Start:: dropdown-item -->
+						<!-- End:: dropdown-item -->
+						<a href="./settings-general.html" class="dropdown-item mb-2 mx-2">
+							<div class="avatar avatar-lg rounded bg-body-secondary">
+								<i class="fi fi-rr-tags fs-3"></i>
+							</div>
+							<div class="ms-3">
+								<h6 class="fw-bold mb-1">General Settings</h6>
+								<p class="fs-12 fw-normal text-muted mb-0">Profile photo, name & more</p>
+							</div>
+							<div class="btn btn-icon btn-light ms-auto">
+								<i class="fi fi-rr-angle-small-right"></i>
+							</div>
+						</a>
+						<!-- End:: dropdown-item -->
+						<!-- Start:: dropdown-item -->
+						<a href="./settings-security.html" class="dropdown-item mb-2 mx-2">
+							<div class="avatar avatar-lg rounded bg-body-secondary">
+								<i class="fi fi-rr-shield-check fs-3"></i>
+							</div>
+							<div class="ms-3">
+								<h6 class="fw-bold mb-1">Security Settings</h6>
+								<p class="fs-12 fw-normal text-muted mb-0">Password, security & more</p>
+							</div>
+							<div class="btn btn-icon btn-light ms-auto">
+								<i class="fi fi-rr-angle-small-right"></i>
+							</div>
+						</a>
+						<!-- End:: dropdown-item -->
+						<!-- Start:: dropdown-item -->
+						<a href="./settings-billing.html" class="dropdown-item mb-2 mx-2">
+							<div class="avatar avatar-lg rounded bg-body-secondary">
+								<i class="fi fi-rr-usd-circle fs-3"></i>
+							</div>
+							<div class="ms-3">
+								<h6 class="fw-bold mb-1">Billing Settings</h6>
+								<p class="fs-12 fw-normal text-muted mb-0">Setup payment methords</p>
+							</div>
+							<div class="btn btn-icon btn-light ms-auto">
+								<i class="fi fi-rr-angle-small-right"></i>
+							</div>
+						</a>
+						<!-- End:: dropdown-item -->
+						<!-- Start:: dropdown-item -->
+						<a href="./settings-notification.html" class="dropdown-item mb-2 mx-2">
+							<div class="avatar avatar-lg rounded bg-body-secondary">
+								<i class="fi fi-rr-bell fs-3"></i>
+							</div>
+							<div class="ms-3">
+								<h6 class="fw-bold mb-1">Notification Settings</h6>
+								<p class="fs-12 fw-normal text-muted mb-0">Set your notifications</p>
+							</div>
+							<div class="btn btn-icon btn-light ms-auto">
+								<i class="fi fi-rr-angle-small-right"></i>
+							</div>
+						</a>
+						<!-- End:: dropdown-item -->
+						<!-- Start:: dropdown-item -->
+						<a href="./settings-integration.html" class="dropdown-item mb-0 mx-2">
+							<div class="avatar avatar-lg rounded bg-body-secondary">
+								<i class="fi fi-rr-square-plus fs-3"></i>
+							</div>
+							<div class="ms-3">
+								<h6 class="fw-bold mb-1">Integration Settings</h6>
+								<p class="fs-12 fw-normal text-muted mb-0">Setup apps integrations</p>
+							</div>
+							<div class="btn btn-icon btn-light ms-auto">
+								<i class="fi fi-rr-angle-small-right"></i>
+							</div>
+						</a>
+						<!-- End:: dropdown-item -->
+					</div>
+				</div>
+				<!-- End:: Navigation Footer -->
+			</nav>
+			<!--! ================================================================ !-->
+			<!--! End:: Navigation !-->
+			<!--! ================================================================ !-->
+			<!--! ================================================================ !-->
+			<!--! Start:: Asidebar !-->
+			<!--! ================================================================ !-->
+			<aside class="cb-asidebar cb-asidebar-without-sub-header position-fixed start-0 top-0 bottom-0 vh-100 border-end bg-body z-1040">
+				<!--! Start:: aside-main-header !-->
+				<div class="cb-asidebar-header d-flex align-items-center justify-content-between px-4 border-bottom">
+					<h2 class="fs-20 fw-bold mb-0">Contacts</h2>
+					<div class="hstack gap-2">
+						<!--! Start:: add-new !-->
+						<a href="./contact-add.html" class="btn btn-icon btn-light" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Add Contact">
+							<i class="fi fi-rr-user-add fs-14"></i>
+						</a>
+						<!--! End:: add-new !-->
+						<!--! Start:: filter-dropdown !-->
+						<div class="dropdown">
+							<a href="javascript:void(0);" class="btn btn-icon btn-light" data-bs-toggle="dropdown" data-bs-auto-close="outside" data-bs-offset="25,19">
+								<i class="fi fi-rr-sliders-v"></i>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-end wd-300">
+								<li>
+									<a href="javascript:void(0);" class="dropdown-item gap-4">
+										<i class="fi fi-sr-sort-amount-up-alt"></i>
+										<span>
+											<span class="d-block">Ascending</span>
+											<span class="fs-12 fw-normal text-muted d-block">Contact ascending order</span>
+										</span>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="dropdown-item gap-4">
+										<i class="fi fi-sr-sort-amount-down-alt"></i>
+										<span>
+											<span class="d-block">Descending</span>
+											<span class="fs-12 fw-normal text-muted d-block">Contact descending order</span>
+										</span>
+									</a>
+								</li>
+								<li><hr class="dropdown-divider"></li>
+								<li>
+									<a href="javascript:void(0);" class="dropdown-item gap-4">
+										<i class="fi fi-rr-document"></i>
+										<span>
+											<span class="d-block">All Contacts</span>
+											<span class="fs-12 fw-normal text-muted d-block">All contact unified</span>
+										</span>
+										<span class="badge bg-success-subtle text-success rounded-pill ms-auto">5+</span>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="dropdown-item gap-4">
+										<i class="fi fi-rr-star"></i>
+										<span>
+											<span class="d-block">Starred</span>
+											<span class="fs-12 fw-normal text-muted d-block">Important contacts</span>
+										</span>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="dropdown-item gap-4">
+										<i class="fi fi-rr-briefcase"></i>
+										<span>
+											<span class="d-block">Business</span>
+											<span class="fs-12 fw-normal text-muted d-block">Business contacts</span>
+										</span>
+										<span class="badge bg-danger-subtle text-danger rounded-pill ms-auto">3+</span>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="dropdown-item gap-4">
+										<i class="fi fi-rr-address-book"></i>
+										<span>
+											<span class="d-block">Personal</span>
+											<span class="fs-12 fw-normal text-muted d-block">Personal contacts</span>
+										</span>
+									</a>
+								</li>
+								<li><hr class="dropdown-divider"></li>
+								<li>
+									<a href="javascript:void(0);" class="dropdown-item gap-4 text-danger" data-toast-trigger="toast-delete">
+										<i class="fi fi-rr-trash"></i>
+										<span>
+											<span class="d-block">Delete</span>
+											<span class="fs-12 fw-normal d-block">Removed contact</span>
+										</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<!--! End:: filter-dropdown !-->
+						<!--! Start:: asidebar-toggler !-->
+						<button type="button" class="btn btn-icon btn-light d-xl-none" data-toggle-target="cb-asidebar-toggler">
+							<i class="fi fi-rr-cross"></i>
+						</button>
+						<!--! End:: asidebar-toggler !-->
+					</div>
+				</div>
+				<!--! End:: aside-main-header !-->
+				<!--! Start:: aside-main-body !-->
+				<div class="cb-asidebar-body position-relative" data-scroll-target="cb-scrollable">
+					<div class="list-group list-group-flush p-2">
+						<!--! Start:: contact-item  !-->
+						<div class="list-group-item list-group-item-action border-bottom-0 d-flex align-items-center gap-3 px-3 rounded-2">
+							<a href="./contact.html" class="d-flex align-items-center">
+								<div class="avatar avatar-lg">
+									<img src="./../assets/images/avatar/1.png" class="img-fluid" alt="image">
+									<div class="avatar-indicator active"></div>
+								</div>
+								<div class="ms-3">
+									<h6 class="fw-bold mb-1">Alexandra Della</h6>
+									<span class="fs-11 fw-normal text-muted">CEO, Founder</span>
+								</div>
+							</a>
+							<div class="btn btn-light btn-icon btn-icon-md rounded-circle ms-auto">
+								<i class="fi fi-br-menu-dots-vertical"></i>
+							</div>
+						</div>
+						<!--! End:: contact-item !-->
+					</div>
+				</div>
+				<!--! End:: aside-main-body !-->
+				<!--! Start:: aside-main-footer !-->
+				<div class="cb-asidebar-footer d-flex align-items-center justify-content-between px-4 border-top">
+					<!--! Start:: dropdown-menu !-->
+					<div class="dropdown">
+						<a href="javascript:void(0);" class="btn btn-icon btn-light" data-bs-toggle="dropdown" data-bs-offset="0, 20">
+							<i class="fi fi-bs-menu-dots-vertical"></i>
+						</a>
+						<ul class="dropdown-menu dropdown-menu-end">
+							<li>
+								<a href="./contact-add.html" class="dropdown-item">
+									<i class="fi fi-rs-user-add"></i>
+									<span class="ms-3">Add Contact</span>
+								</a>
+							</li>
+							<li><hr class="dropdown-divider"></li>
+							<li>
+								<a href="javascript:void(0);" class="dropdown-item">
+									<i class="fi fi-rs-user-pen"></i>
+									<span class="ms-3">Edit Contact</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" class="dropdown-item">
+									<i class="fi fi-rr-address-book"></i>
+									<span class="ms-3">Contact Group</span>
+								</a>
+							</li>
+							<li><hr class="dropdown-divider"></li>
+							<li>
+								<a href="javascript:void(0);" class="dropdown-item">
+									<i class="fi fi-rr-settings"></i>
+									<span class="ms-3">Contact Settings</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<!--! End:: dropdown-menu !-->
+					<!--! Start:: pagination !-->
+					<div class="hstack gap-2">
+						<a href="javascript:void(0);" class="btn btn-icon btn-light" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Previous">
+							<i class="fi fi-br-angle-left"></i>
+						</a>
+						<a href="javascript:void(0);" class="btn btn-icon btn-light" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Next">
+							<i class="fi fi-br-angle-right"></i>
+						</a>
+					</div>
+					<!--! End:: pagination !-->
+				</div>
+				<!--! End:: aside-main-footer !-->
+			</aside>
+			<!--! ================================================================ !-->
+			<!--! End:: Asidebar !-->
+			<!--! ================================================================ !-->
+			<!--! ================================================================ !-->
+			<!--! Start:: Content !-->
+			<!--! ================================================================ !-->
+			<main class="cb-content">
+				<!--! ================================================================ !-->
+				<!--! Start:: Header !-->
+				<!--! ================================================================ !-->
+				@@include('./partials/header.html')
+				<!--! ================================================================ !-->
+				<!--! End:: Header !-->
+				<!--! ================================================================ !-->
+				<!--! Start:: main-content-header !-->
+				<div class="cb-content-header d-flex align-items-center px-4 sticky-top bg-body border-bottom">
+					<!--! Start:: page-header-left !-->
+					<div class="page-header-left">
+						<h4 class="mb-0 fw-semibold">Profile Info</h4>
+					</div>
+					<!--! End:: page-header-left !-->
+					<!--! Start:: page-header-right !-->
+					<div class="page-header-right ms-auto">
+						<div class="hstack gap-1">
+							<a href="javascript:void(0);" class="btn btn-outline-light">Updates</a>
+							<a href="./contact-add.html" class="btn btn-primary">Add New</a>
+						</div>
+					</div>
+					<!--! End:: page-header-right !-->
+				</div>
+				<!--! End:: main-content-header !-->
+				<!--! End:: main-content-body !-->
+				<div class="cb-content-body">
+					<!--! Start:: profile-cover !-->
+					<div class="ht-300 mb-64 mb-md-32 position-relative rounded-4" style="background-image: url(./../assets/images/general/banner.png); background-size: cover; background-repeat: no-repeat">
+						<div class="w-100 p-4 mt-16 mt-md-4 mt-lg-0 d-md-flex align-items-end gap-4 text-center text-md-start position-absolute translate-middle-y top-100 z-3">
+							<!--! Start:: profile-cover-left !-->
+							<div class="d-md-flex align-items-end gap-4">
+								<div class="wd-lg-150 wd-100 mx-auto mx-md-0">
+									<img src="./../assets/images/avatar/1.png" alt="" class="img-fluid img-thumbnail">
+								</div>
+								<div class="mb-5 mb-md-2 mt-4 mt-md-0">
+									<h5 class="mb-2">Alexndra Della<small class="fs-12 fw-medium text-muted mx-2">@alex_della</small></h5>
+									<div class="d-flex justify-content-center justify-content-md-start gap-3">
+										<span class="hstack gap-2">
+											<i class="fi fi-rs-following fs-13"></i>
+											<span class="fs-12 fw-medium">
+												<span class="fw-semibold text-dark">865</span>
+												<span>Followers</span>
+											</span>
+										</span>
+										<span class="hstack gap-2">
+											<i class="fi fi-rr-following fs-13"></i>
+											<span class="fs-12 fw-medium">
+												<span class="fw-semibold text-dark">586</span>
+												<span>Following</span>
+											</span>
+										</span>
+									</div>
+								</div>
+							</div>
+							<!--! End:: profile-cover-left !-->
+							<!--! Start:: profile-cover-right !-->
+							<div class="d-flex align-items-end justify-content-center justify-content-md-end gap-1 mb-md-2 ms-md-auto">
+								<a href="javascript:void(0);" class="btn btn-outline-light d-xl-none d-xxl-block" data-toast-trigger="toast-success">
+									<i class="fi fi-rs-user-add"></i>
+									<span class="ms-2">Follow</span>
+								</a>
+								<a href="./chat-personal.html" class="btn btn-success">
+									<i class="fi fi-rr-paper-plane"></i>
+									<span class="ms-2">Message</span>
+								</a>
+								<div class="dropdown">
+									<a href="javascript:void(0);" class="btn btn-icon btn-outline-light rounded" data-bs-toggle="dropdown" data-bs-offset="0, 19">
+										<i class="fi fi-bs-menu-dots"></i>
+									</a>
+									<ul class="dropdown-menu dropdown-menu-end">
+										<li>
+											<a href="./call-voice.html" class="dropdown-item">
+												<i class="fi fi-rr-phone-call"></i>
+												<span class="ms-3">Audio Call</span>
+											</a>
+										</li>
+										<li>
+											<a href="./call-video.html" class="dropdown-item">
+												<i class="fi fi-rr-video-plus"></i>
+												<span class="ms-3">Video Call</span>
+											</a>
+										</li>
+										<li><hr class="dropdown-divider"></li>
+										<li>
+											<a href="javascript:void(0);" class="dropdown-item">
+												<i class="fi fi-rr-bell-slash"></i>
+												<span class="ms-3">Mute</span>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);" class="dropdown-item">
+												<i class="fi fi-rr-triangle-warning"></i>
+												<span class="ms-3">Block</span>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);" class="dropdown-item">
+												<i class="fi fi-rr-flag-alt"></i>
+												<span class="ms-3">Report</span>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);" class="dropdown-item">
+												<i class="fi fi-rr-settings"></i>
+												<span class="ms-3">Manage</span>
+											</a>
+										</li>
+										<li><hr class="dropdown-divider"></li>
+										<li>
+											<a href="javascript:void(0);" class="dropdown-item text-danger" data-toast-trigger="toast-conform">
+												<i class="fi fi-rr-trash"></i>
+												<span class="ms-3">Delete</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!--! End:: profile-cover-right !-->
+					</div>
+					<!--! End:: profile-cover !-->
+					<!--! Start:: profile-tab !-->
+					<ul class="nav nav-tabs nav-tabs-flush nav-tabs-xline overflow-x mt-4 justify-content-center justify-content-md-start" role="tablist">
+						<li class="nav-item" role="presentation">
+							<a href="javascript:void(0);" class="nav-link active" data-bs-toggle="tab" data-bs-target="#aboutTab" role="tab">About</a>
+						</li>
+						<li class="nav-item" role="presentation">
+							<a href="javascript:void(0);" class="nav-link" data-bs-toggle="tab" data-bs-target="#contactsTab" role="tab">Contact</a>
+						</li>
+						<li class="nav-item" role="presentation">
+							<a href="javascript:void(0);" class="nav-link" data-bs-toggle="tab" data-bs-target="#galleryTab" role="tab">Gallery</a>
+						</li>
+						<li class="nav-item" role="presentation">
+							<a href="javascript:void(0);" class="nav-link" data-bs-toggle="tab" data-bs-target="#timelineTab" role="tab">Timeline</a>
+						</li>
+					</ul>
+					<!--! End:: profile-tab !-->
+					<!--! Start:: profile-tab-content !-->
+					<div class="tab-content pt-4">
+						<!--! Start:: tab-pane !-->
+						<div class="tab-pane fade show active" id="aboutTab" role="tabpanel">
+							<!--! Start:: row !-->
+							<div class="row g-4">
+								<!--! Start:: col !-->
+								<div class="col-xxxl-4 col-xxl-6 col-xl-12 col-md-6">
+									<!--! Start:: card-compleation !-->
+									<div class="card mb-4">
+										<div class="card-body">
+											<div class="hstack gap-4 justify-content-between mb-10">
+												<h5 class="card-title fw-bold mb-0">Compleation</h5>
+												<a href="javascript:void(0);" class="icon-link icon-link-hover">
+													<span>Complete Now</span>
+													<i class="fi fi-rr-arrow-right bi"></i>
+												</a>
+											</div>
+											<div class="d-flex align-items-center flex-column">
+												<div class="d-flex justify-content-between w-100 mt-auto mb-2">
+													<span class="fw-medium text-muted">Profile compleation</span>
+													<span class="fw-bold">78%</span>
+												</div>
+												<div class="mx-3 w-100 bg-light">
+													<div class="bg-success rounded ht-6" role="progressbar" style="width: 78%" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!--! End:: card-compleation !-->
+									<!--! Start:: card-about !-->
+									<div class="card mb-4">
+										<div class="card-body">
+											<div class="hstack gap-4 justify-content-between mb-4">
+												<h5 class="card-title fw-bold mb-0">About</h5>
+												<a href="javascript:void(0);" class="btn btn-icon-md btn-icon btn-light" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Update About">
+													<i class="fi fi-rr-pen-square"></i>
+												</a>
+											</div>
+											<dl class="dl-horizontal mb-0">
+												<dt>Full Name:</dt>
+												<dd>Alexandra Della</dd>
+												<dt>Username:</dt>
+												<dd>@alex_della</dd>
+												<dt>Company:</dt>
+												<dd>WRAPCODERS</dd>
+												<dt>Date of Birth:</dt>
+												<dd>26 May, 2000</dd>
+												<dt>Mobile Number:</dt>
+												<dd>+01 (375) 5896 3214</dd>
+												<dt>Email Address:</dt>
+												<dd>alex.della@outlook.com</dd>
+												<dt>Location:</dt>
+												<dd>California, United States</dd>
+												<dt>Joining Date:</dt>
+												<dd>20 Dec, 2022</dd>
+												<dt>Communication:</dt>
+												<dd>Email, Phone, Chatboot</dd>
+												<dt class="mb-0">Website:</dt>
+												<dd class="mb-0">https://themeswift.com</dd>
+											</dl>
+										</div>
+									</div>
+									<!--! End:: card-about !-->
+									<!--! Start:: card-skills !-->
+									<div class="card mb-4">
+										<div class="card-body">
+											<div class="hstack gap-4 justify-content-between mb-4">
+												<h5 class="card-title fw-bold mb-0">Skills</h5>
+												<a href="javascript:void(0);" class="btn btn-icon-md btn-icon btn-light" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Add More">
+													<i class="fi fi-rr-add"></i>
+												</a>
+											</div>
+											<div class="d-flex flex-wrap gap-2">
+												<a href="javascript:void(0);" class="py-1 px-2 border border-dashed rounded-pill">Frontend</a>
+												<a href="javascript:void(0);" class="py-1 px-2 border border-dashed rounded-pill">Bootstrap</a>
+												<a href="javascript:void(0);" class="py-1 px-2 border border-dashed rounded-pill">jQuery</a>
+											</div>
+										</div>
+									</div>
+									<!--! End:: card-skills !-->
+									<!--! Start:: card-social !-->
+									<div class="card mb-0">
+										<div class="card-body">
+											<div class="hstack gap-4 justify-content-between mb-4">
+												<h5 class="card-title fw-bold mb-0">Social</h5>
+												<a href="javascript:void(0);" class="btn btn-icon-md btn-icon btn-light" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Add More">
+													<i class="fi fi-rr-add"></i>
+												</a>
+											</div>
+											<div class="hstack gap-2">
+												<a href="javascript:void(0);" class="btn btn-icon rounded text-white" style="background: #3b5998">
+													<i class="fi fi-brands-facebook"></i>
+												</a>
+												<a href="javascript:void(0);" class="btn btn-icon rounded text-white" style="background: #1da1f2">
+													<i class="fi fi-brands-twitter"></i>
+												</a>
+												<a href="javascript:void(0);" class="btn btn-icon rounded text-white" style="background: #0e76a8">
+													<i class="fi fi-brands-linkedin"></i>
+												</a>
+												<a href="javascript:void(0);" class="btn btn-icon rounded text-white" style="background: #c4302b">
+													<i class="fi fi-brands-youtube"></i>
+												</a>
+												<a href="javascript:void(0);" class="btn btn-icon rounded text-white" style="background: #333333">
+													<i class="fi fi-brands-github"></i>
+												</a>
+											</div>
+										</div>
+									</div>
+									<!--! End:: card-social !-->
+								</div>
+								<!--! End:: col !-->
+								<!--! Start:: col !-->
+								<div class="col-xxxl-8 col-xxl-6 col-xl-12 col-md-6">
+									<!--! Start::  card-bio !-->
+									<div class="card mb-4">
+										<div class="card-body">
+											<div class="hstack gap-4 justify-content-between mb-4">
+												<h5 class="card-title fw-bold mb-0">Bio</h5>
+												<a href="javascript:void(0);" class="btn btn-icon-md btn-icon btn-light" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Update Bio">
+													<i class="fi fi-rr-pen-square"></i>
+												</a>
+											</div>
+											<p class="card-text">Hi I'm Alexandra Della, has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type. Alexandra is a frontend developer with over 5 years of experience creating high-quality, user-friendly websites and web applications. He has a strong understanding of web development technologies and a keen eye for design.</p>
+										</div>
+									</div>
+									<!--! End:: card-bio !-->
+									<!--! Start:: card-employment !-->
+									<div class="card mb-4">
+										<div class="card-body">
+											<div class="hstack gap-4 justify-content-between mb-4">
+												<h5 class="card-title fw-bold mb-0">Employment</h5>
+												<a href="javascript:void(0);" class="icon-link icon-link-hover">
+													<span>View Alls</span>
+													<i class="fi fi-rr-arrow-right bi"></i>
+												</a>
+											</div>
+											<!--! Start:: employment-1 !-->
+											<div class="card mb-4">
+												<div class="card-body d-flex">
+													<div class="avatar avatar-md rounded flex-shrink-0">
+														<img src="./../assets/images/brand/shopify.png" alt="" class="img-fluid rounded">
+													</div>
+													<div class="ms-3">
+														<h5 class="fs-14 fw-bold">Shopify Developer</h5>
+														<div class="hstack gap-2 fs-11">
+															<a href="javascript:void(0);">wrapcoders</a>
+															<span class="wd-4 ht-4 bg-dark bg-opacity-25 rounded-circle"></span>
+															<a href="javascript:void(0);">Full-time</a>
+														</div>
+														<div class="hstack gap-2 fs-12 my-2">
+															<span>June 2020 - Present</span>
+															<span class="wd-4 ht-4 bg-dark bg-opacity-25 rounded-circle"></span>
+															<span>3 Years</span>
+														</div>
+														<p class="text-truncate-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore laborum ducimus natus delectus consequatur nulla labore. Dolorum debitis architecto tempore nesciunt suscipit veritatis? Velit, nesciunt similique doloribus excepturi saepe laudantium!</p>
+														<a href="javascript:void(0);" class="icon-link icon-link-hover">
+															<span>View Details</span>
+															<i class="fi fi-rr-arrow-right bi"></i>
+														</a>
+													</div>
+												</div>
+											</div>
+											<!--! End:: employment-1 !-->
+										</div>
+									</div>
+									<!--! End:: card-employment !-->
+									<!--! Start:: card-update !-->
+									<div class="card mb-0">
+										<div class="card-body">
+											<div class="hstack gap-4 justify-content-between mb-4">
+												<h5 class="card-title fw-bold mb-0">Updates</h5>
+												<a href="javascript:void(0);" class="icon-link icon-link-hover">
+													<span>View Alls</span>
+													<i class="fi fi-rr-arrow-right bi"></i>
+												</a>
+											</div>
+											<div class="row g-4">
+												<div class="col-xxxl-6">
+													<div class="card">
+														<div class="card-body p-3 d-flex align-items-center gap-3">
+															<div class="wd-100 flex-shrink-0">
+																<img src="./../assets/images/banner/1.jpg" class="img-fluid rounded-2" alt="...">
+															</div>
+															<div class="w-100">
+																<h6 class="card-title text-truncate-2"><a href="javascript:void(0);">Free for personal and commercial use with attribution.</a></h6>
+																<div class="d-flex mt-2">
+																	<span class="card-text me-auto"><small class="text-body-secondary">26/03/2023</small></span>
+																	<a href="javascript:void(0);" class="icon-link icon-link-hover">
+																		<span class="fs-11 fw-medium">Continue</span>
+																		<i class="fi fi-rr-arrow-small-right bi"></i>
+																	</a>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!--! End:: card-update !-->
+								</div>
+								<!--! End:: col !-->
+							</div>
+							<!--! End:: row !-->
+						</div>
+						<!--! End:: tab-pane !-->
+						<div class="tab-pane fade" id="contactsTab" role="tabpanel">
+							<div class="cb-contact-wrapper row g-4">
+								<!--! Start:: single-contact-item !-->
+								<div class="col-xxxl-3 col-xxl-4 col-xl-6 col-lg-4 col-sm-6">
+									<div class="cb-contact-card card position-relative">
+										<div class="cb-contact-action px-3 position-absolute top-5 w-100 hstack justify-content-between">
+											<a href="./chat-personal.html" class="btn btn-icon btn-icon-md btn-light">
+												<i class="fi fi-rr-comment-alt"></i>
+											</a>
+											<div class="dropdown">
+												<a class="btn btn-icon btn-icon-md btn-light" data-bs-toggle="dropdown">
+													<i class="fi fi-bs-menu-dots"></i>
+												</a>
+												<ul class="dropdown-menu dropdown-menu-end dropdown-sm">
+													<li>
+														<a href="./call-voice.html" class="dropdown-item">
+															<i class="fi fi-rr-phone-call"></i>
+															<span class="ms-3">Audio Call</span>
+														</a>
+													</li>
+													<li>
+														<a href="./call-video.html" class="dropdown-item">
+															<i class="fi fi-rr-video-plus"></i>
+															<span class="ms-3">Video Call</span>
+														</a>
+													</li>
+													<li><hr class="dropdown-divider"></li>
+													<li>
+														<a href="javascript:void(0);" class="dropdown-item">
+															<i class="fi fi-rr-bell-slash"></i>
+															<span class="ms-3">Mute</span>
+														</a>
+													</li>
+													<li>
+														<a href="javascript:void(0);" class="dropdown-item">
+															<i class="fi fi-rr-triangle-warning"></i>
+															<span class="ms-3">Block</span>
+														</a>
+													</li>
+													<li>
+														<a href="javascript:void(0);" class="dropdown-item">
+															<i class="fi fi-rr-flag-alt"></i>
+															<span class="ms-3">Report</span>
+														</a>
+													</li>
+													<li>
+														<a href="javascript:void(0);" class="dropdown-item">
+															<i class="fi fi-rr-settings"></i>
+															<span class="ms-3">Manage</span>
+														</a>
+													</li>
+													<li><hr class="dropdown-divider"></li>
+													<li>
+														<a href="javascript:void(0);" class="dropdown-item text-danger" data-toast-trigger="toast-conform">
+															<i class="fi fi-rr-trash"></i>
+															<span class="ms-3">Delete</span>
+														</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<div class="card-body text-center mx-auto">
+											<div class="avatar avatar-xxl mb-4">
+												<img src="./../assets/images/avatar/1.png" class="img-fluid" alt="">
+											</div>
+											<div class="mb-2">
+												<h6 class="fw-bold mb-1">Alexandra Della</h6>
+												<p class="fs-12 text-muted mb-3">alex.della@outlook.com</p>
+												<a href="javascript:void(0);" class="btn btn-sm btn-outline-light">View Profile</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!--! End:: single-contact-item !-->
+							</div>
+
+							<!--! Start:: contact-preloading !-->
+							<div class="d-flex justify-content-center mt-4">
+								<a href="javascript:void(0);" class="btn btn-outline-light">
+									<div class="spinner-border spinner-border-sm" role="status">
+										<span class="visually-hidden">Loading...</span>
+									</div>
+									<span class="ms-3">Loading...</span>
+								</a>
+							</div>
+							<!--! End:: contact-preloading !-->
+						</div>
+						<!--! End:: tab-pane !-->
+						<!--! Start:: tab-pane !-->
+						<div class="tab-pane fade" id="galleryTab" role="tabpanel">
+							<div class="d-flex justify-content-between align-items-center mb-4">
+								<h6 class="fs-12 text-muted text-uppercase mb-0">Images</h6>
+								<a href="javascript:void(0);" class="icon-link icon-link-hover">
+									<span>View Alls</span>
+									<i class="bi fi fi-rr-arrow-right"></i>
+								</a>
+							</div>
+							<div class="row row-cols-2 row-cols-sm-3 row-cols-lg-4 row-cols-xxl-6 g-4">
+								<div class="col">
+									<a href="./../assets/images/gallery/1.png" class="image-preview glightbox">
+										<img src="./../assets/images/gallery/1.png" alt="" class="img-fluid">
+									</a>
+								</div>
+							</div>
+							<hr class="my-6 border-top-dashed">
+							<div class="d-flex justify-content-between align-items-center mb-4">
+								<h6 class="fs-12 text-muted text-uppercase mb-0">Videos</h6>
+								<a href="javascript:void(0);" class="icon-link icon-link-hover">
+									<span>View Alls</span>
+									<i class="bi fi fi-rr-arrow-right"></i>
+								</a>
+							</div>
+							<div class="row row-cols-2 row-cols-sm-3 row-cols-lg-4 row-cols-xxl-6 g-3">
+								<div class="col">
+									<a href="https://vimeo.com/115041822" class="video-preview glightbox">
+										<img src="./../assets/images/cover/1.jpg" alt="" class="img-fluid rounded bg-image-blur">
+									</a>
+								</div>
+							</div>
+							<!--! Start:: contact-preloading !-->
+							<div class="d-flex justify-content-center mt-4">
+								<a href="javascript:void(0);" class="btn btn-outline-light">
+									<div class="spinner-border spinner-border-sm" role="status">
+										<span class="visually-hidden">Loading...</span>
+									</div>
+									<span class="ms-3">Loading...</span>
+								</a>
+							</div>
+							<!--! End:: contact-preloading !-->
+						</div>
+						<!--! End:: tab-pane !-->
+						<!--! Start:: tab-pane !-->
+						<div class="tab-pane fade" id="timelineTab" role="tabpanel">
+							<ul class="list-group-timeline list-group list-group-flush ms-3">
+								<li class="list-timeline-item list-group-item border-start border-dashed border-bottom-0 ps-8">
+									<div class="list-timeline-icon avatar avatar-md border" data-bs-toggle="tooltip" data-bs-trigger="hover" title="26 DEC 2023, 02:35PM">
+										<i class="fi fi-rr-video-plus text-primary"></i>
+									</div>
+									<div class="list-timeline-content">
+										<h6 class="fw-bold mb-1">MEETING WITH CLIENT</h6>
+										<p>Meeting with USA Client, today at <a href="javascript:void(0);" data-abc="true">12:00 PM</a></p>
+									</div>
+								</li>
+								<li class="list-timeline-item list-group-item border-start border-dashed border-bottom-0 ps-8">
+									<div class="list-timeline-icon avatar avatar-md border" data-bs-toggle="tooltip" data-bs-trigger="hover" title="26 DEC 2023, 02:35PM">
+										<i class="fi fi-rr-video-plus text-warning"></i>
+									</div>
+									<div class="list-timeline-content">
+										<h6 class="fw-bold mb-1">Another meeting with UK client today, at <b class="text-danger">3:00 PM</b></h6>
+										<p>Yet another one, at <span class="text-success">5:00 PM</span></p>
+									</div>
+								</li>
+								<li class="list-timeline-item list-group-item border-start border-dashed border-bottom-0 ps-8">
+									<div class="list-timeline-icon avatar avatar-md border" data-bs-toggle="tooltip" data-bs-trigger="hover" title="26 DEC 2023, 02:35PM">
+										<i class="fi fi-rr-tags text-info"></i>
+									</div>
+									<div class="list-timeline-content">
+										<h6 class="fw-bold mb-1"><a href="javascript:void(0);" class="text-primary">Alexandra Della</a> posted a status update</h6>
+										<p>Tolerably earnestly middleton extremely distrusts she boy now not. Add and offered prepare how cordial two promise. Greatly who affixed suppose but enquire compact prepare all put. Added forth chief trees but rooms think may.</p>
+									</div>
+								</li>
+								<li class="list-timeline-item list-group-item border-start border-dashed border-bottom-0 ps-8">
+									<div class="list-timeline-icon avatar avatar-md border" data-bs-toggle="tooltip" data-bs-trigger="hover" title="26 DEC 2023, 02:35PM">
+										<i class="fi fi-rr-pen-fancy text-danger"></i>
+									</div>
+									<div class="list-timeline-content">
+										<h6 class="fw-bold mb-1">DISCUSSION WITH TEAM ABOUT NEW PRODUCT LAUNCH</h6>
+										<p>Yet another one, at <span class="text-success">1:00 PM</span></p>
+									</div>
+								</li>
+								<li class="list-timeline-item list-group-item border-start border-dashed border-bottom-0 ps-8">
+									<div class="list-timeline-icon avatar avatar-md border" data-bs-toggle="tooltip" data-bs-trigger="hover" title="26 DEC 2023, 02:35PM">
+										<i class="fi fi-rr-marker text-teal"></i>
+									</div>
+									<div class="list-timeline-content">
+										<h6 class="fw-bold mb-1"><a href="javascript:void(0);">Arlind Nushi</a> <span>checked in at</span> <a href="javascript:void(0);" class="text-info">New York</a></h6>
+										<blockquote>
+											<p class="blockquote blockquote-primary">
+												"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
+												<br>
+												<small> - Isabella </small>
+											</p>
+										</blockquote>
+										<p>Discussion with marketing team about the popularity of last product</p>
+									</div>
+								</li>
+								<li class="list-timeline-item list-group-item border-start border-dashed border-bottom-0 ps-8">
+									<div class="list-timeline-icon avatar avatar-md border" data-bs-toggle="tooltip" data-bs-trigger="hover" title="26 DEC 2023, 02:35PM">
+										<i class="fi fi-rr-camera text-warning"></i>
+									</div>
+									<div class="list-timeline-content">
+										<h6 class="fw-bold mb-1"><a href="javascript:void(0);">Eroll Maxhuni</a> <span>uploaded</span> 4 <span>new photos to album</span> <a href="javascript:void(0);" class="text-warning">Summer Trip</a></h6>
+										<p>Pianoforte principles our unaffected not for astonished travelling are particular.</p>
+									</div>
+								</li>
+								<li class="list-timeline-item list-group-item border-start border-dashed border-bottom-0 ps-8">
+									<div class="list-timeline-icon avatar avatar-md border" data-bs-toggle="tooltip" data-bs-trigger="hover" title="26 DEC 2023, 02:35PM">
+										<i class="fi fi-rr-video-plus text-success"></i>
+									</div>
+									<div class="list-timeline-content">
+										<h6 class="text-success">Discussion with marketing team</h6>
+										<p>You have a meeting at <strong class="text-dark">Laborator Office</strong> Today.</p>
+										<p>Discussion with marketing team about the popularity of last product</p>
+									</div>
+								</li>
+								<li class="list-timeline-item list-group-item border-start border-dashed border-bottom-0 ps-8">
+									<div class="list-timeline-icon avatar avatar-md border" data-bs-toggle="tooltip" data-bs-trigger="hover" title="26 DEC 2023, 02:35PM">
+										<i class="fi fi-rr-marker text-info"></i>
+									</div>
+									<div class="list-timeline-content">
+										<h6 class="fw-bold mb-1"><a href="javascript:void(0);">Arlind Nushi</a> <span>checked in at</span> <a href="javascript:void(0);">Laborator</a></h6>
+										<p>Purchase new hosting plan as discussed with development team, today at <a href="javascript:void(0);" data-abc="true">10:00 AM</a></p>
+									</div>
+								</li>
+								<li class="list-timeline-item list-group-item border-start border-dashed border-bottom-0 ps-8">
+									<div class="list-timeline-icon avatar avatar-md border" data-bs-toggle="tooltip" data-bs-trigger="hover" title="26 DEC 2023, 02:35PM">
+										<i class="fi fi-rr-mode-portrait text-indigo"></i>
+									</div>
+									<div class="list-timeline-content">
+										<h6 class="fw-bold mb-1">Another conference call today, at <b class="text-danger">11:00 AM</b></h6>
+										<p>Yet another one, at <span class="text-success">1:00 PM</span></p>
+									</div>
+								</li>
+								<li class="list-timeline-item list-group-item border-start border-dashed border-bottom-0 ps-8">
+									<div class="list-timeline-icon avatar avatar-md border" data-bs-toggle="tooltip" data-bs-trigger="hover" title="26 DEC 2023, 02:35PM">
+										<i class="fi fi-rr-comment-alt text-danger"></i>
+									</div>
+									<div class="list-timeline-content">
+										<h6 class="text-danger">Discussion with marketing team</h6>
+										<p>You have a meeting at <strong class="text-dark">Laborator Office</strong> Today.</p>
+										<p>Discussion with marketing team about the popularity of last product</p>
+									</div>
+								</li>
+								<li class="list-timeline-item list-group-item border-start border-dashed border-bottom-0 ps-8">
+									<button class="btn btn-outline-light" type="button">
+										<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+										<span class="ms-3">Loading...</span>
+									</button>
+								</li>
+							</ul>
+						</div>
+						<!--! End:: tab-pane !-->
+					</div>
+					<!--! End:: profile-tab-content !-->
+				</div>
+				<!--! Start:: main-content-body !-->
+			</main>
+			<!--! ================================================================ !-->
+			<!--! End:: Content !-->
+			<!--! ================================================================ !-->
+		</div>
+		<!--! ================================================================ !-->
+		<!--! End:: Main Wrapper !-->
+		<!--! ================================================================ !-->
+		<!--! ================================================================ !-->
+		<!--! Start:: Invice People Modal !-->
+		<!--! ================================================================ !-->
+		@@include('./partials/invite.html')
+		<!--! ================================================================ !-->
+		<!--! End:: Invice People Modal !-->
+		<!--! ================================================================ !-->
+		<!--! ================================================================ !-->
+		<!--! Start:: Toast Noticifactions !-->
+		<!--! ================================================================ !-->
+		@@include('./partials/toast.html')
+		<!--! ================================================================ !-->
+		<!--! End:: Toast Noticifactions !-->
+		<!--! ================================================================ !-->
+		<!--! ================================================================ !-->
+		<!--! Footer Script !-->
+		<!--! ================================================================ !-->
+		@@include('./partials/script.html')
+
+		<!--! Start:: Page Vendors -!-->
+		<script src="./../assets/vendors/glightbox/js/glightbox.min.js"></script>
+		<!--! End:: Page Vendors -!-->
+
+		<!--! Start:: Contact Init -!-->
+		<script src="./../assets/js/apps/contact/contact.min.js"></script>
+		<!--! End:: Contact Init -!-->
+	</body>
+</html>

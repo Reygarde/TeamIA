@@ -1,0 +1,77 @@
+// Import Bootstrap core
+@import "./../../../node_modules/bootstrap/scss/bootstrap";
+
+
+// Width and Height Utilities
+$utilities: map-merge($utilities, ("wd": (property: width,
+				class: wd,
+				responsive: true,
+				values: $sizings,
+			),
+			"ht": (property: height,
+				class: ht,
+				responsive: true,
+				values: $sizings,
+			),
+			"min-wd": (property: min-width,
+				class: min-wd,
+				responsive: true,
+				values: $sizings,
+			),
+			"min-ht": (property: min-height,
+				class: min-ht,
+				responsive: true,
+				values: $sizings,
+			),
+			"max-wd": (property: max-width,
+				class: max-wd,
+				responsive: true,
+				values: $sizings,
+			),
+			"max-ht": (property: max-height,
+				class: max-ht,
+				responsive: true,
+				values: $sizings,
+			),
+		));
+
+// Border Style Utilities
+$utilities: map-merge($utilities, ("border-style": (property: border-style,
+				class: border,
+				values: $border-styles,
+			),
+			"border-top-style": (property: border-top-style,
+				class: border-top,
+				values: $border-styles,
+			),
+			"border-left-style": (property: border-left-style,
+				class: border-left,
+				values: $border-styles,
+			),
+			"border-right-style": (property: border-right-style,
+				class: border-right,
+				values: $border-styles,
+			),
+			"border-bottom-style": (property: border-bottom-style,
+				class: border-bottom,
+				values: $border-styles,
+			),
+		));
+
+// Cursor Utilities
+$utilities: map-merge($utilities, ("cursor": (property: cursor,
+				values: auto default pointer wait text move help not-allowed,
+			),
+		));
+
+// Opacity Utility
+$utilities: map-merge($utilities, ("opacity": (property: opacity,
+				class: opacity,
+				values: $opacitys,
+			),
+			"bg-opacity": (property: opacity,
+				css-var: true,
+				class: bg-opacity,
+				values: $opacitys,
+			),
+		));

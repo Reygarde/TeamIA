@@ -1,0 +1,66 @@
+/*
+<--!----------------------------------------------------------------!-->
+<--! MAIN HEADER SCSS !-->
+<--!----------------------------------------------------------------!-->
+*/
+.cb-main-header {
+	height: var(--#{$prefix}header-height);
+	transition: $transition-base;
+
+	.cb-asidebar-search-wrapper {
+		.cb-asidebar-search {
+			height: var(--#{$prefix}header-height);
+			opacity: 0;
+			visibility: hidden;
+			transition: $transition-base;
+
+			&.search-form-open {
+				opacity: 1;
+				visibility: visible;
+				transition: $transition-base;
+			}
+		}
+	}
+
+	.btn-icon {
+		.fi {
+			line-height: 0;
+			font-size: $font-size-lg;
+		}
+	}
+
+	.cb-main-header-right {
+		.cb-icon {
+			line-height: 0;
+		}
+
+		.cb-notifications-item {
+			.cb-notifications-action {
+				opacity: 0;
+				visibility: hidden;
+				transition: $transition-base;
+			}
+
+			&:hover {
+				.cb-notifications-action {
+					opacity: 1;
+					visibility: visible;
+					transition: $transition-base;
+				}
+			}
+		}
+
+		.cb-theme-applications {
+			.dropdown-menu {
+				a {
+					border-radius: $border-radius-sm;
+					transition: $transition-base;
+
+					&:hover {
+						background-color: var(--#{$prefix}link-bg);
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,45 @@
+/*
+<--!----------------------------------------------------------------!-->
+<--! OFFCANVAS ASIDEBAR SCSS !-->
+<--!----------------------------------------------------------------!-->
+*/
+
+body {
+	.offcanvas {
+
+		.cb-offcanvas-header,
+		.cb-offcanvas-footer {
+			height: var(--#{$prefix}header-height);
+		}
+
+		.cb-offcanvas-body {
+			height: calc(100% - 10rem);
+
+		}
+	}
+
+	&.offcanvas-opened {
+		.main-wrapper {
+			.cb-asidebar {
+				@include media-breakpoint-between(xl, xxxl) {
+					opacity: 0;
+					visibility: hidden;
+					transform: translateX(-100%);
+				}
+			}
+
+			.cb-content {
+				margin-right: var(--#{$prefix}asidebar-width);
+
+				@include media-breakpoint-down(xxl) {
+					margin-right: 0;
+				}
+
+				@include media-breakpoint-between(xl, xxxl) {
+					margin-right: var(--#{$prefix}asidebar-width);
+					margin-left: var(--#{$prefix}navigation-width);
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="zxx">
+	<head>
+		@@include('./partials/meta.html', {"title": "Screenshare Start"} )
+		<!--! Start:: Page Vendors -!-->
+		<link rel="stylesheet" href="./../assets/vendors/owl.carousel/assets/owl.carousel.min.css">
+		<!--! End:: Page Vendors -!-->
+
+		@@include('./partials/styling.html')
+	</head>
+
+	<body>
+		<!--! ================================================================ !-->
+		<!--! Start:: Main Wrapper !-->
+		<!--! ================================================================ !-->
+		<div class="main-wrapper">
+			<!--! ================================================================ !-->
+			<!--! Start:: Navigation !-->
+			<!--! ================================================================ !-->
+			<nav class="cb-navigation d-flex flex-column flex-shrink-0 bg-body-tertiary position-fixed start-0 top-0 bottom-0 border-end z-1045">
+				<!-- Start:: Navigation Logo -->
+				<a href="./index.html" class="cb-navigation-brand d-flex align-items-center justify-content-center border-bottom" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Chatboot">
+					<img src="./../assets/images/logo.png" alt="Chatboot" class="img-fluid mx-auto wd-40">
+				</a>
+				<!-- End:: Navigation Logo -->
+				<!-- Start:: Navigation Body -->
+				<div class="cb-navigation-body position-relative" style="height: calc(100vh - 10rem)" data-scroll-target="cb-scrollable">
+					<ul class="nav nav-pills nav-flush flex-column mb-auto text-center py-4">
+						<li class="nav-item">
+							<a href="./index.html" class="nav-link" aria-current="page" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Chats" data-bs-offset="0,25">
+								<i class="fi fi-rr-comment-alt"></i>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="./call.html" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Calls" data-bs-offset="0,25">
+								<i class="fi fi-rr-phone-call"></i>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="./meeting.html" class="nav-link active" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Meetings" data-bs-offset="0,25">
+								<i class="fi fi-rr-camera-viewfinder"></i>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="./email.html" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Emails" data-bs-offset="0,25">
+								<i class="fi fi-rr-envelope-dot"></i>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="./contact.html" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Contacts" data-bs-offset="0,25">
+								<i class="fi fi-rr-address-book"></i>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="./pages.html" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Pages" data-bs-offset="0,25">
+								<i class="fi fi-rr-layers"></i>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="./../../docs/docs.html" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Documentations" data-bs-offset="0,25">
+								<i class="fi fi-rr-book-open-cover"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<!-- End:: Navigation Body  -->
+				<!-- Start:: Navigation Footer -->
+				<div class="cb-navigation-footer dropdown border-top d-flex align-items-center justify-content-center">
+					<a href="javascript:void(0);" data-bs-toggle="dropdown" data-bs-offset="-24, 16">
+						<div class="nav-link d-flex align-items-center justify-content-center rounded-pill" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Settings" data-bs-offset="0,25">
+							<i class="fi fi-rr-settings"></i>
+						</div>
+					</a>
+					<div class="dropdown-menu wd-350 py-3">
+						<!-- Start:: dropdown-item -->
+						<!-- End:: dropdown-item -->
+						<a href="./settings-general.html" class="dropdown-item mb-2 mx-2">
+							<div class="avatar avatar-lg rounded bg-body-secondary">
+								<i class="fi fi-rr-tags fs-3"></i>
+							</div>
+							<div class="ms-3">
+								<h6 class="fw-bold mb-1">General Settings</h6>
+								<p class="fs-12 fw-normal text-muted mb-0">Profile photo, name & more</p>
+							</div>
+							<div class="btn btn-icon btn-light ms-auto">
+								<i class="fi fi-rr-angle-small-right"></i>
+							</div>
+						</a>
+						<!-- End:: dropdown-item -->
+						<!-- Start:: dropdown-item -->
+						<a href="./settings-security.html" class="dropdown-item mb-2 mx-2">
+							<div class="avatar avatar-lg rounded bg-body-secondary">
+								<i class="fi fi-rr-shield-check fs-3"></i>
+							</div>
+							<div class="ms-3">
+								<h6 class="fw-bold mb-1">Security Settings</h6>
+								<p class="fs-12 fw-normal text-muted mb-0">Password, security & more</p>
+							</div>
+							<div class="btn btn-icon btn-light ms-auto">
+								<i class="fi fi-rr-angle-small-right"></i>
+							</div>
+						</a>
+						<!-- End:: dropdown-item -->
+						<!-- Start:: dropdown-item -->
+						<a href="./settings-billing.html" class="dropdown-item mb-2 mx-2">
+							<div class="avatar avatar-lg rounded bg-body-secondary">
+								<i class="fi fi-rr-usd-circle fs-3"></i>
+							</div>
+							<div class="ms-3">
+								<h6 class="fw-bold mb-1">Billing Settings</h6>
+								<p class="fs-12 fw-normal text-muted mb-0">Setup payment methords</p>
+							</div>
+							<div class="btn btn-icon btn-light ms-auto">
+								<i class="fi fi-rr-angle-small-right"></i>
+							</div>
+						</a>
+						<!-- End:: dropdown-item -->
+						<!-- Start:: dropdown-item -->
+						<a href="./settings-notification.html" class="dropdown-item mb-2 mx-2">
+							<div class="avatar avatar-lg rounded bg-body-secondary">
+								<i class="fi fi-rr-bell fs-3"></i>
+							</div>
+							<div class="ms-3">
+								<h6 class="fw-bold mb-1">Notification Settings</h6>
+								<p class="fs-12 fw-normal text-muted mb-0">Set your notifications</p>
+							</div>
+							<div class="btn btn-icon btn-light ms-auto">
+								<i class="fi fi-rr-angle-small-right"></i>
+							</div>
+						</a>
+						<!-- End:: dropdown-item -->
+						<!-- Start:: dropdown-item -->
+						<a href="./settings-integration.html" class="dropdown-item mb-0 mx-2">
+							<div class="avatar avatar-lg rounded bg-body-secondary">
+								<i class="fi fi-rr-square-plus fs-3"></i>
+							</div>
+							<div class="ms-3">
+								<h6 class="fw-bold mb-1">Integration Settings</h6>
+								<p class="fs-12 fw-normal text-muted mb-0">Setup apps integrations</p>
+							</div>
+							<div class="btn btn-icon btn-light ms-auto">
+								<i class="fi fi-rr-angle-small-right"></i>
+							</div>
+						</a>
+						<!-- End:: dropdown-item -->
+					</div>
+				</div>
+				<!-- End:: Navigation Footer -->
+			</nav>
+			<!--! ================================================================ !-->
+			<!--! End:: Navigation !-->
+			<!--! ================================================================ !-->
+			<!--! ================================================================ !-->
+			<!--! Start:: Asidebar !-->
+			<!--! ================================================================ !-->
+			<aside class="cb-asidebar cb-asidebar-without-sub-header position-fixed start-0 top-0 bottom-0 vh-100 border-end bg-body z-1040">
+				<!--! Start:: aside-main-header !-->
+				<div class="cb-asidebar-header d-flex align-items-center justify-content-between px-4 border-bottom">
+					<h2 class="fs-20 fw-bold mb-0">Screenshare</h2>
+					<div class="hstack gap-2">
+						<!--! Start:: filter-dropdown !-->
+						<div class="dropdown">
+							<a href="javascript:void(0);" class="btn btn-icon btn-light" data-bs-toggle="dropdown" data-bs-auto-close="outside" data-bs-offset="25,19">
+								<i class="fi fi-rr-sliders-v"></i>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-end wd-300">
+								<li>
+									<a href="javascript:void(0);" class="dropdown-item gap-4">
+										<i class="fi fi-sr-sort-amount-up-alt"></i>
+										<span>
+											<span class="d-block">Ascending</span>
+											<span class="fs-12 fw-normal text-muted d-block">Meeting ascending order</span>
+										</span>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="dropdown-item gap-4">
+										<i class="fi fi-sr-sort-amount-down-alt"></i>
+										<span>
+											<span class="d-block">Descending</span>
+											<span class="fs-12 fw-normal text-muted d-block">Meeting descending order</span>
+										</span>
+									</a>
+								</li>
+								<li><hr class="dropdown-divider"></li>
+								<li>
+									<a href="javascript:void(0);" class="dropdown-item gap-4">
+										<i class="fi fi-rr-mode-portrait"></i>
+										<span>
+											<span class="d-block">All Meeting</span>
+											<span class="fs-12 fw-normal text-muted d-block">All meeting unified</span>
+										</span>
+										<span class="badge bg-success-subtle text-success rounded-pill ms-auto">5+</span>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="dropdown-item gap-4">
+										<i class="fi fi-rr-megaphone"></i>
+										<span>
+											<span class="d-block">Upcomming</span>
+											<span class="fs-12 fw-normal text-muted d-block">Upcomming meeting</span>
+										</span>
+										<span class="badge bg-warning-subtle text-warning rounded-pill ms-auto">4+</span>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="dropdown-item gap-4">
+										<i class="fi fi-rr-alarm-clock"></i>
+										<span>
+											<span class="d-block">Expired</span>
+											<span class="fs-12 fw-normal text-muted d-block">Expired meeting</span>
+										</span>
+										<span class="badge bg-danger-subtle text-danger rounded-pill ms-auto">3+</span>
+									</a>
+								</li>
+								<li><hr class="dropdown-divider"></li>
+								<li>
+									<a href="javascript:void(0);" class="dropdown-item gap-4 text-danger" data-toast-trigger="toast-delete">
+										<i class="fi fi-rr-trash"></i>
+										<span>
+											<span class="d-block">Delete</span>
+											<span class="fs-12 fw-normal d-block">Removed meeting</span>
+										</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<!--! End:: filter-dropdown !-->
+						<!--! Start:: asidebar-toggler !-->
+						<button type="button" class="btn btn-icon btn-light d-xl-none" data-toggle-target="cb-asidebar-toggler">
+							<i class="fi fi-rr-cross"></i>
+						</button>
+						<!--! End:: asidebar-toggler !-->
+					</div>
+				</div>
+				<!--! End:: aside-main-header !-->
+				<!--! Start:: aside-main-body !-->
+				<div class="cb-asidebar-body position-relative p-4" data-scroll-target="cb-scrollable">
+					<!--! Start:: screenshare-item !-->
+					<div class="card mb-4">
+						<div class="position-relative overflow-hidden">
+							<img class="card-img-top bg-image-blur" src="./../assets/images/share/1.jpg" alt="Title">
+							<div class="dropdown position-absolute end-5 top-5">
+								<a href="javascript:void(0);" class="btn btn-icon btn-icon-md bg-white bg-opacity-10 text-white" data-bs-toggle="dropdown">
+									<i class="fi fi-bs-menu-dots-vertical"></i>
+								</a>
+								<ul class="dropdown-menu dropdown-menu-end dropdown-sm">
+									<li>
+										<a href="javascript:void(0);" class="dropdown-item">
+											<i class="fi fi-rr-share"></i>
+											<span class="ms-3">Share</span>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);" class="dropdown-item">
+											<i class="fi fi-rr-box"></i>
+											<span class="ms-3">Archive</span>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);" class="dropdown-item">
+											<i class="fi fi-rr-mode-portrait"></i>
+											<span class="ms-3">Broadcast</span>
+										</a>
+									</li>
+									<li><hr class="dropdown-divider"></li>
+									<li>
+										<a href="javascript:void(0);" class="dropdown-item text-danger" data-toast-trigger="toast-delete">
+											<i class="fi fi-rr-trash"></i>
+											<span class="ms-3">Delete</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<a href="./meeting-details.html" class="hstack px-4 py-3 bg-dark text-muted rounded-2 position-absolute translate-middle top-50 start-50">
+								<i class="fi fi-rr-play fs-4 lh-0"></i>
+							</a>
+						</div>
+						<div class="card-body">
+							<h5 class="card-title mb-2">
+								<a href="./meeting-details.html">React Dashboard Design</a>
+							</h5>
+							<div class="fs-11 fw-medium text-muted hstack gap-2">
+								<span>20/03/2023</span>
+								<span class="wd-4 ht-4 bg-gray-400 rounded-circle"></span>
+								<span>53.47K Views</span>
+								<span class="wd-4 ht-4 bg-gray-400 rounded-circle"></span>
+								<span>23:47 Mins</span>
+							</div>
+						</div>
+					</div>
+					<!--! End:: screenshare-item !-->
+					<!--! Start:: screenshare-item !-->
+					<div class="card mb-4">
+						<div class="position-relative overflow-hidden">
+							<img class="card-img-top bg-image-blur" src="./../assets/images/share/2.jpg" alt="Title">
+							<div class="dropdown position-absolute end-5 top-5">
+								<a href="javascript:void(0);" class="btn btn-icon btn-icon-md bg-white bg-opacity-10 text-white" data-bs-toggle="dropdown">
+									<i class="fi fi-bs-menu-dots-vertical"></i>
+								</a>
+								<ul class="dropdown-menu dropdown-menu-end dropdown-sm">
+									<li>
+										<a href="javascript:void(0);" class="dropdown-item">
+											<i class="fi fi-rr-share"></i>
+											<span class="ms-3">Share</span>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);" class="dropdown-item">
+											<i class="fi fi-rr-box"></i>
+											<span class="ms-3">Archive</span>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);" class="dropdown-item">
+											<i class="fi fi-rr-mode-portrait"></i>
+											<span class="ms-3">Broadcast</span>
+										</a>
+									</li>
+									<li><hr class="dropdown-divider"></li>
+									<li>
+										<a href="javascript:void(0);" class="dropdown-item text-danger" data-toast-trigger="toast-delete">
+											<i class="fi fi-rr-trash"></i>
+											<span class="ms-3">Delete</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<a href="./meeting-details.html" class="hstack px-4 py-3 bg-dark text-muted rounded-2 position-absolute translate-middle top-50 start-50">
+								<i class="fi fi-rr-play fs-4 lh-0"></i>
+							</a>
+						</div>
+						<div class="card-body">
+							<h5 class="card-title mb-2">
+								<a href="./meeting-details.html">Standup Team Meeting</a>
+							</h5>
+							<div class="fs-11 fw-medium text-muted hstack gap-2">
+								<span>20/03/2023</span>
+								<span class="wd-4 ht-4 bg-gray-400 rounded-circle"></span>
+								<span>53.47K Views</span>
+								<span class="wd-4 ht-4 bg-gray-400 rounded-circle"></span>
+								<span>23:47 Mins</span>
+							</div>
+						</div>
+					</div>
+					<!--! End:: screenshare-item !-->
+					<!--! Start:: screenshare-item !-->
+					<div class="card mb-4">
+						<div class="position-relative overflow-hidden">
+							<img class="card-img-top bg-image-blur" src="./../assets/images/share/3.jpg" alt="Title">
+							<div class="dropdown position-absolute end-5 top-5">
+								<a href="javascript:void(0);" class="btn btn-icon btn-icon-md bg-white bg-opacity-10 text-white" data-bs-toggle="dropdown">
+									<i class="fi fi-bs-menu-dots-vertical"></i>
+								</a>
+								<ul class="dropdown-menu dropdown-menu-end dropdown-sm">
+									<li>
+										<a href="javascript:void(0);" class="dropdown-item">
+											<i class="fi fi-rr-share"></i>
+											<span class="ms-3">Share</span>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);" class="dropdown-item">
+											<i class="fi fi-rr-box"></i>
+											<span class="ms-3">Archive</span>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);" class="dropdown-item">
+											<i class="fi fi-rr-mode-portrait"></i>
+											<span class="ms-3">Broadcast</span>
+										</a>
+									</li>
+									<li><hr class="dropdown-divider"></li>
+									<li>
+										<a href="javascript:void(0);" class="dropdown-item text-danger" data-toast-trigger="toast-delete">
+											<i class="fi fi-rr-trash"></i>
+											<span class="ms-3">Delete</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<a href="./meeting-details.html" class="hstack px-4 py-3 bg-dark text-muted rounded-2 position-absolute translate-middle top-50 start-50">
+								<i class="fi fi-rr-play fs-4 lh-0"></i>
+							</a>
+						</div>
+						<div class="card-body">
+							<h5 class="card-title mb-2">
+								<a href="./meeting-details.html">Chatboot Messanger BS5</a>
+							</h5>
+							<div class="fs-11 fw-medium text-muted hstack gap-2">
+								<span>20/03/2023</span>
+								<span class="wd-4 ht-4 bg-gray-400 rounded-circle"></span>
+								<span>53.47K Views</span>
+								<span class="wd-4 ht-4 bg-gray-400 rounded-circle"></span>
+								<span>23:47 Mins</span>
+							</div>
+						</div>
+					</div>
+					<!--! End:: screenshare-item !-->
+					<!--! Start:: screenshare-item !-->
+					<div class="card mb-4">
+						<div class="position-relative overflow-hidden">
+							<img class="card-img-top bg-image-blur" src="./../assets/images/share/4.jpg" alt="Title">
+							<div class="dropdown position-absolute end-5 top-5">
+								<a href="javascript:void(0);" class="btn btn-icon btn-icon-md bg-white bg-opacity-10 text-white" data-bs-toggle="dropdown">
+									<i class="fi fi-bs-menu-dots-vertical"></i>
+								</a>
+								<ul class="dropdown-menu dropdown-menu-end dropdown-sm">
+									<li>
+										<a href="javascript:void(0);" class="dropdown-item">
+											<i class="fi fi-rr-share"></i>
+											<span class="ms-3">Share</span>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);" class="dropdown-item">
+											<i class="fi fi-rr-box"></i>
+											<span class="ms-3">Archive</span>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);" class="dropdown-item">
+											<i class="fi fi-rr-mode-portrait"></i>
+											<span class="ms-3">Broadcast</span>
+										</a>
+									</li>
+									<li><hr class="dropdown-divider"></li>
+									<li>
+										<a href="javascript:void(0);" class="dropdown-item text-danger" data-toast-trigger="toast-delete">
+											<i class="fi fi-rr-trash"></i>
+											<span class="ms-3">Delete</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<a href="./meeting-details.html" class="hstack px-4 py-3 bg-dark text-muted rounded-2 position-absolute translate-middle top-50 start-50">
+								<i class="fi fi-rr-play fs-4 lh-0"></i>
+							</a>
+						</div>
+						<div class="card-body">
+							<h5 class="card-title mb-2">
+								<a href="./meeting-details.html">Zoom Team Meeting</a>
+							</h5>
+							<div class="fs-11 fw-medium text-muted hstack gap-2">
+								<span>20/03/2023</span>
+								<span class="wd-4 ht-4 bg-gray-400 rounded-circle"></span>
+								<span>53.47K Views</span>
+								<span class="wd-4 ht-4 bg-gray-400 rounded-circle"></span>
+								<span>23:47 Mins</span>
+							</div>
+						</div>
+					</div>
+					<!--! End:: screenshare-item !-->
+					<!--! Start:: screenshare-item !-->
+					<div class="card mb-0">
+						<div class="position-relative overflow-hidden">
+							<img class="card-img-top bg-image-blur" src="./../assets/images/share/5.jpg" alt="Title">
+							<div class="dropdown position-absolute end-5 top-5">
+								<a href="javascript:void(0);" class="btn btn-icon btn-icon-md bg-white bg-opacity-10 text-white" data-bs-toggle="dropdown">
+									<i class="fi fi-bs-menu-dots-vertical"></i>
+								</a>
+								<ul class="dropdown-menu dropdown-menu-end dropdown-sm">
+									<li>
+										<a href="javascript:void(0);" class="dropdown-item">
+											<i class="fi fi-rr-share"></i>
+											<span class="ms-3">Share</span>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);" class="dropdown-item">
+											<i class="fi fi-rr-box"></i>
+											<span class="ms-3">Archive</span>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);" class="dropdown-item">
+											<i class="fi fi-rr-mode-portrait"></i>
+											<span class="ms-3">Broadcast</span>
+										</a>
+									</li>
+									<li><hr class="dropdown-divider"></li>
+									<li>
+										<a href="javascript:void(0);" class="dropdown-item text-danger" data-toast-trigger="toast-delete">
+											<i class="fi fi-rr-trash"></i>
+											<span class="ms-3">Delete</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<a href="./meeting-details.html" class="hstack px-4 py-3 bg-dark text-muted rounded-2 position-absolute translate-middle top-50 start-50">
+								<i class="fi fi-rr-play fs-4 lh-0"></i>
+							</a>
+						</div>
+						<div class="card-body">
+							<h5 class="card-title mb-2">
+								<a href="./meeting-details.html">BS5 Admin Dashboard Design</a>
+							</h5>
+							<div class="fs-11 fw-medium text-muted hstack gap-2">
+								<span>20/03/2023</span>
+								<span class="wd-4 ht-4 bg-gray-400 rounded-circle"></span>
+								<span>53.47K Views</span>
+								<span class="wd-4 ht-4 bg-gray-400 rounded-circle"></span>
+								<span>23:47 Mins</span>
+							</div>
+						</div>
+					</div>
+					<!--! End:: screenshare-item !-->
+				</div>
+				<!--! End:: aside-main-body !-->
+				<!--! Start:: aside-main-footer !-->
+				<div class="cb-asidebar-footer d-flex align-items-center justify-content-between px-4 border-top">
+					<!--! Start:: pagination !-->
+					<div class="hstack gap-2">
+						<a href="javascript:void(0);" class="btn btn-icon btn-light" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Previous">
+							<i class="fi fi-br-angle-left"></i>
+						</a>
+						<a href="javascript:void(0);" class="btn btn-icon btn-light" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Next">
+							<i class="fi fi-br-angle-right"></i>
+						</a>
+					</div>
+					<!--! End:: pagination !-->
+					<!--! Start:: meeting-back !-->
+					<a href="./meeting-start.html" class="btn btn-light border">
+						<i class="fi fi-rr-arrow-small-left"></i>
+						<span class="ms-2">Back</span>
+					</a>
+					<!--! End:: meeting-back !-->
+				</div>
+				<!--! End:: aside-main-footer !-->
+			</aside>
+			<!--! ================================================================ !-->
+			<!--! End:: Asidebar !-->
+			<!--! ================================================================ !-->
+			<!--! ================================================================ !-->
+			<!--! Start:Content !-->
+			<!--! ================================================================ !-->
+			<main class="cb-content">
+				<!--! ================================================================ !-->
+				<!--! Start:: Header !-->
+				<!--! ================================================================ !-->
+				@@include('./partials/header.html')
+				<!--! ================================================================ !-->
+				<!--! End:: Header !-->
+				<!--! ================================================================ !-->
+				<!--! Start:: main-content-header !-->
+				<div class="cb-content-header d-flex align-items-center px-4 sticky-top bg-body border-bottom">
+					<!--! Start:: page-header-left !-->
+					<div class="page-header-left hstack gap-4">
+						<a href="javascript:void(0);" class="app-sidebar-open-trigger d-none">
+							<i data-feather="align-right"></i>
+						</a>
+						<div class="hstack gap-4">
+							<a href="./meeting.html" class="btn btn-icon btn-light">
+								<i class="fi fi-rr-arrow-left"></i>
+							</a>
+							<div class="d-none d-sm-block">
+								<div class="mb-1 fw-semibold fs-14">Bootstrap Hack</div>
+								<div>
+									<span class="fs-11 fw-normal text-muted">Record: </span>
+									<span class="fw-semibold text-success timetracker">00:00:00</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--! End:: page-header-left !-->
+					<!--! Start:: page-header-right !-->
+					<div class="page-header-right ms-auto">
+						<div class="d-flex align-items-center justify-content-center">
+							<div class="hstack gap-2">
+								<a href="javascript:void(0);" class="btn btn-outline-light hstack rounded-pill">
+									<div class="avatar-group avatar-group-xs">
+										<div class="avatar avatar-xs">
+											<img src="./../assets/images/avatar/1.png" alt="" class="img-fluid">
+										</div>
+										<div class="avatar avatar-xs">
+											<img src="./../assets/images/avatar/2.png" alt="" class="img-fluid">
+										</div>
+										<div class="avatar avatar-xs">
+											<img src="./../assets/images/avatar/3.png" alt="" class="img-fluid">
+										</div>
+										<div class="avatar avatar-xs">
+											<img src="./../assets/images/avatar/4.png" alt="" class="img-fluid">
+										</div>
+										<div class="avatar avatar-xs rounded-circle bg-light">
+											<i class="fi fi-bs-menu-dots"></i>
+										</div>
+									</div>
+									<div class="ms-2">
+										<strong class="mx-1 fs-12">25</strong>
+										<span>Joined</span>
+									</div>
+								</a>
+								<a href="javascript:void(0);" class="btn btn-sm btn-icon btn-light">
+									<i class="fi fi-rr-dot-circle"></i>
+								</a>
+								<a href="javascript:void(0);" class="btn btn-light btn-icon" data-bs-toggle="offcanvas" data-bs-target="#offcanvasComments" title="Comments">
+									<i class="fi fi-rr-comment-alt"></i>
+								</a>
+								<div class="dropdown">
+									<a href="javascript:void(0);" class="btn btn-sm btn-icon btn-light" data-bs-toggle="dropdown" data-bs-offset="0,19">
+										<i class="fi fi-br-menu-dots-vertical"></i>
+									</a>
+									<div class="dropdown-menu dropdown-menu-end">
+										<a href="javascript:void(0);" class="dropdown-item">
+											<i class="fi fi-rr-shield-plus"></i>
+											<span class="ms-3">Mute</span>
+										</a>
+										<a href="javascript:void(0);" class="dropdown-item">
+											<i class="fi fi-rr-dot-circle"></i>
+											<span class="ms-3">Record</span>
+										</a>
+										<a href="javascript:void(0);" class="dropdown-item">
+											<i class="fi fi-rr-star-comment-alt"></i>
+											<span class="ms-3">Feedback</span>
+										</a>
+										<a href="javascript:void(0);" class="dropdown-item">
+											<i class="fi fi-rr-lightbulb-question"></i>
+											<span class="ms-3">Sportlight</span>
+										</a>
+										<div class="dropdown-divider"></div>
+										<a href="javascript:void(0);" class="dropdown-item">
+											<i class="fi fi-rr-flag-alt"></i>
+											<span class="ms-3">Flags</span>
+										</a>
+										<a href="javascript:void(0);" class="dropdown-item">
+											<i class="fi fi-rr-triangle-warning"></i>
+											<span class="ms-3">Reoprt</span>
+										</a>
+										<div class="dropdown-divider"></div>
+										<a href="javascript:void(0);" class="dropdown-item text-danger" data-toast-trigger="toast-leave">
+											<i class="fi fi-rr-exit"></i>
+											<span class="ms-3">Leave</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--! End:: page-header-right !-->
+				</div>
+				<!--! End:: main-content-header !-->
+				<!--! Start:: content-wrapper !-->
+				<div class="cb-content-wrapper">
+					<!--! Start:: main-content-body !-->
+					<div class="cb-content-body">
+						<div class="cb-content-inner">
+							<!--! Start:: screenshare-video-stream !-->
+							<div class="cb-screenshare-video-stream card rounded-5 position-relative">
+								<video autoplay muted loop class="w-100 rounded-5 object-fit-cover">
+									<source src="./../assets/images/general/video_bg_1.mp4" type="video/mp4">
+								</video>
+								<div class="d-flex align-items-center justify-content-between gap-2 position-absolute top-0 p-4 w-100">
+									<div class="hstack gap-2">
+										<a href="javascript:void(0);" class="btn btn-sm btn-danger">Live</a>
+										<a href="javascript:void(0);" class="btn btn-sm bg-white bg-opacity-10 text-white">
+											<i class="fi fi-rr-eye fs-12"></i>
+											<span class="ms-2">25</span>
+										</a>
+										<a href="javascript:void(0);" class="btn btn-icon btn-icon-md bg-warning bg-opacity-10 text-warning">
+											<i class="fi fi-rr-dot-circle"></i>
+										</a>
+									</div>
+									<div class="hstack gap-2">
+										<a href="javascript:void(0);" class="btn btn-icon btn-icon-md bg-white bg-opacity-10 text-white">
+											<i class="fi fi-rr-circle-microphone fs-12"></i>
+										</a>
+										<a href="javascript:void(0);" class="btn btn-icon btn-icon-md bg-white bg-opacity-10 text-white">
+											<i class="fi fi-rr-thumbtack fs-12"></i>
+										</a>
+										<a href="javascript:void(0);" class="btn btn-icon btn-icon-md bg-white bg-opacity-10 text-white">
+											<i class="fi fi-rr-expand fs-12"></i>
+										</a>
+									</div>
+								</div>
+								<div class="position-absolute bottom-0 p-4 w-100">
+									<!--! Start:: owl-carousel !-->
+									<div class="owl-carousel">
+										<div class="owl-item-wrapper position-relative">
+											<img src="./../assets/images/cover/1.jpg" alt="" class="img-fluid bg-image-blur">
+											<a href="javascript:void(0);" class="btn btn-icon btn-icon-sm btn-success rounded-circle position-absolute top-5 end-5"><i class="fi fi-rr-circle-microphone"></i></a>
+											<div class="avatar avatar-lg rounded-circle position-absolute translate-middle top-50 start-50">
+												<img src="./../assets/images/avatar/1.png" alt="" class="img-fluid">
+											</div>
+											<a href="javascript:void(0);" class="btn btn-sm bg-white bg-opacity-10 text-white position-absolute start-5 bottom-5">Alexandra Della</a>
+										</div>
+										<div class="owl-item-wrapper position-relative">
+											<img src="./../assets/images/cover/2.jpg" alt="" class="img-fluid bg-image-blur">
+											<a href="javascript:void(0);" class="btn btn-icon btn-icon-sm bg-white bg-opacity-10 text-white rounded-circle position-absolute top-5 end-5"><i class="fi fi-rr-microphone-slash"></i></a>
+											<div class="avatar avatar-lg rounded-circle position-absolute translate-middle top-50 start-50">
+												<img src="./../assets/images/avatar/2.png" alt="" class="img-fluid">
+											</div>
+											<a href="javascript:void(0);" class="btn btn-sm bg-white bg-opacity-10 text-white position-absolute start-5 bottom-5">Green Cute</a>
+										</div>
+										<div class="owl-item-wrapper position-relative">
+											<img src="./../assets/images/cover/3.jpg" alt="" class="img-fluid bg-image-blur">
+											<a href="javascript:void(0);" class="btn btn-icon btn-icon-sm bg-white bg-opacity-10 text-white rounded-circle position-absolute top-5 end-5"><i class="fi fi-rr-microphone-slash"></i></a>
+											<div class="avatar avatar-lg rounded-circle position-absolute translate-middle top-50 start-50">
+												<img src="./../assets/images/avatar/3.png" alt="" class="img-fluid">
+											</div>
+											<a href="javascript:void(0);" class="btn btn-sm bg-white bg-opacity-10 text-white position-absolute start-5 bottom-5">Norman Byrd</a>
+										</div>
+										<div class="owl-item-wrapper position-relative">
+											<img src="./../assets/images/cover/4.jpg" alt="" class="img-fluid bg-image-blur">
+											<a href="javascript:void(0);" class="btn btn-icon btn-icon-sm btn-success rounded-circle position-absolute top-5 end-5"><i class="fi fi-rr-circle-microphone"></i></a>
+											<div class="avatar avatar-lg rounded-circle position-absolute translate-middle top-50 start-50">
+												<img src="./../assets/images/avatar/4.png" alt="" class="img-fluid">
+											</div>
+											<a href="javascript:void(0);" class="btn btn-sm bg-white bg-opacity-10 text-white position-absolute start-5 bottom-5">Bryan Waters</a>
+										</div>
+										<div class="owl-item-wrapper position-relative">
+											<img src="./../assets/images/cover/5.jpg" alt="" class="img-fluid bg-image-blur">
+											<a href="javascript:void(0);" class="btn btn-icon btn-icon-sm bg-white bg-opacity-10 text-white rounded-circle position-absolute top-5 end-5"><i class="fi fi-rr-microphone-slash"></i></a>
+											<div class="avatar avatar-lg rounded-circle position-absolute translate-middle top-50 start-50">
+												<img src="./../assets/images/avatar/5.png" alt="" class="img-fluid">
+											</div>
+											<a href="javascript:void(0);" class="btn btn-sm bg-white bg-opacity-10 text-white position-absolute start-5 bottom-5">Timothy Boyd</a>
+										</div>
+										<div class="owl-item-wrapper position-relative">
+											<img src="./../assets/images/cover/6.jpg" alt="" class="img-fluid bg-image-blur">
+											<a href="javascript:void(0);" class="btn btn-icon btn-icon-sm bg-white bg-opacity-10 text-white rounded-circle position-absolute top-5 end-5"><i class="fi fi-rr-microphone-slash"></i></a>
+											<div class="avatar avatar-lg rounded-circle position-absolute translate-middle top-50 start-50">
+												<img src="./../assets/images/avatar/6.png" alt="" class="img-fluid">
+											</div>
+											<a href="javascript:void(0);" class="btn btn-sm bg-white bg-opacity-10 text-white position-absolute start-5 bottom-5">Archie Cantones</a>
+										</div>
+										<div class="owl-item-wrapper position-relative">
+											<img src="./../assets/images/cover/7.jpg" alt="" class="img-fluid bg-image-blur">
+											<a href="javascript:void(0);" class="btn btn-icon btn-icon-sm bg-white bg-opacity-10 text-white rounded-circle position-absolute top-5 end-5"><i class="fi fi-rr-microphone-slash"></i></a>
+											<div class="avatar avatar-lg rounded-circle position-absolute translate-middle top-50 start-50">
+												<img src="./../assets/images/avatar/7.png" alt="" class="img-fluid">
+											</div>
+											<a href="javascript:void(0);" class="btn btn-sm bg-white bg-opacity-10 text-white position-absolute start-5 bottom-5">Edward Andrade</a>
+										</div>
+										<div class="owl-item-wrapper position-relative">
+											<img src="./../assets/images/cover/8.jpg" alt="" class="img-fluid bg-image-blur">
+											<a href="javascript:void(0);" class="btn btn-icon btn-icon-sm bg-white bg-opacity-10 text-white rounded-circle position-absolute top-5 end-5"><i class="fi fi-rr-microphone-slash"></i></a>
+											<div class="avatar avatar-lg rounded-circle position-absolute translate-middle top-50 start-50">
+												<img src="./../assets/images/avatar/8.png" alt="" class="img-fluid">
+											</div>
+											<a href="javascript:void(0);" class="btn btn-sm bg-white bg-opacity-10 text-white position-absolute start-5 bottom-5">Kenneth Hune</a>
+										</div>
+										<div class="owl-item-wrapper position-relative">
+											<img src="./../assets/images/cover/9.jpg" alt="" class="img-fluid bg-image-blur">
+											<a href="javascript:void(0);" class="btn btn-icon btn-icon-sm bg-white bg-opacity-10 text-white rounded-circle position-absolute top-5 end-5"><i class="fi fi-rr-microphone-slash"></i></a>
+											<div class="avatar avatar-lg rounded-circle position-absolute translate-middle top-50 start-50">
+												<img src="./../assets/images/avatar/9.png" alt="" class="img-fluid">
+											</div>
+											<a href="javascript:void(0);" class="btn btn-sm bg-white bg-opacity-10 text-white position-absolute start-5 bottom-5">Madsen Daniel</a>
+										</div>
+										<div class="owl-item-wrapper position-relative">
+											<img src="./../assets/images/cover/10.jpg" alt="" class="img-fluid bg-image-blur">
+											<a href="javascript:void(0);" class="btn btn-icon btn-icon-sm bg-white bg-opacity-10 text-white rounded-circle position-absolute top-5 end-5"><i class="fi fi-rr-microphone-slash"></i></a>
+											<div class="avatar avatar-lg rounded-circle position-absolute translate-middle top-50 start-50">
+												<img src="./../assets/images/avatar/10.png" alt="" class="img-fluid">
+											</div>
+											<a href="javascript:void(0);" class="btn btn-sm bg-white bg-opacity-10 text-white position-absolute start-5 bottom-5">Ursula Sanders</a>
+										</div>
+										<div class="owl-item-wrapper position-relative">
+											<img src="./../assets/images/cover/11.jpg" alt="" class="img-fluid bg-image-blur">
+											<a href="javascript:void(0);" class="btn btn-icon btn-icon-sm bg-white bg-opacity-10 text-white rounded-circle position-absolute top-5 end-5"><i class="fi fi-rr-microphone-slash"></i></a>
+											<div class="avatar avatar-lg rounded-circle position-absolute translate-middle top-50 start-50">
+												<img src="./../assets/images/avatar/11.png" alt="" class="img-fluid">
+											</div>
+											<a href="javascript:void(0);" class="btn btn-sm bg-white bg-opacity-10 text-white position-absolute start-5 bottom-5">Laura Foreman</a>
+										</div>
+										<div class="owl-item-wrapper position-relative">
+											<img src="./../assets/images/cover/12.jpg" alt="" class="img-fluid bg-image-blur">
+											<a href="javascript:void(0);" class="btn btn-icon btn-icon-sm bg-white bg-opacity-10 text-white rounded-circle position-absolute top-5 end-5"><i class="fi fi-rr-microphone-slash"></i></a>
+											<div class="avatar avatar-lg rounded-circle position-absolute translate-middle top-50 start-50">
+												<img src="./../assets/images/avatar/12.png" alt="" class="img-fluid">
+											</div>
+											<a href="javascript:void(0);" class="btn btn-sm bg-white bg-opacity-10 text-white position-absolute start-5 bottom-5">Erna Serpa</a>
+										</div>
+									</div>
+									<!--! End:: owl-carousel !-->
+								</div>
+							</div>
+							<!--! End:: screenshare-video-stream !-->
+						</div>
+					</div>
+					<!--! Start:: main-content-body !-->
+					<!--! End:: main-content-footer !-->
+					<div class="cb-content-footer px-4 d-flex align-items-center border-top sticky-bottom bg-body row w-100">
+						<div class="col">
+							<a href="javascript:void(0);" class="btn btn-outline-light" data-toast-trigger="toast-copy">
+								<span class="d-none d-lg-inline-block">
+									<span class="text-truncate-1">https://cb.com/id?=axdefa</span>
+								</span>
+								<span class="vr mx-2 bg-body-secondary d-none d-lg-inline-block"></span>
+								<i class="fi fi-rr-copy"></i>
+							</a>
+						</div>
+						<div class="col hstack gap-2 justify-content-center">
+							<a href="javascript:void(0);" class="btn btn-light btn-icon btn-icon-lg d-none d-sm-flex" data-bs-toggle="tooltip" data-bs-trigger="hover" title="FullScreen">
+								<i class="fi fi-rr-expand"></i>
+							</a>
+							<a href="javascript:void(0);" class="btn btn-light btn-icon btn-icon-lg" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Mute">
+								<i class="fi fi-rr-microphone-slash"></i>
+							</a>
+							<a href="./meeting-start.html" class="btn btn-danger btn-icon btn-icon-lg" data-bs-toggle="tooltip" data-bs-trigger="hover" title="End">
+								<i class="fi fi-rr-signal-stream-slash"></i>
+							</a>
+							<div class="dropdown">
+								<a href="javascript:void(0);" class="btn btn-icon btn-light" data-bs-toggle="dropdown" data-bs-offset="0, 20" aria-expanded="false">
+									<i class="fi fi-rr-clip"></i>
+								</a>
+								<ul class="dropdown-menu dropdown-menu-end">
+									<li>
+										<a href="javascript:void(0);" class="dropdown-item">
+											<i class="fi fi-rr-picture"></i>
+											<span class="ms-3">Upload Images</span>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);" class="dropdown-item">
+											<i class="fi fi-rr-music-alt"></i>
+											<span class="ms-3">Upload Audios</span>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);" class="dropdown-item">
+											<i class="fi fi-rr-camera"></i>
+											<span class="ms-3">Upload Videos</span>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);" class="dropdown-item">
+											<i class="fi fi-rr-memo-circle-check"></i>
+											<span class="ms-3">Upload Documents</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<a href="javascript:void(0);" class="btn btn-light btn-icon btn-icon-lg d-none d-sm-flex" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Record">
+								<i class="fi fi-rr-dot-circle"></i>
+							</a>
+						</div>
+						<div class="col text-end">
+							<a href="javascript:void(0);" class="btn btn-success" data-toast-trigger="toast-conform">
+								<i class="fi fi-br-check"></i>
+								<span class="ms-2 d-none d-lg-inline-block">Finish</span>
+							</a>
+						</div>
+					</div>
+					<!--! Start:: main-content-footer !-->
+				</div>
+			</main>
+			<!--! ================================================================ !-->
+			<!--! End:: Content !-->
+			<!--! ================================================================ !-->
+		</div>
+		<!--! ================================================================ !-->
+		<!--! End:: Main Wrapper !-->
+		<!--! ================================================================ !-->
+		<!--! ================================================================ !-->
+		<!--! Start:: Comments OffCanvas !-->
+		<!--! ================================================================ !-->
+		@@include('./partials/comments.html')
+		<!--! ================================================================ !-->
+		<!--! End:: Comments OffCanvas !-->
+		<!--! ================================================================ !-->
+		<!--! ================================================================ !-->
+		<!--! Start:: Invice People Modal !-->
+		<!--! ================================================================ !-->
+		@@include('./partials/invite.html')
+		<!--! ================================================================ !-->
+		<!--! End:: Invice People Modal !-->
+		<!--! ================================================================ !-->
+		<!--! ================================================================ !-->
+		<!--! Start:: Toast Noticifactions !-->
+		<!--! ================================================================ !-->
+		@@include('./partials/toast.html')
+		<!--! ================================================================ !-->
+		<!--! End:: Toast Noticifactions !-->
+		<!--! ================================================================ !-->
+		<!--! ================================================================ !-->
+		<!--! Footer Script !-->
+		<!--! ================================================================ !-->
+		@@include('./partials/script.html')
+		<!--! Start:: Page Vendors -!-->
+		<script src="./../assets/vendors/owl.carousel/owl.carousel.min.js"></script>
+		<script src="./../assets/js/plugins/time-tracker.min.js"></script>
+		<!--! End:: Page Vendors -!-->
+
+		<!--! Start:: Screenshare Start Init -!-->
+		<script src="./../assets/js/apps/meeting/meeting-share-start.min.js"></script>
+		<!--! End:: Screenshare Start Init -!-->
+	</body>
+</html>

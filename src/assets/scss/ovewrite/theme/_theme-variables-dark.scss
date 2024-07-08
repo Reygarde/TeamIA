@@ -1,0 +1,30 @@
+/*
+<--!----------------------------------------------------------------!-->
+<--! THEME DARK SCSS !-->
+<--!----------------------------------------------------------------!-->
+*/
+html[data-bs-theme="dark"] {
+
+	// GRAY-DARK
+	@each $color,
+	$value in $grays-dark {
+		--#{$prefix}gray-#{$color}: #{$value};
+	}
+
+	// DARK-COLORS
+	--#{$prefix}dark: #{$light};
+	--#{$prefix}dark-rgb: #{to-rgb($light)};
+	--#{$prefix}light: #{$dark};
+	--#{$prefix}light-rgb: #{to-rgb($gray-dark-300)};
+	--#{$prefix}black: #{$white};
+	--#{$prefix}bg-white: #{$gray-dark-300};
+	--#{$prefix}body-color: #{$gray-dark-800};
+	--#{$prefix}secondary-color: #{$gray-dark-500};
+	--#{$prefix}link-color: #{$light};
+	--#{$prefix}link-hover-color: #{$white};
+	--#{$prefix}link-color-rgb: #{to-rgb($gray-dark-700)};
+	--#{$prefix}link-hover-color-rgb: #{to-rgb($white)};
+	--#{$prefix}border-color: #{$gray-dark-200};
+	--#{$prefix}border-color-white: #{$gray-dark-200};
+
+}

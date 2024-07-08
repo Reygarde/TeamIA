@@ -1,0 +1,86 @@
+/*
+<--!----------------------------------------------------------------!-->
+<--! EMAIL SCSS !-->
+<--!----------------------------------------------------------------!-->
+*/
+.cb-asidebar {
+	.cb-asidebar-body {
+		.cb-email-inbox-list {
+			.list-group-item {
+				.cb-asidebar-email-action {
+					opacity: 0;
+					visibility: hidden;
+					transition: all 0.3s ease;
+				}
+
+				&:hover {
+					.cb-asidebar-email-action {
+						opacity: 1;
+						visibility: visible;
+						transition: all 0.3s ease;
+					}
+				}
+
+			}
+		}
+	}
+}
+
+.cb-content {
+	.cb-content-header {
+		.page-header-left {
+			.cb-email-action {
+				.cb-email-action-list {
+					opacity: 0;
+					visibility: hidden;
+					transition: $transition-base;
+
+					&.show-action {
+						opacity: 1;
+						visibility: visible;
+						transition: $transition-base;
+					}
+				}
+			}
+		}
+	}
+
+	.cb-content-body {
+		.cb-email-item {
+			.cb-email-sender {
+				width: 12.5rem;
+				max-width: 12.5rem;
+			}
+
+			.cb-email-content {
+				a {
+					color: $text-muted;
+					font-weight: $font-weight-medium;
+
+					&.unread {
+						color: var(--#{$prefix}dark-text-emphasis);
+						font-weight: $font-weight-bold;
+					}
+				}
+			}
+
+			.cb-email-info {
+				.cb-email-info-action {
+					opacity: 0;
+					visibility: hidden;
+					background-color: var(--#{$prefix}body-bg);
+					transition: visibility 0.1s, opacity 0.2s linear;
+				}
+			}
+
+			&:hover {
+				.cb-email-info {
+					.cb-email-info-action {
+						opacity: 1;
+						visibility: visible;
+					}
+				}
+			}
+		}
+	}
+}

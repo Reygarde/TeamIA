@@ -1,0 +1,19 @@
+/*
+<--!----------------------------------------------------------------!-->
+<--! CONTACT SCSS !-->
+<--!----------------------------------------------------------------!-->
+*/
+.cb-contact-card {
+	&:hover {
+		.cb-contact-action {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+
+	.cb-contact-action {
+		opacity: 0;
+		visibility: hidden;
+		transition: $transition-base;
+	}
+}

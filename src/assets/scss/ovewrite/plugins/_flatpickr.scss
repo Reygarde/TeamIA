@@ -1,0 +1,91 @@
+/*
+<--!----------------------------------------------------------------!-->
+<--! FlatPickr SCSS !-->
+<--!----------------------------------------------------------------!-->
+*/
+.flatpickr-calendar {
+	background: var(--#{$prefix}tertiary-bg);
+	box-shadow: none;
+
+	&.arrowTop:before {
+		border-bottom-color: var(--#{$prefix}border-color);
+	}
+}
+
+.flatpickr-months .flatpickr-month {
+	color: var(--#{$prefix}dark);
+	fill: var(--#{$prefix}dark);
+	height: 55px;
+	top: 3px;
+}
+
+.flatpickr-current-month {
+	font-size: 100%;
+	font-weight: 500;
+	padding: 12px 0 0 0;
+	height: 50px;
+
+	.flatpickr-monthDropdown-months {
+		.flatpickr-monthDropdown-month {
+			background-color:var(--#{$prefix}tertiary-bg);
+		}
+	}
+}
+
+span.flatpickr-weekday {
+	color: var(--#{$prefix}dark);
+}
+
+.flatpickr-day {
+	font-size: $font-size-base;
+	color: var(--#{$prefix}body-color);
+
+	&.selected,
+	&.startRange,
+	&.endRange,
+	&.selected.inRange,
+	&.startRange.inRange,
+	&.endRange.inRange,
+	&.selected:focus,
+	&.startRange:focus,
+	&.endRange:focus,
+	&.selected:hover,
+	&.startRange:hover,
+	&.endRange:hover,
+	&.selected.prevMonthDay,
+	&.startRange.prevMonthDay,
+	&.endRange.prevMonthDay,
+	&.selected.nextMonthDay,
+	&.startRange.nextMonthDay,
+	&.endRange.nextMonthDay {
+		background: var(--#{$prefix}primary);
+		border-color: var(--#{$prefix}primary);
+	}
+
+	&.today {
+		color: var(--#{$prefix}primary);
+		border-color: transparent;
+
+		&:hover,
+		&:focus {
+			border-color: var(--#{$prefix}primary);
+			background: var(--#{$prefix}primary);
+		}
+	}
+
+	&.inRange,
+	&.prevMonthDay.inRange,
+	&.nextMonthDay.inRange,
+	&.today.inRange,
+	&.prevMonthDay.today.inRange,
+	&.nextMonthDay.today.inRange,
+	&:hover,
+	&.prevMonthDay:hover,
+	&.nextMonthDay:hover,
+	&:focus,
+	&.prevMonthDay:focus,
+	&.nextMonthDay:focus {
+		background: var(--#{$prefix}tertiary-bg);
+		border-color: var(--#{$prefix}border-color);
+	}
+}

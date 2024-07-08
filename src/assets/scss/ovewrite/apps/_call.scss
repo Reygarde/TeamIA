@@ -1,0 +1,163 @@
+/*
+<--!----------------------------------------------------------------!-->
+<--! CALLS SCSS !-->
+<--!----------------------------------------------------------------!-->
+*/
+// cb-asidebar
+.cb-asidebar {
+
+	.cb-call-item {
+		.cb-call-meta {
+			.cb-call-actions {
+				opacity: 0;
+				visibility: hidden;
+			}
+		}
+
+		&:hover {
+			.cb-call-meta {
+				.call-details {
+					opacity: 0;
+					visibility: hidden;
+				}
+
+				.cb-call-actions {
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+		}
+	}
+}
+
+// cb-call-dail-pad
+.cb-call-dail-pad {
+	#output {
+		color: $primary;
+		font-size: $font-size-xxl;
+		font-weight: $font-weight-bold;
+		height: 3.75rem;
+	}
+
+	.row {
+
+		.digit,
+		.dig {
+			cursor: pointer;
+			width: 33.3333%;
+			font-size: $font-size-xl;
+			font-weight: $font-weight-bolder;
+			border-radius: $border-radius-sm;
+			padding: 0.625rem 2rem;
+		}
+
+		.sub {
+			color: $gray-500;
+			font-weight: $font-weight-medium;
+			font-size: $font-size-xs;
+		}
+	}
+
+	.botrow {
+		display: flex;
+		flex-wrap: wrap;
+		text-align: center;
+		margin-top: 1.5rem;
+
+		.dig,
+		.call {
+			cursor: pointer;
+			flex: 1 1 auto !important;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 0.3125rem;
+			padding: 0.625rem 1.25rem;
+			border-radius: $border-radius-sm;
+		}
+
+		.call {
+			color: $white;
+			background-color: $success;
+		}
+	}
+
+	.dig,
+	.digit {
+
+		&:hover,
+		&:active {
+			background-color: var(--#{$prefix}gray-200);
+			transition: $transition-base;
+		}
+	}
+}
+
+// animation-infinite 
+.animation-infinite {
+	animation: animation-infinite 1.5s infinite;
+
+	@keyframes animation-infinite {
+		0% {
+			box-shadow: 0 0 0 0 $gray-300;
+		}
+
+		100% {
+			box-shadow: 0 0 0 1.5rem transparent;
+		}
+	}
+}
+
+// call-video-content
+.call-video-content {
+	height: calc(100vh - 15rem);
+
+	video {
+		height: calc(100vh - 15rem);
+	}
+
+	.call-host-item {
+		transition: $transition-base;
+
+		&:hover {
+			.call-host-item-action {
+				opacity: 1;
+				visibility: visible;
+				transform: translateY(0);
+			}
+		}
+
+		&-action {
+			opacity: 0;
+			visibility: hidden;
+			transition: $transition-base;
+			transform: translateY(6.25rem);
+			background-color: rgba($dark, 35%);
+		}
+	}
+}
+
+/*
+<--!----------------------------------------------------------------!-->
+<--! THEME DARK SCSS !-->
+<--!----------------------------------------------------------------!-->
+*/
+html[data-bs-theme="dark"] {
+	.cb-content {
+		.cb-content-body {
+			.animation-infinite {
+				animation: animation-infinite-dark 1.5s infinite;
+
+				@keyframes animation-infinite-dark {
+					0% {
+						box-shadow: 0 0 0 0 $gray-dark-300;
+					}
+
+					100% {
+						box-shadow: 0 0 0 25px transparent;
+					}
+				}
+			}
+		}
+	}
+}

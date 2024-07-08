@@ -1,0 +1,19 @@
+/*
+<--!----------------------------------------------------------------!-->
+<--! REBOOT SCSS !-->
+<--!----------------------------------------------------------------!-->
+*/
+// links
+a {
+	font-weight: $font-weight-semibold;
+	transition: $transition-base;
+
+	&:hover {
+		transition: $transition-base;
+	}
+}
+
+// focus
+:focus-visible {
+	outline: none;
+}

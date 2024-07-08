@@ -1,0 +1,29 @@
+/*
+<--!----------------------------------------------------------------!-->
+<--! UTILITIES SCSS !-->
+<--!----------------------------------------------------------------!-->
+*/
+.text-truncate {
+
+	&-1,
+	&-2,
+	&-3 {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: initial;
+		display: -webkit-box !important;
+		-webkit-box-orient: vertical;
+	}
+
+	&-1 {
+		-webkit-line-clamp: 1;
+	}
+
+	&-2 {
+		-webkit-line-clamp: 2;
+	}
+
+	&-3 {
+		-webkit-line-clamp: 3;
+	}
+}

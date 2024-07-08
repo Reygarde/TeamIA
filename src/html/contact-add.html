@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="zxx">
+	<head>
+		@@include('./partials/meta.html', {"title": "Contact Add"} )
+		<!--! Start:: Page Vendors -!-->
+		<link rel="stylesheet" href="./../assets/vendors/flatpickr/flatpickr.min.css">
+		<!--! End:: Page Vendors -!-->
+
+		@@include('./partials/styling.html')
+	</head>
+
+	<body>
+		<!--! ================================================================ !-->
+		<!--! Start:: Main Wrapper !-->
+		<!--! ================================================================ !-->
+		<div class="main-wrapper">
+			<!--! ================================================================ !-->
+			<!--! Start:: Navigation !-->
+			<!--! ================================================================ !-->
+			<nav class="cb-navigation d-flex flex-column flex-shrink-0 bg-body-tertiary position-fixed start-0 top-0 bottom-0 border-end z-1045">
+				<!-- Start:: Navigation Logo -->
+				<a href="./index.html" class="cb-navigation-brand d-flex align-items-center justify-content-center border-bottom" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Chatboot">
+					<img src="./../assets/images/logo.png" alt="Chatboot" class="img-fluid mx-auto wd-40">
+				</a>
+				<!-- End:: Navigation Logo -->
+				<!-- Start:: Navigation Body -->
+				<div class="cb-navigation-body position-relative" style="height: calc(100vh - 10rem)" data-scroll-target="cb-scrollable">
+					<ul class="nav nav-pills nav-flush flex-column mb-auto text-center py-4">
+						<li class="nav-item">
+							<a href="./index.html" class="nav-link" aria-current="page" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Chats" data-bs-offset="0,25">
+								<i class="fi fi-rr-comment-alt"></i>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="./call.html" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Calls" data-bs-offset="0,25">
+								<i class="fi fi-rr-phone-call"></i>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="./meeting.html" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Meetings" data-bs-offset="0,25">
+								<i class="fi fi-rr-camera-viewfinder"></i>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="./email.html" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Emails" data-bs-offset="0,25">
+								<i class="fi fi-rr-envelope-dot"></i>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="./contact.html" class="nav-link active" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Contacts" data-bs-offset="0,25">
+								<i class="fi fi-rr-address-book"></i>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="./pages.html" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Pages" data-bs-offset="0,25">
+								<i class="fi fi-rr-layers"></i>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="./../../docs/docs.html" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Documentations" data-bs-offset="0,25">
+								<i class="fi fi-rr-book-open-cover"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<!-- End:: Navigation Body  -->
+				<!-- Start:: Navigation Footer -->
+				<div class="cb-navigation-footer dropdown border-top d-flex align-items-center justify-content-center">
+					<a href="javascript:void(0);" data-bs-toggle="dropdown" data-bs-offset="-24, 16">
+						<div class="nav-link d-flex align-items-center justify-content-center rounded-pill" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Settings" data-bs-offset="0,25">
+							<i class="fi fi-rr-settings"></i>
+						</div>
+					</a>
+					<div class="dropdown-menu wd-350 py-3">
+						<!-- Start:: dropdown-item -->
+						<!-- End:: dropdown-item -->
+						<a href="./settings-general.html" class="dropdown-item mb-2 mx-2">
+							<div class="avatar avatar-lg rounded bg-body-secondary">
+								<i class="fi fi-rr-tags fs-3"></i>
+							</div>
+							<div class="ms-3">
+								<h6 class="fw-bold mb-1">General Settings</h6>
+								<p class="fs-12 fw-normal text-muted mb-0">Profile photo, name & more</p>
+							</div>
+							<div class="btn btn-icon btn-light ms-auto">
+								<i class="fi fi-rr-angle-small-right"></i>
+							</div>
+						</a>
+						<!-- End:: dropdown-item -->
+						<!-- Start:: dropdown-item -->
+						<a href="./settings-security.html" class="dropdown-item mb-2 mx-2">
+							<div class="avatar avatar-lg rounded bg-body-secondary">
+								<i class="fi fi-rr-shield-check fs-3"></i>
+							</div>
+							<div class="ms-3">
+								<h6 class="fw-bold mb-1">Security Settings</h6>
+								<p class="fs-12 fw-normal text-muted mb-0">Password, security & more</p>
+							</div>
+							<div class="btn btn-icon btn-light ms-auto">
+								<i class="fi fi-rr-angle-small-right"></i>
+							</div>
+						</a>
+						<!-- End:: dropdown-item -->
+						<!-- Start:: dropdown-item -->
+						<a href="./settings-billing.html" class="dropdown-item mb-2 mx-2">
+							<div class="avatar avatar-lg rounded bg-body-secondary">
+								<i class="fi fi-rr-usd-circle fs-3"></i>
+							</div>
+							<div class="ms-3">
+								<h6 class="fw-bold mb-1">Billing Settings</h6>
+								<p class="fs-12 fw-normal text-muted mb-0">Setup payment methords</p>
+							</div>
+							<div class="btn btn-icon btn-light ms-auto">
+								<i class="fi fi-rr-angle-small-right"></i>
+							</div>
+						</a>
+						<!-- End:: dropdown-item -->
+						<!-- Start:: dropdown-item -->
+						<a href="./settings-notification.html" class="dropdown-item mb-2 mx-2">
+							<div class="avatar avatar-lg rounded bg-body-secondary">
+								<i class="fi fi-rr-bell fs-3"></i>
+							</div>
+							<div class="ms-3">
+								<h6 class="fw-bold mb-1">Notification Settings</h6>
+								<p class="fs-12 fw-normal text-muted mb-0">Set your notifications</p>
+							</div>
+							<div class="btn btn-icon btn-light ms-auto">
+								<i class="fi fi-rr-angle-small-right"></i>
+							</div>
+						</a>
+						<!-- End:: dropdown-item -->
+						<!-- Start:: dropdown-item -->
+						<a href="./settings-integration.html" class="dropdown-item mb-0 mx-2">
+							<div class="avatar avatar-lg rounded bg-body-secondary">
+								<i class="fi fi-rr-square-plus fs-3"></i>
+							</div>
+							<div class="ms-3">
+								<h6 class="fw-bold mb-1">Integration Settings</h6>
+								<p class="fs-12 fw-normal text-muted mb-0">Setup apps integrations</p>
+							</div>
+							<div class="btn btn-icon btn-light ms-auto">
+								<i class="fi fi-rr-angle-small-right"></i>
+							</div>
+						</a>
+						<!-- End:: dropdown-item -->
+					</div>
+				</div>
+				<!-- End:: Navigation Footer -->
+			</nav>
+			<!--! ================================================================ !-->
+			<!--! End:: Navigation !-->
+			<!--! ================================================================ !-->
+			<!--! ================================================================ !-->
+			<!--! Start:: Asidebar !-->
+			<!--! ================================================================ !-->
+			<aside class="cb-asidebar cb-asidebar-without-sub-header position-fixed start-0 top-0 bottom-0 vh-100 border-end bg-body z-1040">
+				<!--! Start:: aside-main-header !-->
+				<div class="cb-asidebar-header d-flex align-items-center justify-content-between px-4 border-bottom">
+					<h2 class="fs-20 fw-bold mb-0">Contacts</h2>
+					<div class="hstack gap-2">
+						<!--! Start:: filter-dropdown !-->
+						<div class="dropdown">
+							<a href="javascript:void(0);" class="btn btn-icon btn-light" data-bs-toggle="dropdown" data-bs-auto-close="outside" data-bs-offset="25,19">
+								<i class="fi fi-rr-sliders-v"></i>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-end wd-300">
+								<li>
+									<a href="javascript:void(0);" class="dropdown-item gap-4">
+										<i class="fi fi-sr-sort-amount-up-alt"></i>
+										<span>
+											<span class="d-block">Ascending</span>
+											<span class="fs-12 fw-normal text-muted d-block">Contact ascending order</span>
+										</span>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="dropdown-item gap-4">
+										<i class="fi fi-sr-sort-amount-down-alt"></i>
+										<span>
+											<span class="d-block">Descending</span>
+											<span class="fs-12 fw-normal text-muted d-block">Contact descending order</span>
+										</span>
+									</a>
+								</li>
+								<li><hr class="dropdown-divider"></li>
+								<li>
+									<a href="javascript:void(0);" class="dropdown-item gap-4">
+										<i class="fi fi-rr-document"></i>
+										<span>
+											<span class="d-block">All Contacts</span>
+											<span class="fs-12 fw-normal text-muted d-block">All contact unified</span>
+										</span>
+										<span class="badge bg-success-subtle text-success rounded-pill ms-auto">5+</span>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="dropdown-item gap-4">
+										<i class="fi fi-rr-star"></i>
+										<span>
+											<span class="d-block">Starred</span>
+											<span class="fs-12 fw-normal text-muted d-block">Important contacts</span>
+										</span>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="dropdown-item gap-4">
+										<i class="fi fi-rr-briefcase"></i>
+										<span>
+											<span class="d-block">Business</span>
+											<span class="fs-12 fw-normal text-muted d-block">Business contacts</span>
+										</span>
+										<span class="badge bg-danger-subtle text-danger rounded-pill ms-auto">3+</span>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="dropdown-item gap-4">
+										<i class="fi fi-rr-address-book"></i>
+										<span>
+											<span class="d-block">Personal</span>
+											<span class="fs-12 fw-normal text-muted d-block">Personal contacts</span>
+										</span>
+									</a>
+								</li>
+								<li><hr class="dropdown-divider"></li>
+								<li>
+									<a href="javascript:void(0);" class="dropdown-item gap-4 text-danger" data-toast-trigger="toast-delete">
+										<i class="fi fi-rr-trash"></i>
+										<span>
+											<span class="d-block">Delete</span>
+											<span class="fs-12 fw-normal d-block">Removed contact</span>
+										</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<!--! End:: filter-dropdown !-->
+						<!--! Start:: asidebar-toggler !-->
+						<button type="button" class="btn btn-icon btn-light d-xl-none" data-toggle-target="cb-asidebar-toggler">
+							<i class="fi fi-rr-cross"></i>
+						</button>
+						<!--! End:: asidebar-toggler !-->
+					</div>
+				</div>
+				<!--! End:: aside-main-header !-->
+				<!--! Start:: aside-main-body !-->
+				<div class="cb-asidebar-body position-relative" data-scroll-target="cb-scrollable">
+					<div class="list-group list-group-flush p-2">
+						<!--! Start:: contact-item  !-->
+						<div class="list-group-item list-group-item-action border-bottom-0 d-flex align-items-center gap-3 px-3 rounded-2">
+							<a href="./contact.html" class="d-flex align-items-center">
+								<div class="avatar avatar-lg">
+									<img src="./../assets/images/avatar/1.png" class="img-fluid" alt="image">
+									<div class="avatar-indicator active"></div>
+								</div>
+								<div class="ms-3">
+									<h6 class="fw-bold mb-1">Alexandra Della</h6>
+									<span class="fs-11 fw-normal text-muted">CEO, Founder</span>
+								</div>
+							</a>
+							<div class="btn btn-light btn-icon btn-icon-md rounded-circle ms-auto">
+								<i class="fi fi-br-menu-dots-vertical"></i>
+							</div>
+						</div>
+						<!--! End:: contact-item !-->
+						<!--! Start:: contact-item  !-->
+						<div class="list-group-item list-group-item-action border-bottom-0 d-flex align-items-center gap-3 px-3 rounded-2">
+							<a href="./contact.html" class="d-flex align-items-center">
+								<div class="avatar avatar-lg">
+									<img src="./../assets/images/avatar/2.png" class="img-fluid" alt="image">
+									<div class="avatar-indicator active"></div>
+								</div>
+								<div class="ms-3">
+									<h6 class="fw-bold mb-1">Green Cute</h6>
+									<span class="fs-11 fw-normal text-muted">Digital Marketer</span>
+								</div>
+							</a>
+							<div class="btn btn-light btn-icon btn-icon-md rounded-circle ms-auto">
+								<i class="fi fi-br-menu-dots-vertical"></i>
+							</div>
+						</div>
+						<!--! End:: contact-item !-->
+						<!--! Start:: contact-item  !-->
+						<div class="list-group-item list-group-item-action border-bottom-0 d-flex align-items-center gap-3 px-3 rounded-2">
+							<a href="./contact.html" class="d-flex align-items-center">
+								<div class="avatar avatar-lg">
+									<img src="./../assets/images/avatar/3.png" class="img-fluid" alt="image">
+									<div class="avatar-indicator offline"></div>
+								</div>
+								<div class="ms-3">
+									<h6 class="fw-bold mb-1">Bryan Waters</h6>
+									<span class="fs-11 fw-normal text-muted">Backend Developer</span>
+								</div>
+							</a>
+							<div class="btn btn-light btn-icon btn-icon-md rounded-circle ms-auto">
+								<i class="fi fi-br-menu-dots-vertical"></i>
+							</div>
+						</div>
+						<!--! End:: contact-item !-->
+						<!--! Start:: contact-item  !-->
+						<div class="list-group-item list-group-item-action border-bottom-0 d-flex align-items-center gap-3 px-3 rounded-2">
+							<a href="./contact.html" class="d-flex align-items-center">
+								<div class="avatar avatar-lg">
+									<img src="./../assets/images/avatar/4.png" class="img-fluid" alt="image">
+									<div class="avatar-indicator active"></div>
+								</div>
+								<div class="ms-3">
+									<h6 class="fw-bold mb-1">Edward Andrade</h6>
+									<span class="fs-11 fw-normal text-muted">Fullstack Develper</span>
+								</div>
+							</a>
+							<div class="btn btn-light btn-icon btn-icon-md rounded-circle ms-auto">
+								<i class="fi fi-br-menu-dots-vertical"></i>
+							</div>
+						</div>
+						<!--! End:: contact-item !-->
+						<!--! Start:: contact-item  !-->
+						<div class="list-group-item list-group-item-action border-bottom-0 d-flex align-items-center gap-3 px-3 rounded-2">
+							<a href="./contact.html" class="d-flex align-items-center">
+								<div class="avatar avatar-lg">
+									<img src="./../assets/images/avatar/5.png" class="img-fluid" alt="image">
+									<div class="avatar-indicator active"></div>
+								</div>
+								<div class="ms-3">
+									<h6 class="fw-bold mb-1">Marianne Audrey</h6>
+									<span class="fs-11 fw-normal text-muted">UI/UX Designer</span>
+								</div>
+							</a>
+							<div class="btn btn-light btn-icon btn-icon-md rounded-circle ms-auto">
+								<i class="fi fi-br-menu-dots-vertical"></i>
+							</div>
+						</div>
+						<!--! End:: contact-item !-->
+						<!--! Start:: contact-item  !-->
+						<div class="list-group-item list-group-item-action border-bottom-0 d-flex align-items-center gap-3 px-3 rounded-2">
+							<a href="./contact.html" class="d-flex align-items-center">
+								<div class="avatar avatar-lg">
+									<img src="./../assets/images/avatar/6.png" class="img-fluid" alt="image">
+									<div class="avatar-indicator busy"></div>
+								</div>
+								<div class="ms-3">
+									<h6 class="fw-bold mb-1">Anderson Thomas</h6>
+									<span class="fs-11 fw-normal text-muted">Sales Manager</span>
+								</div>
+							</a>
+							<div class="btn btn-light btn-icon btn-icon-md rounded-circle ms-auto">
+								<i class="fi fi-br-menu-dots-vertical"></i>
+							</div>
+						</div>
+						<!--! End:: contact-item !-->
+						<!--! Start:: contact-item  !-->
+						<div class="list-group-item list-group-item-action border-bottom-0 d-flex align-items-center gap-3 px-3 rounded-2">
+							<a href="./contact.html" class="d-flex align-items-center">
+								<div class="avatar avatar-lg">
+									<img src="./../assets/images/avatar/7.png" class="img-fluid" alt="image">
+									<div class="avatar-indicator active"></div>
+								</div>
+								<div class="ms-3">
+									<h6 class="fw-bold mb-1">Holland Scott</h6>
+									<span class="fs-11 fw-normal text-muted">Project Manager</span>
+								</div>
+							</a>
+							<div class="btn btn-light btn-icon btn-icon-md rounded-circle ms-auto">
+								<i class="fi fi-br-menu-dots-vertical"></i>
+							</div>
+						</div>
+						<!--! End:: contact-item !-->
+						<!--! Start:: contact-item  !-->
+						<div class="list-group-item list-group-item-action border-bottom-0 d-flex align-items-center gap-3 px-3 rounded-2">
+							<a href="./contact.html" class="d-flex align-items-center">
+								<div class="avatar avatar-lg">
+									<img src="./../assets/images/avatar/8.png" class="img-fluid" alt="image">
+									<div class="avatar-indicator inactive"></div>
+								</div>
+								<div class="ms-3">
+									<h6 class="fw-bold mb-1">Nancy Elliot</h6>
+									<span class="fs-11 fw-normal text-muted">Virtual Assistant</span>
+								</div>
+							</a>
+							<div class="btn btn-light btn-icon btn-icon-md rounded-circle ms-auto">
+								<i class="fi fi-br-menu-dots-vertical"></i>
+							</div>
+						</div>
+						<!--! End:: contact-item !-->
+						<!--! Start:: contact-item  !-->
+						<div class="list-group-item list-group-item-action border-bottom-0 d-flex align-items-center gap-3 px-3 rounded-2">
+							<a href="./contact.html" class="d-flex align-items-center">
+								<div class="avatar avatar-lg">
+									<img src="./../assets/images/avatar/9.png" class="img-fluid" alt="image">
+									<div class="avatar-indicator active"></div>
+								</div>
+								<div class="ms-3">
+									<h6 class="fw-bold mb-1">Henry Leach</h6>
+									<span class="fs-11 fw-normal text-muted">Support Team</span>
+								</div>
+							</a>
+							<div class="btn btn-light btn-icon btn-icon-md rounded-circle ms-auto">
+								<i class="fi fi-br-menu-dots-vertical"></i>
+							</div>
+						</div>
+						<!--! End:: contact-item !-->
+						<!--! Start:: contact-item  !-->
+						<div class="list-group-item list-group-item-action border-bottom-0 d-flex align-items-center gap-3 px-3 rounded-2">
+							<a href="./contact.html" class="d-flex align-items-center">
+								<div class="avatar avatar-lg">
+									<img src="./../assets/images/avatar/10.png" class="img-fluid" alt="image">
+									<div class="avatar-indicator busy"></div>
+								</div>
+								<div class="ms-3">
+									<h6 class="fw-bold mb-1">Kenneth Hune</h6>
+									<span class="fs-11 fw-normal text-muted">Frontend Developer</span>
+								</div>
+							</a>
+							<div class="btn btn-light btn-icon btn-icon-md rounded-circle ms-auto">
+								<i class="fi fi-br-menu-dots-vertical"></i>
+							</div>
+						</div>
+						<!--! End:: contact-item !-->
+					</div>
+				</div>
+				<!--! End:: aside-main-body !-->
+				<!--! Start:: aside-main-footer !-->
+				<div class="cb-asidebar-footer d-flex align-items-center justify-content-between px-4 border-top">
+					<!--! Start:: dropdown-menu !-->
+					<div class="dropdown">
+						<a href="javascript:void(0);" class="btn btn-icon btn-light" data-bs-toggle="dropdown" data-bs-offset="0, 20">
+							<i class="fi fi-bs-menu-dots-vertical"></i>
+						</a>
+						<ul class="dropdown-menu dropdown-menu-end">
+							<li>
+								<a href="./contact-add.html" class="dropdown-item">
+									<i class="fi fi-rs-user-add"></i>
+									<span class="ms-3">Add Contact</span>
+								</a>
+							</li>
+							<li><hr class="dropdown-divider"></li>
+							<li>
+								<a href="javascript:void(0);" class="dropdown-item">
+									<i class="fi fi-rs-user-pen"></i>
+									<span class="ms-3">Edit Contact</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" class="dropdown-item">
+									<i class="fi fi-rr-address-book"></i>
+									<span class="ms-3">Contact Group</span>
+								</a>
+							</li>
+							<li><hr class="dropdown-divider"></li>
+							<li>
+								<a href="javascript:void(0);" class="dropdown-item">
+									<i class="fi fi-rr-settings"></i>
+									<span class="ms-3">Contact Settings</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<!--! End:: dropdown-menu !-->
+					<!--! Start:: pagination !-->
+					<div class="hstack gap-2">
+						<a href="javascript:void(0);" class="btn btn-icon btn-light" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Previous">
+							<i class="fi fi-br-angle-left"></i>
+						</a>
+						<a href="javascript:void(0);" class="btn btn-icon btn-light" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Next">
+							<i class="fi fi-br-angle-right"></i>
+						</a>
+					</div>
+					<!--! End:: pagination !-->
+				</div>
+				<!--! End:: aside-main-footer !-->
+			</aside>
+			<!--! ================================================================ !-->
+			<!--! End:: Asidebar !-->
+			<!--! ================================================================ !-->
+			<!--! ================================================================ !-->
+			<!--! Start:: Content !-->
+			<!--! ================================================================ !-->
+			<main class="cb-content">
+				<!--! ================================================================ !-->
+				<!--! Start:: Header !-->
+				<!--! ================================================================ !-->
+				@@include('./partials/header.html')
+				<!--! ================================================================ !-->
+				<!--! End:: Header !-->
+				<!--! ================================================================ !-->
+				<!--! Start:: main-content-header !-->
+				<div class="cb-content-header d-flex align-items-center px-4 sticky-top bg-body border-bottom">
+					<!--! Start:: page-header-left !-->
+					<div class="page-header-left">
+						<h4 class="mb-0 fw-semibold">New Contact</h4>
+					</div>
+					<!--! End:: page-header-left !-->
+					<!--! Start:: page-header-right !-->
+					<div class="page-header-right ms-auto">
+						<a href="javascript:void(0);" class="btn btn-outline-light text-danger" data-toast-trigger="toast-cancel">Discard</a>
+						<a href="javascript:void(0);" class="btn btn-primary" data-toast-trigger="toast-success">Save Changes</a>
+					</div>
+					<!--! End:: page-header-right !-->
+				</div>
+				<!--! End:: main-content-header !-->
+				<!--! End:: main-content-body !-->
+				<div class="cb-content-body overflow-hidden my-5">
+					<!--! Start:: contact-avatar !-->
+					<div class="row g-4 g-md-8 g-lg-16">
+						<div class="col-md-3 col-xl-4 col-xxl-3 text-md-end">
+							<h5 class="fw-bold">Avatar</h5>
+							<span class="text-muted">Select contact avatar</span>
+						</div>
+						<div class="col-md-8 col-xl-7 col-xxl-6">
+							<div class="wd-100 ht-100 position-relative overflow-hidden border border-gray-2 rounded cursor-pointer">
+								<img src="./../assets/images/avatar/1.png" class="upload-pic img-fluid rounded h-100 w-100" alt="">
+								<div class="position-absolute start-50 top-50 end-0 bottom-0 translate-middle h-100 w-100 hstack align-items-center justify-content-center cursor-pointer upload-button">
+									<i class="fi fi-rr-camera" aria-hidden="true"></i>
+								</div>
+								<input class="file-upload" type="file" accept="image/*">
+							</div>
+							<ul class="fs-12 text-muted mt-3 mb-0 ps-3">
+								<li class="mb-2">Avatar size 150x150</li>
+								<li class="mb-2">Max upload size 2mb</li>
+								<li class="mb-0">File types: png, jpg, jpeg</li>
+							</ul>
+						</div>
+					</div>
+					<!--! End:: contact-avatar !-->
+					<hr class="my-12 border-top-dashed">
+					<!--! Start:: contact-plan !-->
+					<div class="row g-4 g-md-8 g-lg-16">
+						<div class="col-md-3 col-xl-4 col-xxl-3 text-md-end">
+							<h5 class="fw-bold">Plan</h5>
+							<span class="text-muted">Select contact plan</span>
+						</div>
+						<div class="col-md-8 col-xl-7 col-xxl-6">
+							<ul class="nav nav-justified nav-tabs-select justify-content-around flex-xl-column flex-xxl-row flex-column flex-lg-row gap-4" role="tablist">
+								<li class="nav-item" role="presentation">
+									<a href="javascript:void(0);" class="nav-link p-4 border border-2 rounded-3" data-bs-toggle="tab" data-bs-target="#personalTab" role="tab">
+										<div class="avatar avatar-xxl bg-primary-subtle text-primary">
+											<i class="fi fi-rr-globe fs-1"></i>
+										</div>
+										<div class="d-flex align-items-center justify-content-center gap-2 mt-4 mb-3">
+											<h4 class="mb-0">Personal</h4>
+											<div class="fw-bold text-primary">(500)</div>
+										</div>
+										<p class="fs-12 fw-normal text-muted text-truncate-2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod ipsa id corrupti modi, impedit exercitationem harum voluptates reiciendis.</p>
+										<div class="btn btn-primary w-100 mt-3">Select</div>
+									</a>
+								</li>
+								<li class="nav-item" role="presentation">
+									<a href="javascript:void(0);" class="nav-link p-4 border border-2 rounded-3" data-bs-toggle="tab" data-bs-target="#businessTab" role="tab">
+										<div class="avatar avatar-xxl bg-danger-subtle text-danger">
+											<i class="fi fi-rr-briefcase fs-1"></i>
+										</div>
+										<div class="d-flex align-items-center justify-content-center gap-2 mt-4 mb-3">
+											<h4 class="mb-0">Business</h4>
+											<div class="fw-bold text-danger">(5000)</div>
+										</div>
+										<p class="fs-12 fw-normal text-muted text-truncate-2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod ipsa id corrupti modi, impedit exercitationem harum voluptates reiciendis.</p>
+										<div class="btn btn-danger w-100 mt-3">Select</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!--! End:: contact-plan !-->
+					<hr class="my-12 border-top-dashed">
+					<!--! Start:: general-info!-->
+					<div class="row g-4 g-md-8 g-lg-16">
+						<div class="col-md-3 col-xl-4 col-xxl-3 text-md-end">
+							<h5 class="fw-bold">General</h5>
+							<span class="text-muted">General Information</span>
+						</div>
+						<div class="col-md-8 col-xl-7 col-xxl-6">
+							<div class="input-group mb-4">
+								<span class="input-group-text">
+									<i class="fi fi-rr-address-book"></i>
+								</span>
+								<input type="text" class="form-control" placeholder="Full Name">
+							</div>
+							<div class="input-group mb-4">
+								<span class="input-group-text">
+									<i class="fi fi-rr-phone-call"></i>
+								</span>
+								<input type="tel" class="form-control" placeholder="Phone">
+							</div>
+							<div class="input-group mb-4">
+								<span class="input-group-text">
+									<i class="fi fi-rr-marker"></i>
+								</span>
+								<input type="text" class="form-control" placeholder="Address">
+							</div>
+							<div class="input-group mb-4">
+								<span class="input-group-text">
+									<i class="fi fi-rr-address-book"></i>
+								</span>
+								<input type="text" class="form-control" placeholder="Role">
+							</div>
+							<div class="input-group mb-4">
+								<span class="input-group-text">
+									<i class="fi fi-rr-calendar-day"></i>
+								</span>
+								<input class="form-control" id="birthDatePicker" placeholder="Date of Birth">
+							</div>
+							<div class="input-group mb-0">
+								<span class="input-group-text">
+									<i class="fi fi-rr-edit"></i>
+								</span>
+								<input type="text" class="form-control" placeholder="Designation">
+							</div>
+						</div>
+					</div>
+					<!--! End:: general-info !-->
+					<hr class="my-12 border-top-dashed">
+					<!--! Start:: auth-info!-->
+					<div class="row g-4 g-md-8 g-lg-16">
+						<div class="col-md-3 col-xl-4 col-xxl-3 text-md-end">
+							<h5 class="fw-bold">Auth</h5>
+							<span class="text-muted">Auth Information</span>
+						</div>
+						<div class="col-md-8 col-xl-7 col-xxl-6">
+							<div class="input-group mb-4">
+								<span class="input-group-text">
+									<i class="fi fi-rr-at"></i>
+								</span>
+								<input type="text" class="form-control" placeholder="Username">
+							</div>
+							<div class="input-group mb-4">
+								<span class="input-group-text">
+									<i class="fi fi-rr-envelope-dot"></i>
+								</span>
+								<input type="email" class="form-control" placeholder="Email">
+							</div>
+							<div class="input-group mb-4">
+								<span class="input-group-text">
+									<i class="fi fi-rr-key"></i>
+								</span>
+								<input type="password" class="form-control" placeholder="Password">
+							</div>
+							<div class="input-group mb-4">
+								<span class="input-group-text">
+									<i class="fi fi-rr-key"></i>
+								</span>
+								<input type="password" class="form-control" placeholder="Re-enter Password">
+							</div>
+						</div>
+					</div>
+					<!--! End:: auth-info !-->
+					<hr class="my-12 border-top-dashed">
+					<!--! Start:: about-info !-->
+					<div class="row g-4 g-md-8 g-lg-16">
+						<div class="col-md-3 col-xl-4 col-xxl-3 text-md-end">
+							<h5 class="fw-bold">About</h5>
+							<span class="text-muted">About Information</span>
+						</div>
+						<div class="col-md-8 col-xl-7 col-xxl-6">
+							<div class="input-group mb-4">
+								<span class="input-group-text">
+									<i class="fi fi-rr-location-crosshairs"></i>
+								</span>
+								<input type="text" class="form-control" placeholder="Company">
+							</div>
+							<div class="input-group mb-4">
+								<span class="input-group-text">
+									<i class="fi fi-rr-globe"></i>
+								</span>
+								<input type="text" class="form-control" placeholder="Website">
+							</div>
+							<div class="input-group mb-4">
+								<span class="input-group-text">
+									<i class="fi fi-rr-marker"></i>
+								</span>
+								<input type="text" class="form-control" placeholder="Location">
+							</div>
+							<div class="input-group mb-0">
+								<span class="input-group-text"><i class="fi fi-rr-info"></i> </span>
+								<textarea class="form-control" rows="3" placeholder="About"></textarea>
+							</div>
+						</div>
+					</div>
+					<!--! End:: about-info !-->
+					<hr class="my-12 border-top-dashed">
+					<!--! Start:: social-info !-->
+					<div class="row g-4 g-md-8 g-lg-16">
+						<div class="col-md-3 col-xl-4 col-xxl-3 text-md-end">
+							<h5 class="fw-bold">Social</h5>
+							<span class="text-muted">Social Information</span>
+						</div>
+						<div class="col-md-8 col-xl-7 col-xxl-6">
+							<div class="input-group mb-4">
+								<span class="input-group-text">
+									<i class="fi fi-brands-facebook"></i>
+								</span>
+								<input type="text" class="form-control" placeholder="Facebook">
+							</div>
+							<div class="input-group mb-4">
+								<span class="input-group-text">
+									<i class="fi fi-brands-twitter"></i>
+								</span>
+								<input type="text" class="form-control" placeholder="Twitter">
+							</div>
+							<div class="input-group mb-4">
+								<span class="input-group-text">
+									<i class="fi fi-brands-instagram"></i>
+								</span>
+								<input type="text" class="form-control" placeholder="Instagram">
+							</div>
+							<div class="input-group mb-4">
+								<span class="input-group-text">
+									<i class="fi fi-brands-linkedin"></i>
+								</span>
+								<input type="text" class="form-control" placeholder="Linkedin">
+							</div>
+							<div class="input-group mb-0">
+								<span class="input-group-text">
+									<i class="fi fi-brands-github"></i>
+								</span>
+								<input type="text" class="form-control" placeholder="Github">
+							</div>
+						</div>
+					</div>
+					<!--! End:: social-info !-->
+					<hr class="my-12 border-top-dashed">
+					<!--! Start:: action-button !-->
+					<div class="row g-4 g-md-8 g-lg-16">
+						<div class="offset-md-3 offset-xl-4 offset-xxl-3">
+							<a href="javascript:void(0);" class="btn btn-outline-light text-danger" data-toast-trigger="toast-cancel">Discard</a>
+							<a href="javascript:void(0);" class="btn btn-primary" data-toast-trigger="toast-success">Save Changes</a>
+						</div>
+					</div>
+					<!--! End:: action-button !-->
+				</div>
+				<!--! Start:: main-content-body !-->
+			</main>
+			<!--! ================================================================ !-->
+			<!--! End:: Content !-->
+			<!--! ================================================================ !-->
+		</div>
+		<!--! ================================================================ !-->
+		<!--! End:: Main Wrapper !-->
+		<!--! ================================================================ !-->
+		<!--! ================================================================ !-->
+		<!--! Start:: Invice People Modal !-->
+		<!--! ================================================================ !-->
+		@@include('./partials/invite.html')
+		<!--! ================================================================ !-->
+		<!--! End:: Invice People Modal !-->
+		<!--! ================================================================ !-->
+		<!--! ================================================================ !-->
+		<!--! Start:: Toast Noticifactions !-->
+		<!--! ================================================================ !-->
+		@@include('./partials/toast.html')
+		<!--! ================================================================ !-->
+		<!--! End:: Toast Noticifactions !-->
+		<!--! ================================================================ !-->
+		<!--! ================================================================ !-->
+		<!--! Footer Script !-->
+		<!--! ================================================================ !-->
+		@@include('./partials/script.html')
+		<!--! Start:: Page Vendors -!-->
+		<script src="./../assets/vendors/flatpickr/flatpickr.min.js"></script>
+		<!--! End:: Page Vendors -!-->
+
+		<!--! Start:: Contact Add Init -!-->
+		<script src="./../assets/js/apps/contact/contact-add.min.js"></script>
+		<!--! End:: Contact Add Init -!-->
+	</body>
+</html>

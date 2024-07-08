@@ -1,0 +1,89 @@
+/*
+<--!----------------------------------------------------------------!-->
+<--! NAVIGATION SCSS !-->
+<--!----------------------------------------------------------------!-->
+*/
+body {
+	.cb-navigation {
+		width: var(--#{$prefix}navigation-width);
+		min-width: var(--#{$prefix}navigation-width);
+		transition: $transition-base;
+
+		.cb-navigation-brand,
+		.cb-navigation-footer {
+			width: var(--#{$prefix}navigation-width);
+			min-width: var(--#{$prefix}navigation-width);
+			height: var(--#{$prefix}navigation-brand-height);
+			min-height: var(--#{$prefix}navigation-brand-height);
+		}
+
+		.cb-navigation-body {
+			.nav-item {
+				margin-bottom: 0.5rem;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+
+				.nav-link {
+					display: inline-flex;
+					align-items: center;
+					justify-content: center;
+					width: 3rem;
+					height: 3rem;
+					padding: 0.5rem 0.5rem;
+					font-size: $font-size-lg;
+					border-radius: $border-radius-pill;
+					transition: $transition-base;
+
+					&:hover {
+						color: var(--#{$prefix}primary);
+						background-color: var(--#{$prefix}link-bg);
+						transition: $transition-base;
+					}
+
+					.fi {
+						line-height: 0;
+						font-size: $font-size-lg;
+					}
+				}
+			}
+		}
+
+		.cb-navigation-footer {
+			div.nav-link {
+				width: 3rem;
+				height: 3rem;
+				padding: 0.5rem 0.5rem;
+				transition: $transition-base;
+
+				&:hover {
+					color: var(--#{$prefix}primary);
+					background-color: var(--#{$prefix}link-bg);
+					transition: $transition-base;
+				}
+
+				.fi {
+					line-height: 0;
+					font-size: $font-size-lg;
+				}
+			}
+		}
+
+		@include media-breakpoint-down(lg) {
+			opacity: 0;
+			visibility: hidden;
+			transform: translateX(-100%);
+		}
+	}
+
+	&.cb-navigation-open {
+		.cb-navigation {
+			@include media-breakpoint-down(lg) {
+				opacity: 1;
+				visibility: visible;
+				transform: translateX(0);
+			}
+		}
+	}
+}

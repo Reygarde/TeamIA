@@ -1,0 +1,60 @@
+/*
+<--!----------------------------------------------------------------!-->
+<--! CHATS SCSS !-->
+<--!----------------------------------------------------------------!-->
+*/
+.cb-content {
+	.cb-content-body {
+		.cb-chat-wrapper {
+			.cb-chat-items {
+				.cb-chat-item {
+					position: relative;
+
+					.cb-chat-text {
+						max-width: calc(100% - 1rem);
+					}
+
+					.cb-chat-action {
+						opacity: 0;
+						visibility: hidden;
+						transition: $transition-base;
+					}
+
+					&:hover {
+						.cb-chat-action {
+							opacity: 1;
+							visibility: visible;
+						}
+					}
+
+					&:last-child:after {
+						right: 100%;
+						content: "";
+						height: 0;
+						width: 0;
+						bottom: 1rem;
+						position: absolute;
+						pointer-events: none;
+						border: solid transparent;
+						border-width: 0.625rem;
+						border-right-color: var(--#{$prefix}gray-200);
+						border-left-color: transparent;
+					}
+				}
+			}
+
+			&.cb-chat-reply {
+				.cb-chat-items {
+					.cb-chat-item {
+
+						&:last-child:after {
+							left: 100% !important;
+							border-left-color: var(--#{$prefix}gray-200) !important;
+							border-right-color: transparent !important;
+						}
+					}
+				}
+			}
+		}
+	}
+}

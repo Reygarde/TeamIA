@@ -1,0 +1,23 @@
+/*
+<--!----------------------------------------------------------------!-->
+<--! COMMON SCSS !-->
+<--!----------------------------------------------------------------!-->
+*/
+.main-wrapper {
+	width: 100%;
+	height: 100%;
+
+	.cb-without-asidebar {
+		.cb-content {
+			margin-left: var(--#{$prefix}navigation-width);
+		}
+
+		@include media-breakpoint-down(lg) {
+
+			.cb-content,
+			.cb-main-header {
+				margin-left: 0;
+			}
+		}
+	}
+}

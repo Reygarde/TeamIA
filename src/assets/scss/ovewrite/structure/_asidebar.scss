@@ -1,0 +1,65 @@
+/*
+<--!----------------------------------------------------------------!-->
+<--! ASIDE MAIN SCSS !-->
+<--!----------------------------------------------------------------!-->
+*/
+body {
+	.cb-asidebar {
+		background: var(--#{$prefix}body-bg);
+		width: min(var(--#{$prefix}asidebar-width), 100%);
+		transition: $transition-base;
+
+		@include media-breakpoint-up(xl) {
+			margin-left: var(--#{$prefix}navigation-width);
+		}
+
+		@include media-breakpoint-down(xl) {
+			opacity: 0;
+			visibility: hidden;
+			transform: translateX(-100%);
+		}
+
+		&.cb-asidebar-md {
+			width: min(calc(var(--#{$prefix}asidebar-width) - 5rem), 100%);
+
+			~.cb-content {
+				margin-left: calc(var(--#{$prefix}navigation-width) + var(--#{$prefix}asidebar-width) - 5rem);
+			}
+		}
+
+		&.cb-asidebar-without-sub-header {
+			.cb-asidebar-body {
+				height: calc(100% - 10rem);
+			}
+		}
+
+		.cb-asidebar-header,
+		.cb-asidebar-sub-header,
+		.cb-asidebar-footer {
+			height: var(--#{$prefix}header-height);
+		}
+
+		.cb-asidebar-body {
+			height: calc(100% - 15rem);
+
+			.nav-link.active {
+				background-color: var(--#{$prefix}link-bg);
+				border-radius: $border-radius-sm;
+			}
+		}
+	}
+
+	&.cb-asidebar-open {
+		.cb-asidebar {
+			@include media-breakpoint-up(lg) {
+				margin-left: var(--#{$prefix}navigation-width);
+			}
+
+			@include media-breakpoint-down(xl) {
+				opacity: 1;
+				visibility: visible;
+				transform: translateX(0%);
+			}
+		}
+	}
+}

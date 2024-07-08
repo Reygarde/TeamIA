@@ -1,0 +1,21 @@
+/*
+<--!----------------------------------------------------------------!-->
+<--! TOAST SCSS !-->
+<--!----------------------------------------------------------------!-->
+*/
+.toast.fade {
+	animation-duration: 500ms;
+	animation-name: fade-in-down;
+
+	@keyframes fade-in-down {
+		0% {
+			opacity: 0;
+			transform: translateY(-100%);
+		}
+
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+}

@@ -1,0 +1,19 @@
+:root {
+	// HEADER
+	--#{$prefix}header-height: 5rem;
+
+	// NAVIGATION
+	--#{$prefix}navigation-width: 6rem;
+	--#{$prefix}navigation-brand-height: var(--#{$prefix}header-height);
+
+	// ASIDEBAR
+	--#{$prefix}asidebar-width: 25rem;
+}
+
+:root,
+[data-bs-theme="light"] {
+	// CUSTOMS
+	--#{$prefix}link-color: var(--#{$prefix}dark);
+	--#{$prefix}link-bg: var(--#{$prefix}gray-200);
+	--#{$prefix}border-color-white: var(--#{$prefix}gray-100);
+}

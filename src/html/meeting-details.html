@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="zxx">
+	<head>
+		@@include('./partials/meta.html', {"title": "Meeting Details"} )
+		<!--! Start:: Page Vendors -!-->
+		<!--! End:: Page Vendors -!-->
+
+		@@include('./partials/styling.html')
+	</head>
+
+	<body>
+		<!--! ================================================================ !-->
+		<!--! Start:: Main Wrapper !-->
+		<!--! ================================================================ !-->
+		<div class="main-wrapper">
+			<!--! ================================================================ !-->
+			<!--! Start:: Navigation !-->
+			<!--! ================================================================ !-->
+			<nav class="cb-navigation d-flex flex-column flex-shrink-0 bg-body-tertiary position-fixed start-0 top-0 bottom-0 border-end z-1045">
+				<!-- Start:: Navigation Logo -->
+				<a href="./index.html" class="cb-navigation-brand d-flex align-items-center justify-content-center border-bottom" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Chatboot">
+					<img src="./../assets/images/logo.png" alt="Chatboot" class="img-fluid mx-auto wd-40">
+				</a>
+				<!-- End:: Navigation Logo -->
+				<!-- Start:: Navigation Body -->
+				<div class="cb-navigation-body position-relative" style="height: calc(100vh - 10rem)" data-scroll-target="cb-scrollable">
+					<ul class="nav nav-pills nav-flush flex-column mb-auto text-center py-4">
+						<li class="nav-item">
+							<a href="./index.html" class="nav-link" aria-current="page" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Chats" data-bs-offset="0,25">
+								<i class="fi fi-rr-comment-alt"></i>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="./call.html" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Calls" data-bs-offset="0,25">
+								<i class="fi fi-rr-phone-call"></i>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="./meeting.html" class="nav-link active" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Meetings" data-bs-offset="0,25">
+								<i class="fi fi-rr-camera-viewfinder"></i>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="./email.html" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Emails" data-bs-offset="0,25">
+								<i class="fi fi-rr-envelope-dot"></i>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="./contact.html" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Contacts" data-bs-offset="0,25">
+								<i class="fi fi-rr-address-book"></i>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="./pages.html" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Pages" data-bs-offset="0,25">
+								<i class="fi fi-rr-layers"></i>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="./../../docs/docs.html" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Documentations" data-bs-offset="0,25">
+								<i class="fi fi-rr-book-open-cover"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<!-- End:: Navigation Body  -->
+				<!-- Start:: Navigation Footer -->
+				<div class="cb-navigation-footer dropdown border-top d-flex align-items-center justify-content-center">
+					<a href="javascript:void(0);" data-bs-toggle="dropdown" data-bs-offset="-24, 16">
+						<div class="nav-link d-flex align-items-center justify-content-center rounded-pill" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Settings" data-bs-offset="0,25">
+							<i class="fi fi-rr-settings"></i>
+						</div>
+					</a>
+					<div class="dropdown-menu wd-350 py-3">
+						<!-- Start:: dropdown-item -->
+						<!-- End:: dropdown-item -->
+						<a href="./settings-general.html" class="dropdown-item mb-2 mx-2">
+							<div class="avatar avatar-lg rounded bg-body-secondary">
+								<i class="fi fi-rr-tags fs-3"></i>
+							</div>
+							<div class="ms-3">
+								<h6 class="fw-bold mb-1">General Settings</h6>
+								<p class="fs-12 fw-normal text-muted mb-0">Profile photo, name & more</p>
+							</div>
+							<div class="btn btn-icon btn-light ms-auto">
+								<i class="fi fi-rr-angle-small-right"></i>
+							</div>
+						</a>
+						<!-- End:: dropdown-item -->
+						<!-- Start:: dropdown-item -->
+						<a href="./settings-security.html" class="dropdown-item mb-2 mx-2">
+							<div class="avatar avatar-lg rounded bg-body-secondary">
+								<i class="fi fi-rr-shield-check fs-3"></i>
+							</div>
+							<div class="ms-3">
+								<h6 class="fw-bold mb-1">Security Settings</h6>
+								<p class="fs-12 fw-normal text-muted mb-0">Password, security & more</p>
+							</div>
+							<div class="btn btn-icon btn-light ms-auto">
+								<i class="fi fi-rr-angle-small-right"></i>
+							</div>
+						</a>
+						<!-- End:: dropdown-item -->
+						<!-- Start:: dropdown-item -->
+						<a href="./settings-billing.html" class="dropdown-item mb-2 mx-2">
+							<div class="avatar avatar-lg rounded bg-body-secondary">
+								<i class="fi fi-rr-usd-circle fs-3"></i>
+							</div>
+							<div class="ms-3">
+								<h6 class="fw-bold mb-1">Billing Settings</h6>
+								<p class="fs-12 fw-normal text-muted mb-0">Setup payment methords</p>
+							</div>
+							<div class="btn btn-icon btn-light ms-auto">
+								<i class="fi fi-rr-angle-small-right"></i>
+							</div>
+						</a>
+						<!-- End:: dropdown-item -->
+						<!-- Start:: dropdown-item -->
+						<a href="./settings-notification.html" class="dropdown-item mb-2 mx-2">
+							<div class="avatar avatar-lg rounded bg-body-secondary">
+								<i class="fi fi-rr-bell fs-3"></i>
+							</div>
+							<div class="ms-3">
+								<h6 class="fw-bold mb-1">Notification Settings</h6>
+								<p class="fs-12 fw-normal text-muted mb-0">Set your notifications</p>
+							</div>
+							<div class="btn btn-icon btn-light ms-auto">
+								<i class="fi fi-rr-angle-small-right"></i>
+							</div>
+						</a>
+						<!-- End:: dropdown-item -->
+						<!-- Start:: dropdown-item -->
+						<a href="./settings-integration.html" class="dropdown-item mb-0 mx-2">
+							<div class="avatar avatar-lg rounded bg-body-secondary">
+								<i class="fi fi-rr-square-plus fs-3"></i>
+							</div>
+							<div class="ms-3">
+								<h6 class="fw-bold mb-1">Integration Settings</h6>
+								<p class="fs-12 fw-normal text-muted mb-0">Setup apps integrations</p>
+							</div>
+							<div class="btn btn-icon btn-light ms-auto">
+								<i class="fi fi-rr-angle-small-right"></i>
+							</div>
+						</a>
+						<!-- End:: dropdown-item -->
+					</div>
+				</div>
+				<!-- End:: Navigation Footer -->
+			</nav>
+			<!--! ================================================================ !-->
+			<!--! End:: Navigation !-->
+			<!--! ================================================================ !-->
+			<!--! ================================================================ !-->
+			<!--! Start:: Asidebar !-->
+			<!--! ================================================================ !-->
+			<aside class="cb-asidebar cb-asidebar-without-sub-header position-fixed start-0 top-0 bottom-0 vh-100 border-end bg-body z-1040">
+				<!--! Start:: aside-main-header !-->
+				<div class="cb-asidebar-header d-flex align-items-center justify-content-between px-4 border-bottom">
+					<h2 class="fs-20 fw-bold mb-0">Comments <span class="badge bg-success-subtle text-success ms-2">35+</span></h2>
+					<div class="hstack gap-2">
+						<!--! Start:: pagination !-->
+						<div class="hstack gap-2">
+							<a href="javascript:void(0);" class="btn btn-icon btn-light" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Previous">
+								<i class="fi fi-br-angle-left"></i>
+							</a>
+							<a href="javascript:void(0);" class="btn btn-icon btn-light" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Next">
+								<i class="fi fi-br-angle-right"></i>
+							</a>
+						</div>
+						<!--! End:: pagination !-->
+						<!--! Start:: asidebar-toggler !-->
+						<button type="button" class="btn btn-icon btn-light d-xl-none" data-toggle-target="cb-asidebar-toggler">
+							<i class="fi fi-rr-cross"></i>
+						</button>
+						<!--! End:: asidebar-toggler !-->
+					</div>
+				</div>
+				<!--! End:: aside-main-header !-->
+				<!--! Start:: aside-main-body !-->
+				<div class="cb-asidebar-body position-relative p-4" data-scroll-target="cb-scrollable">
+					<div class="row align-items-center">
+						<div class="col row">
+							<div class="col-auto">
+								<div class="avatar avatar-lg">
+									<img src="./../assets/images/avatar/1.png" class="img-fluid" alt="image">
+								</div>
+							</div>
+							<div class="col">
+								<a href="javascript:void(0);" class="fs-13 fw-semibold d-flex align-items-center mb-1">Alexandra Della</a>
+								<div class="fs-11 fw-normal text-muted">Hello everybody!</div>
+							</div>
+						</div>
+						<div class="col-auto dropdown">
+							<a href="javascript:void(0);" class="btn btn-icon btn-icon-md btn-light" data-bs-toggle="dropdown">
+								<i class="fi fi-bs-menu-dots-vertical fs-12"></i>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-end dropdown-sm">
+								<li>
+									<a href="javascript:void(0);" class="dropdown-item">
+										<i class="fi fi-rr-ban"></i>
+										<span class="ms-3">Hide</span>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="dropdown-item">
+										<i class="fi fi-rr-arrows-repeat"></i>
+										<span class="ms-3">Reply</span>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="dropdown-item">
+										<i class="fi fi-rr-forward"></i>
+										<span class="ms-3">Forword</span>
+									</a>
+								</li>
+								<li><hr class="dropdown-divider"></li>
+								<li>
+									<a href="javascript:void(0);" class="dropdown-item">
+										<i class="fi fi-rr-flag-alt"></i>
+										<span class="ms-3">Flag</span>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="dropdown-item">
+										<i class="fi fi-rr-triangle-warning"></i>
+										<span class="ms-3">Report</span>
+									</a>
+								</li>
+								<li><hr class="dropdown-divider"></li>
+								<li>
+									<a href="javascript:void(0);" class="dropdown-item text-danger" data-toast-trigger="toast-delete">
+										<i class="fi fi-rr-trash"></i>
+										<span class="ms-3">Delete</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<hr class="border-top-dashed my-3">
+					<div class="row align-items-center">
+						<div class="col row">
+							<div class="col-auto">
+								<div class="avatar avatar-lg">
+									<img src="./../assets/images/avatar/2.png" class="img-fluid" alt="image">
+								</div>
+							</div>
+							<div class="col">
+								<a href="javascript:void(0);" class="fs-13 fw-semibold d-flex align-items-center mb-1">Erna Serpa</a>
+								<div class="fs-11 fw-normal text-muted">I'm worried😳 it.</div>
+							</div>
+						</div>
+						<div class="col-auto dropdown">
+							<a href="javascript:void(0);" class="btn btn-icon btn-icon-md btn-light" data-bs-toggle="dropdown">
+								<i class="fi fi-bs-menu-dots-vertical fs-12"></i>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-end dropdown-sm">
+								<li>
+									<a href="javascript:void(0);" class="dropdown-item">
+										<i class="fi fi-rr-ban"></i>
+										<span class="ms-3">Hide</span>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="dropdown-item">
+										<i class="fi fi-rr-arrows-repeat"></i>
+										<span class="ms-3">Reply</span>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="dropdown-item">
+										<i class="fi fi-rr-forward"></i>
+										<span class="ms-3">Forword</span>
+									</a>
+								</li>
+								<li><hr class="dropdown-divider"></li>
+								<li>
+									<a href="javascript:void(0);" class="dropdown-item">
+										<i class="fi fi-rr-flag-alt"></i>
+										<span class="ms-3">Flag</span>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);" class="dropdown-item">
+										<i class="fi fi-rr-triangle-warning"></i>
+										<span class="ms-3">Report</span>
+									</a>
+								</li>
+								<li><hr class="dropdown-divider"></li>
+								<li>
+									<a href="javascript:void(0);" class="dropdown-item text-danger" data-toast-trigger="toast-delete">
+										<i class="fi fi-rr-trash"></i>
+										<span class="ms-3">Delete</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>	
+				</div>
+				<!--! End:: aside-main-body !-->
+				<!--! Start:: aside-main-footer !-->
+				<div class="cb-asidebar-footer d-flex align-items-center px-4 border-top">
+					<form action="#" class="w-100">
+						<input class="form-control border-0 px-0" placeholder="Type your message here...">
+					</form>
+				</div>
+				<!--! End:: aside-main-footer !-->
+			</aside>
+			<!--! ================================================================ !-->
+			<!--! End:: Asidebar !-->
+			<!--! ================================================================ !-->
+			<!--! ================================================================ !-->
+			<!--! Start:Content !-->
+			<!--! ================================================================ !-->
+			<main class="cb-content">
+				<!--! ================================================================ !-->
+				<!--! Start:: Header !-->
+				<!--! ================================================================ !-->
+				@@include('./partials/header.html')
+				<!--! ================================================================ !-->
+				<!--! End:: Header !-->
+				<!--! ================================================================ !-->
+				<!--! Start:: main-content-header !-->
+				<div class="cb-content-header d-flex align-items-center px-4 sticky-top bg-body border-bottom">
+					<!--! Start:: page-header-left !-->
+					<div class="page-header-left hstack gap-4">
+						<a href="javascript:void(0);" class="app-sidebar-open-trigger d-none">
+							<i data-feather="align-right"></i>
+						</a>
+						<div class="hstack gap-sm-3">
+							<a href="./meeting.html" class="btn btn-icon btn-light">
+								<i class="fi fi-rr-arrow-left"></i>
+							</a>
+							<div class="d-none d-sm-flex align-items-center gap-2">
+								<a href="javascript:void(0);" class="fw-semibold fs-14">Meeting</a>
+								<i class="fi fi-rr-angle-small-right"></i>
+								<span class="text-muted">Bootstrap Hack</span>
+							</div>
+						</div>
+					</div>
+					<!--! End:: page-header-left !-->
+					<!--! Start:: page-header-right !-->
+					<div class="page-header-right ms-auto">
+						<div class="d-flex align-items-center justify-content-center">
+							<div class="hstack gap-2">
+								<a href="javascript:void(0);" class="btn btn-outline-light hstack rounded-pill">
+									<div class="avatar-group avatar-group-xs">
+										<div class="avatar avatar-xs">
+											<img src="./../assets/images/avatar/1.png" alt="" class="img-fluid">
+										</div>
+										<div class="avatar avatar-xs">
+											<img src="./../assets/images/avatar/2.png" alt="" class="img-fluid">
+										</div>
+										<div class="avatar avatar-xs">
+											<img src="./../assets/images/avatar/3.png" alt="" class="img-fluid">
+										</div>
+										<div class="avatar avatar-xs">
+											<img src="./../assets/images/avatar/4.png" alt="" class="img-fluid">
+										</div>
+										<div class="avatar avatar-xs rounded-circle bg-light">
+											<i class="fi fi-bs-menu-dots"></i>
+										</div>
+									</div>
+									<div class="ms-2">
+										<strong class="mx-1 fs-12">25</strong>
+										<span>Participants</span>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+					<!--! End:: page-header-right !-->
+				</div>
+				<!--! End:: main-content-header !-->
+				<!--! Start:: main-content-body !-->
+				<div class="cb-content-body">
+					<div class="cb-content-inner">
+						<!--! Start:: screenshare-video !-->
+						<div class="card rounded-5 position-relative">
+							<video class="w-100 rounded-5 object-fit-cover" muted loop controls>
+								<source src="./../assets/images/general/video_bg_1.mp4" type="video/mp4">
+							</video>
+							<div class="d-flex align-items-center justify-content-between gap-2 position-absolute top-0 p-4 w-100">
+								<div class="hstack gap-2">
+									<a href="javascript:void(0);" class="btn btn-sm bg-white bg-opacity-10 text-white">
+										<i class="fi fi-rr-eye fs-12"></i>
+										<span class="ms-2">24.68K</span>
+									</a>
+								</div>
+								<div class="hstack gap-2">
+									<a href="javascript:void(0);" class="btn btn-icon btn-icon-md bg-white bg-opacity-10 text-white">
+										<i class="fi fi-rr-shuffle fs-12"></i>
+									</a>
+									<a href="javascript:void(0);" class="btn btn-icon btn-icon-md bg-white bg-opacity-10 text-white">
+										<i class="fi fi-rr-bookmark fs-12"></i>
+									</a>
+									<a href="javascript:void(0);" class="btn btn-icon btn-icon-md bg-white bg-opacity-10 text-white">
+										<i class="fi fi-rr-expand fs-12"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+						<!--! End:: screenshare-video !-->
+						<!--! Start:: video-bio !-->
+						<div class="d-flex aling-items-center justify-content-between gap-4 mt-5">
+							<div class="hstack gap-3">
+								<div class="avatar avatar-lg rounded">
+									<img src="./../assets/images/logo.png" alt="" class="img-fluid rounded">
+								</div>
+								<div class="d-none d-sm-block gap-3">
+									<h5 class="mb-1">Bootcamp conference meeting - <span class="fs-10 fw-medium text-muted fst-italic rounded-1 px-1 border-bottom border-bottom-dashed">23 MAY, 2023</span></h5>
+									<span class="fs-12 text-muted"> https://cb.com/id?=axdefa</span>
+								</div>
+							</div>
+							<div class="hstack gap-2">
+								<a href="javascript:void(0);" class="btn btn-icon btn-light">
+									<i class="fi fi-rr-envelope-dot"></i>
+								</a>
+								<a href="javascript:void(0);" class="btn btn-icon btn-light">
+									<i class="fi fi-rr-share"></i>
+								</a>
+								<a href="javascript:void(0);" class="btn btn-icon btn-light">
+									<i class="fi fi-rr-shuffle"></i>
+								</a>
+								<div class="dropdown">
+									<a href="javascript:void(0);" class="btn btn-icon btn-light" data-bs-toggle="dropdown" data-bs-offset="0, 19">
+										<i class="fi fi-br-menu-dots-vertical"></i>
+									</a>
+									<ul class="dropdown-menu dropdown-menu-end">
+										<li>
+											<a href="javascript:void(0);" class="dropdown-item">
+												<i class="fi fi-rr-box"></i>
+												<span class="ms-3">Archive</span>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);" class="dropdown-item">
+												<i class="fi fi-rr-mode-portrait"></i>
+												<span class="ms-3">Broadcast</span>
+											</a>
+										</li>
+										<li><hr class="dropdown-divider"></li>
+										<li>
+											<a href="javascript:void(0);" class="dropdown-item">
+												<i class="fi fi-rr-flag-alt"></i>
+												<span class="ms-3">Flag</span>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);" class="dropdown-item">
+												<i class="fi fi-rr-triangle-warning"></i>
+												<span class="ms-3">Report</span>
+											</a>
+										</li>
+										<li><hr class="dropdown-divider"></li>
+										<li>
+											<a href="javascript:void(0);" class="dropdown-item text-danger" data-toast-trigger="toast-delete">
+												<i class="fi fi-rr-trash"></i>
+												<span class="ms-3">Delete</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!--! End:: video-bio !-->
+						<hr class="my-4 border-top-dashed">
+						<!--! Start:: description !-->
+						<div class="cb-description">
+							<h4 class="mb-4">Description:</h4>
+							<p>As an AI language model, I can help you in a variety of ways. Here are some examples:</p>
+							<p><span class="fw-semibold text-dark">Answer questions:</span> I can answer your questions about a wide range of topics, including science, history, geography, math, and more.</p>
+							<p><span class="fw-semibold text-dark">Provide information:</span> I can provide you with information on a particular topic, such as the definition of a word, the history of an event, or the current status of a situation.</p>
+							<p><span class="fw-semibold text-dark">Generate text:</span> I can generate text for you, such as an essay, a report, or a summary of a particular topic.</p>
+							<p><span class="fw-semibold text-dark">Help with language:</span> If English is not your first language, I can help you improve your writing or speaking skills by suggesting ways to improve your grammar, syntax, and vocabulary.</p>
+							<p><span class="fw-semibold text-dark">Assist with research:</span> If you're working on a research project, I can help you find relevant information and sources to support your work.</p>
+							<p><span class="fw-semibold text-dark">Engage in conversation:</span> I can engage in conversation with you on a variety of topics and help you explore different ideas and perspectives.</p>
+							<p>Overall, my goal is to assist you in any way that I can using my knowledge and abilities as an AI language model.</p>
+						</div>
+						<!--! End:: description !-->
+						<hr class="my-4 border-top-dashed">
+						<!--! Start:: details !-->
+						<div class="cb-details">
+							<h4 class="mb-4">Details:</h4>
+							<dl class="dl-horizontal mb-0">
+								<dt>File Name</dt>
+								<dd>Bootcamp conference meeting</dd>
+								<dt>Created</dt>
+								<dd>23 May 2023, 10:30 PM</dd>
+								<dt>File Size</dt>
+								<dd>608.95 MB</dd>
+								<dt>Resolution</dt>
+								<dd>1992x1080</dd>
+								<dt>Container</dt>
+								<dd>mp4</dd>
+								<dt>Codec</dt>
+								<dd>H589CA</dd>
+								<dt>Bitrate</dt>
+								<dd>512.5 kbps</dd>
+								<dt>Playback ID</dt>
+								<dd>adf5_66as_df54_d54f</dd>
+								<dt class="mb-0">Playback URL</dt>
+								<dd class="text-truncate-1 mb-0">https://ip.playback.com/meeting/sldksdfk</dd>
+							</dl>
+						</div>
+						<!--! End:: details !-->
+						<hr class="my-4 border-top-dashed">
+						<!--! Start:: attachment !-->
+						<div class="cb-attachment">
+							<div class="h6 mb-4 hstack gap-2">
+								<i class="fi fi-rr-clip"></i>
+								<span class="ms-1">Attachments (5+)</span>
+							</div>
+							<div class="row g-4">
+								<!--! Start:: single-attachment-item !-->
+								<div class="col-xxl-3 col-sm-6">
+									<div class="p-3 d-flex align-items-center justify-content-between border rounded">
+										<div class="d-flex align-items-center">
+											<a href="javascript:void(0);" class="avatar avatar-lg rounded bg-body-secondary">
+												<i class="fi fi-rr-file-zipper"></i>
+											</a>
+											<div class="ms-3 lh-lg">
+												<a href="javascript:void(0)" class="d-block">project.zip</a>
+												<small class="text-muted d-block">20.65 MB</small>
+											</div>
+										</div>
+										<a href="javascript:void(0)" class="btn btn-icon btn-icon btn-light" data-toast-trigger="toast-download">
+											<i class="fi fi-rr-download"></i>
+										</a>
+									</div>
+								</div>
+								<!--! End:: single-attachment-item !-->
+								<!--! Start:: single-attachment-item !-->
+								<div class="col-xxl-3 col-sm-6">
+									<div class="p-3 d-flex align-items-center justify-content-between border rounded">
+										<div class="d-flex align-items-center">
+											<a href="javascript:void(0);" class="avatar avatar-lg rounded bg-body-secondary">
+												<i class="fi fi-brands-html5"></i>
+											</a>
+											<div class="ms-3 lh-lg">
+												<a href="javascript:void(0)" class="d-block">index.html</a>
+												<small class="text-muted d-block">03.56 MB</small>
+											</div>
+										</div>
+										<a href="javascript:void(0)" class="btn btn-icon btn-icon btn-light" data-toast-trigger="toast-download">
+											<i class="fi fi-rr-download"></i>
+										</a>
+									</div>
+								</div>
+								<!--! End:: single-attachment-item !-->
+								<!--! Start:: single-attachment-item !-->
+								<div class="col-xxl-3 col-sm-6">
+									<div class="p-3 d-flex align-items-center justify-content-between border rounded">
+										<div class="d-flex align-items-center">
+											<a href="javascript:void(0);" class="avatar avatar-lg rounded bg-body-secondary">
+												<i class="fi fi-rr-document"></i>
+											</a>
+											<div class="ms-3 lh-lg">
+												<a href="javascript:void(0)" class="d-block">docs.pdf</a>
+												<small class="text-muted d-block">02.65 MB</small>
+											</div>
+											z
+										</div>
+										<a href="javascript:void(0)" class="btn btn-icon btn-icon btn-light" data-toast-trigger="toast-download">
+											<i class="fi fi-rr-download"></i>
+										</a>
+									</div>
+								</div>
+								<!--! End:: single-attachment-item !-->
+								<!--! Start:: single-attachment-item !-->
+								<div class="col-xxl-3 col-sm-6">
+									<div class="p-3 d-flex align-items-center justify-content-between border rounded">
+										<div class="d-flex align-items-center">
+											<a href="javascript:void(0);" class="avatar avatar-lg rounded bg-body-secondary">
+												<i class="fi fi-rr-background"></i>
+											</a>
+											<div class="ms-3 lh-lg">
+												<a href="javascript:void(0)" class="d-block">theme.css</a>
+												<small class="text-muted d-block">02.76 KB</small>
+											</div>
+										</div>
+										<a href="javascript:void(0)" class="btn btn-icon btn-icon btn-light" data-toast-trigger="toast-download">
+											<i class="fi fi-rr-download"></i>
+										</a>
+									</div>
+								</div>
+								<!--! End:: single-attachment-item !-->
+							</div>
+						</div>
+						<!--! End:: attachment !-->
+					</div>
+				</div>
+				<!--! Start:: main-content-body !-->
+				<!--! Start:: main-content-footer !-->
+				<div class="cb-content-footer px-4 d-flex align-items-center justify-content-between border-top sticky-bottom bg-body">
+					<a href="javascript:void(0);" class="btn btn-outline-light">
+						<i class="fi fi-rr-edit"></i>
+						<span class="ms-3">Edit Video</span>
+					</a>
+					<a href="javascript:void(0);" class="btn btn-success" data-toast-trigger="toast-download">
+						<i class="fi fi-rr-download"></i>
+						<span class="ms-3">Download</span>
+					</a>
+				</div>
+				<!--! End:: main-content-footer !-->
+			</main>
+			<!--! ================================================================ !-->
+			<!--! End:: Content !-->
+			<!--! ================================================================ !-->
+		</div>
+		<!--! ================================================================ !-->
+		<!--! End:: Main Wrapper !-->
+		<!--! ================================================================ !-->
+		<!--! ================================================================ !-->
+		<!--! Start:: Invice People Modal !-->
+		<!--! ================================================================ !-->
+		@@include('./partials/invite.html')
+		<!--! ================================================================ !-->
+		<!--! End:: Invice People Modal !-->
+		<!--! ================================================================ !-->
+		<!--! ================================================================ !-->
+		<!--! Start:: Toast Noticifactions !-->
+		<!--! ================================================================ !-->
+		@@include('./partials/toast.html')
+		<!--! ================================================================ !-->
+		<!--! End:: Toast Noticifactions !-->
+		<!--! ================================================================ !-->
+		<!--! ================================================================ !-->
+		<!--! Footer Script !-->
+		<!--! ================================================================ !-->
+		@@include('./partials/script.html')
+	</body>
+</html>

@@ -1,0 +1,32 @@
+/*
+<--!----------------------------------------------------------------!-->
+<--! MEETING SCSS !-->
+<--!----------------------------------------------------------------!-->
+*/
+
+// Meeting
+.meeting-single-item {
+	&:hover {
+		.meeting-single-item-action {
+			opacity: 1;
+			visibility: visible;
+			transition: $transition-base;
+			transform: translateY(0px);
+		}
+	}
+
+	&-action {
+		background-color: rgba($dark, 35%);
+		opacity: 0;
+		visibility: hidden;
+		transition: $transition-base;
+		transform: translateY(100px);
+	}
+}
+
+// Screenshare
+.cb-screenshare-video-stream {
+	video {
+		height: calc(100vh - 290px);
+	}
+}

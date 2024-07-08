@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    @@include('./partials/meta.html', {"title": "Personal Chat"} )
+    <!--! Start:: Page Vendors -!-->
+    <link rel="stylesheet" href="./../assets/vendors/glightbox/css/glightbox.min.css">
+    <!--! End:: Page Vendors -!-->
+    @@include('./partials/styling.html')
+</head>
+
+<body>
+    <!--! ================================================================ !-->
+    <!--! Start:: Main Wrapper !-->
+    <!--! ================================================================ !-->
+    <div class="main-wrapper">
+        <!--! ================================================================ !-->
+        <!--! Start:: Navigation !-->
+        <!--! ================================================================ !-->
+        <nav class="cb-navigation d-flex flex-column flex-shrink-0 bg-body-tertiary position-fixed start-0 top-0 bottom-0 border-end z-1045">
+            <!-- Start:: Navigation Logo -->
+            <a href="./index.html" class="cb-navigation-brand d-flex align-items-center justify-content-center border-bottom" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Chatboot">
+                <img src="./../assets/images/logo.png" alt="Chatboot" class="img-fluid mx-auto wd-40">
+            </a>
+            <!-- End:: Navigation Logo -->
+            <!-- Start:: Navigation Body -->
+            <div class="cb-navigation-body position-relative" style="height: calc(100vh - 10rem)" data-scroll-target="cb-scrollable">
+                <ul class="nav nav-pills nav-flush flex-column mb-auto text-center py-4">
+                    <li class="nav-item">
+                        <a href="./index.html" class="nav-link active" aria-current="page" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Chats" data-bs-offset="0,25">
+                            <i class="fi fi-rr-comment-alt"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./call.html" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Calls" data-bs-offset="0,25">
+                            <i class="fi fi-rr-phone-call"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./meeting.html" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Meetings" data-bs-offset="0,25">
+                            <i class="fi fi-rr-camera-viewfinder"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./email.html" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Emails" data-bs-offset="0,25">
+                            <i class="fi fi-rr-envelope-dot"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./contact.html" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Contacts" data-bs-offset="0,25">
+                            <i class="fi fi-rr-address-book"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./pages.html" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Pages" data-bs-offset="0,25">
+                            <i class="fi fi-rr-layers"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./../../docs/docs.html" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Documentations" data-bs-offset="0,25">
+                            <i class="fi fi-rr-book-open-cover"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- End:: Navigation Body  -->
+            <!-- Start:: Navigation Footer -->
+            <div class="cb-navigation-footer dropdown border-top d-flex align-items-center justify-content-center">
+                <a href="javascript:void(0);" data-bs-toggle="dropdown" data-bs-offset="-24, 16">
+                    <div class="nav-link d-flex align-items-center justify-content-center rounded-pill" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" title="Settings" data-bs-offset="0,25">
+                        <i class="fi fi-rr-settings"></i>
+                    </div>
+                </a>
+                <div class="dropdown-menu wd-350 py-3">
+                    <!-- Start:: dropdown-item -->
+                    <!-- End:: dropdown-item -->
+                    <a href="./settings-general.html" class="dropdown-item mb-2 mx-2">
+                        <div class="avatar avatar-lg rounded bg-body-secondary">
+                            <i class="fi fi-rr-tags fs-3"></i>
+                        </div>
+                        <div class="ms-3">
+                            <h6 class="fw-bold mb-1">General Settings</h6>
+                            <p class="fs-12 fw-normal text-muted mb-0">Profile photo, name & more</p>
+                        </div>
+                        <div class="btn btn-icon btn-light ms-auto">
+                            <i class="fi fi-rr-angle-small-right"></i>
+                        </div>
+                    </a>
+                    <!-- End:: dropdown-item -->
+                    <!-- Start:: dropdown-item -->
+                    <a href="./settings-security.html" class="dropdown-item mb-2 mx-2">
+                        <div class="avatar avatar-lg rounded bg-body-secondary">
+                            <i class="fi fi-rr-shield-check fs-3"></i>
+                        </div>
+                        <div class="ms-3">
+                            <h6 class="fw-bold mb-1">Security Settings</h6>
+                            <p class="fs-12 fw-normal text-muted mb-0">Password, security & more</p>
+                        </div>
+                        <div class="btn btn-icon btn-light ms-auto">
+                            <i class="fi fi-rr-angle-small-right"></i>
+                        </div>
+                    </a>
+                    <!-- End:: dropdown-item -->
+                    <!-- Start:: dropdown-item -->
+                    <a href="./settings-billing.html" class="dropdown-item mb-2 mx-2">
+                        <div class="avatar avatar-lg rounded bg-body-secondary">
+                            <i class="fi fi-rr-usd-circle fs-3"></i>
+                        </div>
+                        <div class="ms-3">
+                            <h6 class="fw-bold mb-1">Billing Settings</h6>
+                            <p class="fs-12 fw-normal text-muted mb-0">Setup payment methods</p>
+                        </div>
+                        <div class="btn btn-icon btn-light ms-auto">
+                            <i class="fi fi-rr-angle-small-right"></i>
+                        </div>
+                    </a>
+                    <!-- End:: dropdown-item -->
+                    <!-- Start:: dropdown-item -->
+                    <a href="./settings-notification.html" class="dropdown-item mb-2 mx-2">
+                        <div class="avatar avatar-lg rounded bg-body-secondary">
+                            <i class="fi fi-rr-bell fs-3"></i>
+                        </div>
+                        <div class="ms-3">
+                            <h6 class="fw-bold mb-1">Notification Settings</h6>
+                            <p class="fs-12 fw-normal text-muted mb-0">Set your notifications</p>
+                        </div>
+                        <div class="btn btn-icon btn-light ms-auto">
+                            <i class="fi fi-rr-angle-small-right"></i>
+                        </div>
+                    </a>
+                    <!-- End:: dropdown-item -->
+                    <!-- Start:: dropdown-item -->
+                    <a href="./settings-integration.html" class="dropdown-item mb-0 mx-2">
+                        <div class="avatar avatar-lg rounded bg-body-secondary">
+                            <i class="fi fi-rr-square-plus fs-3"></i>
+                        </div>
+                        <div class="ms-3">
+                            <h6 class="fw-bold mb-1">Integration Settings</h6>
+                            <p class="fs-12 fw-normal text-muted mb-0">Setup apps integrations</p>
+                        </div>
+                        <div class="btn btn-icon btn-light ms-auto">
+                            <i class="fi fi-rr-angle-small-right"></i>
+                        </div>
+                    </a>
+                    <!-- End:: dropdown-item -->
+                </div>
+            </div>
+            <!-- End:: Navigation Footer -->
+        </nav>
+        <!--! ================================================================ !-->
+        <!--! End:: Navigation !-->
+        <!--! ================================================================ !-->
+        <!--! ================================================================ !-->
+        <!--! Start:: Asidebar !-->
+        <!--! ================================================================ !-->
+        <aside class="cb-asidebar position-fixed start-0 top-0 bottom-0 vh-100 border-end bg-body z-1040">
+            <!--! Start:: aside-main-header !-->
+            <div class="cb-asidebar-header d-flex align-items-center justify-content-between px-4 border-bottom">
+                <h2 class="fs-20 fw-bold mb-0">Personal <span class="badge bg-warning-subtle text-warning ms-2">5+</span></h2>
+                <div class="hstack gap-2">
+                    <!--! Start:: filter-dropdown !-->
+                    <div class="dropdown">
+                        <a href="javascript:void(0);" class="btn btn-icon btn-light" data-bs-toggle="dropdown" data-bs-auto-close="outside" data-bs-offset="25,19">
+                            <i class="fi fi-rr-sliders-v"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end wd-300">
+                            <li>
+                                <a href="javascript:void(0);" class="dropdown-item gap-4">
+                                    <i class="fi fi-sr-sort-amount-up-alt"></i>
+                                    <span>
+                                        <span class="d-block">Ascending</span>
+                                        <span class="fs-12 fw-normal text-muted d-block">Chats ascending order</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" class="dropdown-item gap-4">
+                                    <i class="fi fi-sr-sort-amount-down-alt"></i>
+                                    <span>
+                                        <span class="d-block">Descending</span>
+                                        <span class="fs-12 fw-normal text-muted d-block">Chats descending order</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li>
+                                <a href="javascript:void(0);" class="dropdown-item gap-4">
+                                    <i class="fi fi-rr-comment-alt"></i>
+                                    <span>
+                                        <span class="d-block">All Messages</span>
+                                        <span class="fs-12 fw-normal text-muted d-block">All messages unified</span>
+                                    </span>
+                                    <span class="badge bg-success-subtle text-success rounded-pill ms-auto">5+</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" class="dropdown-item gap-4">
+                                    <i class="fi fi-rr-star"></i>
+                                    <span>
+                                        <span class="d-block">Starred</span>
+                                        <span class="fs-12 fw-normal text-muted d-block">Important messages</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" class="dropdown-item gap-4">
+                                    <i class="fi fi-rr-time-half-past"></i>
+                                    <span>
+                                        <span class="d-block">Snoozed</span>
+                                        <span class="fs-12 fw-normal text-muted d-block">Will appear later</span>
+                                    </span>
+                                    <span class="badge bg-warning-subtle text-warning rounded-pill ms-auto">4+</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" class="dropdown-item gap-4">
+                                    <i class="fi fi-rr-edit"></i>
+                                    <span>
+                                        <span class="d-block">Drafts</span>
+                                        <span class="fs-12 fw-normal text-muted d-block">Re-edite your messages</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li>
+                                <a href="javascript:void(0);" class="dropdown-item gap-4 text-danger" data-toast-trigger="toast-delete">
+                                    <i class="fi fi-rr-trash"></i>
+                                    <span>
+                                        <span class="d-block">Delete</span>
+                                        <span class="fs-12 fw-normal d-block">Removed messages</span>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--! End:: filter-dropdown !-->
+                    <!--! Start:: asidebar-toggler !-->
+                    <button type="button" class="btn btn-icon btn-light d-xl-none" data-toggle-target="cb-asidebar-toggler">
+                        <i class="fi fi-rr-cross"></i>
+                    </button>
+                    <!--! End:: asidebar-toggler !-->
+                </div>
+            </div>
+            <!--! End:: aside-main-header !-->
+            <!--! Start:: asidebar-sub-header !-->
+            <div class="cb-asidebar-sub-header d-flex align-items-center px-4 border-bottom">
+                <ul class="nav nav-pills nav-justified nav-tabs-pill w-100">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#personalTab" role="tab" type="button">
+                            <i class="fi fi-rs-user"></i>
+                            <span class="ms-2">Personal</span>
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#groupTab" role="tab" type="button">
+                            <i class="fi fi-rs-users"></i>
+                            <span class="ms-2">Groups</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <!--! End:: asidebar-sub-header !-->
+            <!--! Start:: aside-main-body !-->
+            <div class="cb-asidebar-body position-relative tab-content" data-scroll-target="cb-scrollable">
+                <!--! Start:: personal-chat-tab-pane  !-->
+                <div class="tab-pane fade active show list-group list-group-flush p-2" id="personalTab" role="tabpanel">
+                    <!--! Start:: cb-chat-item  !-->
+                    <a href="./chat-personal.html" class="list-group-item list-group-item-action border-bottom-0 d-flex align-items-center gap-3 px-3 rounded-2">
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="avatar avatar-lg flex-shrink-0">
+                                <img src="./../assets/images/avatar/10.png" class="img-fluid" alt="image">
+                                <span class="avatar-indicator active"></span>
+                            </div>
+                            <div class="flex-grow-1">
+                                <h6 class="fw-bold mb-1">Mark Strokes</h6>
+                                <span class="fw-normal text-muted text-truncate-1">My order updates?</span>
+                            </div>
+                        </div>
+                        <div class="fs-12 fw-normal text-nowrap text-muted ms-auto">23 min</div>
+                    </a>
+                    <!--! End:: cb-chat-item !-->
+                </div>
+                <!--! End:: personal-chat-tab-pane  !-->
+                <!--! Start:: group-chat-tab-pane  !-->
+                <div class="tab-pane fade list-group list-group-flush p-2" id="groupTab" role="tabpanel">
+                    <!--! Start:: cb-chat-item  !-->
+                    <a href="./chat-group.html" class="list-group-item list-group-item-action border-bottom-0 d-flex align-items-center gap-3 px-3 rounded-2">
+                        <div class="d-flex align-items-center">
+                            <div class="avatar avatar-lg bg-primary bg-gradient text-white">
+                                <span class="avatar-text">BH</span>
+                            </div>
+                            <div class="ms-3">
+                                <h6 class="mb-2">Bootstrap Hack</h6>
+                                <div class="hstack gap-2 me-2">
+                                    <span class="fs-11 fw-normal text-muted">56.34K</span>
+                                    <span class="wd-4 ht-4 rounded-circle bg-dark opacity-20"></span>
+                                    <span class="fs-11 fw-normal text-muted">962 Online</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="avatar-group avatar-group-sm ms-auto">
+                            <div class="avatar avatar-sm">
+                                <img src="./../assets/images/avatar/1.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="avatar avatar-sm">
+                                <img src="./../assets/images/avatar/2.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="avatar avatar-sm">
+                                <img src="./../assets/images/avatar/3.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="avatar avatar-sm">
+                                <img src="./../assets/images/avatar/4.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="avatar avatar-sm">
+                                <img src="./../assets/images/avatar/5.png" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </a>
+                    <!--! End:: cb-chat-item !-->
+                </div>
+                <!--! End:: group-chat-tab-pane  !-->
+            </div>
+            <!--! End:: aside-main-body !-->
+            <!--! Start:: aside-main-footer !-->
+            <div class="cb-asidebar-footer d-flex align-items-center justify-content-between px-4 border-top">
+                <!--! Start:: dropdown-menu !-->
+                <div class="dropdown">
+                    <a href="javascript:void(0);" class="btn btn-icon btn-light" data-bs-toggle="dropdown" data-bs-offset="0, 20">
+                        <i class="fi fi-bs-menu-dots-vertical"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li>
+                            <a href="javascript:void(0);" class="dropdown-item">
+                                <i class="fi fi-rs-user-add"></i>
+                                <span class="ms-3">Invite People</span>
+                            </a>
+                        </li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li>
+                            <a href="javascript:void(0);" class="dropdown-item">
+                                <i class="fi fi-rs-user-pen"></i>
+                                <span class="ms-3">Edit Group</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="dropdown-item">
+                                <i class="fi fi-rs-users-alt"></i>
+                                <span class="ms-3">Create Group</span>
+                            </a>
+                        </li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li>
+                            <a href="javascript:void(0);" class="dropdown-item">
+                                <i class="fi fi-rr-calendar-day"></i>
+                                <span class="ms-3">Edit Event</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="dropdown-item">
+                                <i class="fi fi-rr-edit"></i>
+                                <span class="ms-3">Create Event</span>
+                            </a>
+                        </li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li>
+                            <a href="javascript:void(0);" class="dropdown-item">
+                                <i class="fi fi-rr-settings"></i>
+                                <span class="ms-3">Group Settings</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="dropdown-item">
+                                <i class="fi fi-rr-settings"></i>
+                                <span class="ms-3">Event Settings</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="dropdown-item">
+                                <i class="fi fi-rr-settings"></i>
+                                <span class="ms-3">Notification Settings</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!--! End:: dropdown-menu !-->
+                <!--! Start:: pagination !-->
+                <div class="hstack gap-2">
+                    <a href="javascript:void(0);" class="btn btn-icon btn-light" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Previous">
+                        <i class="fi fi-br-angle-left"></i>
+                    </a>
+                    <a href="javascript:void(0);" class="btn btn-icon btn-light" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Next">
+                        <i class="fi fi-br-angle-right"></i>
+                    </a>
+                </div>
+                <!--! End:: pagination !-->
+            </div>
+            <!--! End:: aside-main-footer !-->
+        </aside>
+        <!--! ================================================================ !-->
+        <!--! End:: Asidebar !-->
+        <!--! ================================================================ !-->
+        <!--! ================================================================ !-->
+        <!--! Start:: Main Content !-->
+        <!--! ================================================================ !-->
+        <main class="cb-content">
+            <!--! ================================================================ !-->
+            <!--! Start:: Header !-->
+            <!--! ================================================================ !-->
+            <header class="cb-main-header px-4 w-100 d-flex align-items-center justify-content-between bg-body border-bottom position-relative z-1030">
+                <!--! Start:: main-header-left !-->
+                <div class="cb-main-header-left hstack gap-2">
+                    <!--! Start:: navigation-toggler !-->
+                    <a href="javascript:void(0);" class="btn btn-icon btn-light rounded-circle d-lg-none" data-toggle-target="cb-navigation-toggler">
+                        <i class="fi fi-rr-align-left"></i>
+                    </a>
+                    <!--! End:: navigation-toggler !-->
+                    <!--! Start:: asidebar-toggler !-->
+                    <a href="javascript:void(0);" class="btn btn-icon btn-light rounded-circle me-2 d-xl-none" data-toggle-target="cb-asidebar-toggler">
+                        <i class="fi fi-rr-symbol"></i>
+                    </a>
+                    <!--! End:: asidebar-toggler !-->
+                    <!--! Start:: invite-people !-->
+                    <button type="button" class="btn btn-icon btn-icon-md btn-primary" data-bs-toggle="modal" data-bs-target="#cb-invite-people" title="Invite">
+                        <i class="fi fi-rr-plus fs-12"></i>
+                    </button>
+                    <!--! End:: invite-people !-->
+                </div>
+                <!--! End:: main-header-left !-->
+                <!--! Start:: main-header-right !-->
+                <div class="cb-main-header-right hstack gap-2">
+                    <!--! Start:: search-wrapper !-->
+                    <div class="cb-asidebar-search-wrapper">
+                        <button type="button" class="btn btn-icon btn-light" data-toggle-target="cb-asidebar-search-toggler">
+                            <i class="fi fi-rr-search"></i>
+                        </button>
+                        <form action="#" class="cb-asidebar-search w-100 d-flex align-items-center px-4 position-absolute top-0 start-0 end-0 bottom-0 bg-body border-bottom z-1">
+                            <input class="form-control border-0 fw-medium text-muted" placeholder="Search.....">
+                            <div>
+                                <a href="javascript:void(0);" class="btn btn-icon btn-icon-md btn-light text-danger ms-2" data-toggle-target="cb-asidebar-search-toggler">
+                                    <i class="fi fi-rr-cross-small"></i>
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                    <!--! End:: search-wrapper !-->
+                    <!--! Start:: theme-switcher !-->
+                    <div class="dropdown">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+                            <symbol id="sun-fill" viewBox="0 0 24 24">
+                                <path d="M12,17c-2.76,0-5-2.24-5-5s2.24-5,5-5,5,2.24,5,5-2.24,5-5,5Zm0-8c-1.65,0-3,1.35-3,3s1.35,3,3,3,3-1.35,3-3-1.35-3-3-3Zm1-5V1c0-.55-.45-1-1-1s-1,.45-1,1v3c0,.55,.45,1,1,1s1-.45,1-1Zm0,19v-3c0-.55-.45-1-1-1s-1,.45-1,1v3c0,.55,.45,1,1,1s1-.45,1-1ZM5,12c0-.55-.45-1-1-1H1c-.55,0-1,.45-1,1s.45,1,1,1h3c.55,0,1-.45,1-1Zm19,0c0-.55-.45-1-1-1h-3c-.55,0-1,.45-1,1s.45,1,1,1h3c.55,0,1-.45,1-1ZM6.71,6.71c.39-.39,.39-1.02,0-1.41l-2-2c-.39-.39-1.02-.39-1.41,0s-.39,1.02,0,1.41l2,2c.2,.2,.45,.29,.71,.29s.51-.1,.71-.29Zm14,14c.39-.39,.39-1.02,0-1.41l-2-2c-.39-.39-1.02-.39-1.41,0s-.39,1.02,0,1.41l2,2c.2,.2,.45,.29,.71,.29s.51-.1,.71-.29Zm-16,0l2-2c.39-.39,.39-1.02,0-1.41s-1.02-.39-1.41,0l-2,2c-.39,.39-.39,1.02,0,1.41,.2,.2,.45,.29,.71,.29s.51-.1,.71-.29ZM18.71,6.71l2-2c.39-.39,.39-1.02,0-1.41s-1.02-.39-1.41,0l-2,2c-.39,.39-.39,1.02,0,1.41,.2,.2,.45,.29,.71,.29s.51-.1,.71-.29Z"></path>
+                            </symbol>
+                            <symbol id="moon-stars-fill" viewBox="0 0 24 24">
+                                <path d="M15,24a12.021,12.021,0,0,1-8.914-3.966,11.9,11.9,0,0,1-3.02-9.309A12.122,12.122,0,0,1,13.085.152a13.061,13.061,0,0,1,5.031.205,2.5,2.5,0,0,1,1.108,4.226c-4.56,4.166-4.164,10.644.807,14.41a2.5,2.5,0,0,1-.7,4.32A13.894,13.894,0,0,1,15,24Zm.076-22a10.793,10.793,0,0,0-1.677.127,10.093,10.093,0,0,0-8.344,8.8A9.927,9.927,0,0,0,7.572,18.7,10.476,10.476,0,0,0,18.664,21.43a.5.5,0,0,0,.139-.857c-5.929-4.478-6.4-12.486-.948-17.449a.459.459,0,0,0,.128-.466.49.49,0,0,0-.356-.361A10.657,10.657,0,0,0,15.076,2Z"></path>
+                            </symbol>
+                            <symbol id="circle-half" viewBox="0 0 24 24">
+                                <path d="M12,0C5.38,0,0,5.38,0,12s5.38,12,12,12,12-5.38,12-12S18.62,0,12,0Zm0,22V2c5.51,0,10,4.49,10,10s-4.49,10-10,10Z"></path>
+                            </symbol>
+                        </svg>
+                        <a href="javascript:void(0);" class="btn btn-icon btn-light rounded-circle" id="bd-theme" aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (dark)" data-bs-auto-close="outside" data-bs-offset="0, 19">
+                            <svg class="theme-icon-active" fill="currentColor"><use href="#moon-stars-fill"></use></svg>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end min-wd-200">
+                            <li>
+                                <a href="javascript:void(0);" class="dropdown-item" data-bs-theme-value="light">
+                                    <svg class="theme-icon" fill="currentColor" width="16" height="16"><use href="#sun-fill"></use></svg>
+                                    <span class="ms-3">Light</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" class="dropdown-item" data-bs-theme-value="dark">
+                                    <svg class="theme-icon" fill="currentColor" width="16" height="16"><use href="#moon-stars-fill"></use></svg>
+                                    <span class="ms-3">Dark</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" class="dropdown-item" data-bs-theme-value="auto">
+                                    <svg class="theme-icon" fill="currentColor" width="16" height="16"><use href="#circle-half"></use></svg>
+                                    <span class="ms-3">Auto</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--! End:: theme-switcher !-->
+                    <!--! Start:: theme-notifications !-->
+                    <div class="dropdown">
+                        <a href="javascript:void(0);" class="btn btn-icon btn-light rounded-circle position-relative" data-bs-toggle="dropdown" data-bs-offset="0, 19" data-bs-auto-close="outside">
+                            <i class="fi fi-rr-bell"></i>
+                            <span class="badge bg-danger rounded-circle position-absolute end-5 top-0 fs-9">3</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end dropdown-xl p-0">
+                            <div class="px-4 py-4 border-bottom d-flex align-items-center justify-content-between">
+                                <h6 class="fs-15 fw-bold mb-0">Notifications<span class="badge bg-danger-subtle text-danger ms-2">3+</span></h6>
+                                <a href="javascript:void(0);" class="fs-12 text-success text-end ms-auto hstack" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Make as Read">Make as Read</a>
+                            </div>
+                            <ul class="list-group list-group-flush p-2">
+                                <li class="cb-notifications-item list-group-item border-bottom-0 d-flex gap-3">
+                                    <div class="avatar avatar-md rounded-circle flex-shrink-0">
+                                        <img src="./../assets/images/avatar/2.png" alt="" class="img-fluid">
+                                        <span class="avatar-indicator active"></span>
+                                    </div>
+                                    <div class="flex-grow-1 hstack">
+                                        <a href="javascript:void(0);" class="fw-normal font-body text-muted text-truncate-2"><span class="fw-semibold text-dark">Malanie Hanvey</span> We should talk about that at lunch! </a>
+                                        <div class="flex-shrink-0 ps-4">
+                                            <div class="fs-11 fw-medium text-muted mb-2">2 mins</div>
+                                            <div class="cb-notifications-action d-flex align-items-center float-end gap-1">
+                                                <a href="javascript:void(0);" class="btn btn-icon btn-icon-xs btn-soft-success rounded-circle" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Make as Read">
+                                                    <i class="fi fi-br-check fs-8"></i>
+                                                </a>
+                                                <a href="javascript:void(0);" class="btn btn-icon btn-icon-xs btn-soft-danger rounded-circle" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Remove">
+                                                    <i class="fi fi-rr-cross-small fs-12"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="cb-notifications-item list-group-item border-bottom-0 d-flex gap-3">
+                                    <div class="avatar avatar-md rounded-circle flex-shrink-0">
+                                        <img src="./../assets/images/avatar/3.png" alt="" class="img-fluid">
+                                        <span class="avatar-indicator inactive"></span>
+                                    </div>
+                                    <div class="flex-grow-1 hstack">
+                                        <a href="javascript:void(0);" class="fw-normal font-body text-muted text-truncate-2"><span class="fw-semibold text-dark">Your parcel will arrive in 3 days</span> DHL</a>
+                                        <div class="flex-shrink-0 ps-4">
+                                            <div class="fs-11 fw-medium text-muted mb-2">2 days</div>
+                                            <div class="cb-notifications-action d-flex align-items-center float-end gap-1">
+                                                <a href="javascript:void(0);" class="btn btn-icon btn-icon-xs btn-soft-success rounded-circle" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Make as Read">
+                                                    <i class="fi fi-br-check fs-8"></i>
+                                                </a>
+                                                <a href="javascript:void(0);" class="btn btn-icon btn-icon-xs btn-soft-danger rounded-circle" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Remove">
+                                                    <i class="fi fi-rr-cross-small fs-12"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="cb-notifications-item list-group-item border-bottom-0 d-flex gap-3">
+                                    <div class="avatar avatar-md rounded-circle flex-shrink-0">
+                                        <img src="./../assets/images/avatar/4.png" alt="" class="img-fluid">
+                                        <span class="avatar-indicator inactive"></span>
+                                    </div>
+                                    <div class="flex-grow-1 hstack">
+                                        <a href="javascript:void(0);" class="fw-normal font-body text-muted text-truncate-2"><span class="fw-semibold text-dark">Jasmin Buchan</span> Complete your KYC </a>
+                                        <div class="flex-shrink-0 ps-4">
+                                            <div class="fs-11 fw-medium text-muted mb-2">4 days</div>
+                                            <div class="cb-notifications-action d-flex align-items-center float-end gap-1">
+                                                <a href="javascript:void(0);" class="btn btn-icon btn-icon-xs btn-soft-success rounded-circle" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Make as Read">
+                                                    <i class="fi fi-br-check fs-8"></i>
+                                                </a>
+                                                <a href="javascript:void(0);" class="btn btn-icon btn-icon-xs btn-soft-danger rounded-circle" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Remove">
+                                                    <i class="fi fi-rr-cross-small fs-12"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--! End:: theme-notifications !-->
+                    <!--! Start:: user-dropdown !-->
+                    <div class="dropdown">
+                        <a href="javascript:void(0);" class="btn btn-icon btn-light rounded-circle" data-bs-toggle="dropdown" data-bs-offset="0, 19">
+                            <img src="./../assets/images/avatar/5.png" class="img-fluid" alt="image">
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end min-wd-200">
+                            <a href="./profile.html" class="dropdown-item">
+                                <i class="fi fi-rr-user"></i>
+                                <span class="ms-3">Profile</span>
+                            </a>
+                            <a href="javascript:void(0);" class="dropdown-item" data-bs-toggle="offcanvas" data-bs-target="#cb-settings">
+                                <i class="fi fi-rr-settings"></i>
+                                <span class="ms-3">Settings</span>
+                            </a>
+                            <a href="javascript:void(0);" class="dropdown-item">
+                                <i class="fi fi-rr-info"></i>
+                                <span class="ms-3">Help</span>
+                            </a>
+                            <a href="javascript:void(0);" class="dropdown-item">
+                                <i class="fi fi-rr-exit"></i>
+                                <span class="ms-3">Sign Out</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!--! End:: user-dropdown !-->
+                </div>
+                <!--! End:: main-header-right !-->
+            </header>
+            <!--! ================================================================ !-->
+            <!--! End:: Header !-->
+            <!--! ================================================================ !-->
+            <!--! ================================================================ !-->
+            <!--! Start:: Content !-->
+            <!--! ================================================================ !-->
+            <div class="cb-content-body p-4">
+                <!-- Chat messages will be dynamically inserted here by the script -->
+            </div>
+            <!--! ================================================================ !-->
+            <!--! End:: Content !-->
+            <!--! ================================================================ !-->
+        </main>
+        <!--! ================================================================ !-->
+        <!--! End:: Main Content !-->
+        <!--! ================================================================ !-->
+    </div>
+    <!--! ================================================================ !-->
+    <!--! End:: Main Wrapper !-->
+    <!--! ================================================================ !-->
+    <!--! Start:: Page Vendor JS Files !-->
+    <script src="./../assets/vendors/glightbox/js/glightbox.min.js"></script>
+    <!--! End:: Page Vendor JS Files !-->
+    <!--! Start:: Theme JS Files !-->
+    <script src="./../assets/js/chat-personal.min.js"></script>
+    <!--! End:: Theme JS Files !-->
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Assuming 'conversationId' is available as a global variable or through some logic
+            const conversationId = '12345'; // Replace with actual logic to get conversationId
+            fetchChatMessages(conversationId);
+        });
+    </script>
+	<script>
+		document.addEventListener('DOMContentLoaded', async () => {
+			const urlParams = new URLSearchParams(window.location.search);
+			const conversationId = urlParams.get('conversationId');
+		
+			const response = await fetch(`http://localhost:5000/api/conversations/${conversationId}/messages`, {
+				method: 'GET',
+				credentials: 'include'
+			});
+			const data = await response.json();
+		
+			if (data.success) {
+				const messages = data.messages;
+				const chatContainer = document.getElementById('chatContainer');
+				
+				chatContainer.innerHTML = ''; // Clear existing messages
+		
+				messages.forEach(message => {
+					const messageElement = document.createElement('div');
+					messageElement.className = 'message';
+					messageElement.innerHTML = `
+						<div class="message-sender">${message.senderId}</div>
+						<div class="message-text">${message.text}</div>
+						<div class="message-timestamp">${new Date(message.timestamp).toLocaleTimeString()}</div>
+					`;
+		
+					chatContainer.appendChild(messageElement);
+				});
+			} else {
+				console.error('Failed to fetch messages.');
+			}
+		});
+		</script>		
+</body>
+</html>
